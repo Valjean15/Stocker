@@ -1,0 +1,10 @@
+Controller(Dto){
+    UnitOfWork(Dto){
+        Mapper(Dto) => Model;
+
+        ErrorEstandar();
+        
+        [ErrorHandler, Validar]
+        Repository(Model);
+    }
+}

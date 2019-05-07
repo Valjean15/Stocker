@@ -29,12 +29,12 @@ namespace sis.DAL.Repositories.Base
         public BaseRepository(DbContext context) => Context = context;
 
         /// <inheritdoc/>
-        public DbSet<TEntity> GetDbSet() => Context.Set<TEntity>();
+        public DbSet<TEntity> DbSet => Context.Set<TEntity>();
 
         #region Operaciones Basicas
 
         /// <inheritdoc/>
-        public virtual void Add(TEntity entity) => GetDbSet().Add(entity);
+        public virtual void Add(TEntity entity) => DbSet.Add(entity);
 
         /// <inheritdoc/>
         public virtual void Save()
@@ -62,8 +62,8 @@ namespace sis.DAL.Repositories.Base
         /// <inheritdoc/>
         public virtual void Delete(TEntity entity)
         {
-            GetDbSet().Attach(entity);
-            GetDbSet().Remove(entity);
+            DbSet.Attach(entity);
+            DbSet.Remove(entity);
         }
 
         #endregion
@@ -71,12 +71,12 @@ namespace sis.DAL.Repositories.Base
         #region Operaciones Compuestas
 
         /// <inheritdoc/>
-        public void AddRange(IEnumerable<TEntity> entites) => GetDbSet().AddRange(entites);
+        public void AddRange(IEnumerable<TEntity> entites) => DbSet.AddRange(entites);
 
         /// <inheritdoc/>
         public virtual void Patch(TEntity entity, IEnumerable<string> properties)
         {
-            GetDbSet().Attach(entity);
+            DbSet.Attach(entity);
 
             var entry = Context.Entry(entity);
             foreach (var property in properties)
@@ -84,62 +84,45 @@ namespace sis.DAL.Repositories.Base
         }
 
         /// <inheritdoc/>
-        public TEntity Delete(params object[] keyValues)
+        public TEntity? Delete(params object[] keyValues)
         {
             var entity = FindByKey(keyValues);
-            if (entity == null) return null;
+            if (entity is null) return null;
             Delete(entity);
             return entity;
         }
 
         /// <inheritdoc/>
-        public void DeleteBy(Expression<Func<TEntity, bool>> predicate)
-        {
-            var entities = FindBy(predicate).AsEnumerable();
-            GetDbSet().RemoveRange(entities);
-        }
-
+        public void DeleteBy(Expression<Func<TEntity, bool>> predicate) => DbSet.RemoveRange(FindBy(predicate));
+        
         #endregion
 
         #region Busqueda
 
         /// <inheritdoc/>
-        public virtual IQueryable<TEntity> GetAll() => GetDbSet();
+        public virtual IQueryable<TEntity> GetAll() => DbSet;
 
         /// <inheritdoc/>
-        public IQueryable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate) => GetDbSet().Where(predicate);
+        public IQueryable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate) => DbSet.Where(predicate);
 
         /// <inheritdoc/>
-        public TEntity FirstBy(Expression<Func<TEntity, bool>> predicate) => FirstOrDefault(predicate);
+        public TEntity? FirstBy(Expression<Func<TEntity, bool>> predicate) => FirstOrDefault(predicate);
 
         /// <inheritdoc/>
-        public bool Any(Expression<Func<TEntity, bool>> predicate) => GetDbSet().Any(predicate);
+        public bool Any(Expression<Func<TEntity, bool>> predicate) => DbSet.Any(predicate);
 
         /// <inheritdoc/>
-        public TEntity FindByKey(params object[] keyValues) => GetDbSet().Find(keyValues);
+        public TEntity? FindByKey(params object[] keyValues) => DbSet.Find(keyValues);
 
         /// <inheritdoc/>
-        public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate) => GetDbSet().FirstOrDefault(predicate);
+        public TEntity? FirstOrDefault(Expression<Func<TEntity, bool>> predicate) => DbSet.FirstOrDefault(predicate);
 
         #endregion
 
         #region IDisposable
 
         /// <inheritdoc/>
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        /// <inheritdoc/>
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!Disposed && disposing)
-                Context?.Dispose();
-
-            Disposed = true;
-        }
+        public void Dispose() => Context.Dispose();
 
         #endregion
     }

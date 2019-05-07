@@ -15,7 +15,7 @@ namespace sis.DAL.Repositories.Base
         /// <summary>
         /// Obtiene DatabaseSet de la entidad
         /// </summary>
-        DbSet<TEntity> GetDbSet();
+        DbSet<TEntity> DbSet { get; }
 
         #region Operaciones Basicas
 
@@ -64,7 +64,7 @@ namespace sis.DAL.Repositories.Base
         /// una copia de la entidad eliminada
         /// </summary>
         /// <param name="keyValues">Valores</param>
-        TEntity Delete(params object[] keyValues);
+        TEntity? Delete(params object[] keyValues);
 
         /// <summary>
         /// Elimina una entidad que cumpla con cierta condicion
@@ -91,7 +91,7 @@ namespace sis.DAL.Repositories.Base
         /// Encuentra una entidad bajo cierta condicion
         /// </summary>
         /// <param name="predicate">Condicion</param>
-        TEntity FirstBy(Expression<Func<TEntity, bool>> predicate);
+        TEntity? FirstBy(Expression<Func<TEntity, bool>> predicate);
 
         /// <summary>
         /// Comprueba si existe una entidad bajo cierta condicion
@@ -103,14 +103,14 @@ namespace sis.DAL.Repositories.Base
         /// Encuenta una entidad bajo ciertos parametros
         /// </summary>
         /// <param name="keyValues">Parametros</param>
-        TEntity FindByKey(params object[] keyValues);
+        TEntity? FindByKey(params object[] keyValues);
 
         /// <summary>
         /// Obtiene la primera coincidencia de una entidad
         /// bajo cierta condicion, si no retorna el valor por defecto
         /// </summary>
         /// <param name="predicate">Condicion</param>
-        TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate);
+        TEntity? FirstOrDefault(Expression<Func<TEntity, bool>> predicate);
 
         #endregion
     }
