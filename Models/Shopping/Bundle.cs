@@ -1,4 +1,5 @@
 ﻿using Models.Common;
+using Models.Workflow;
 using System;
 using System.Collections.Generic;
 
@@ -46,6 +47,11 @@ namespace Models.Shopping
         /// </summary>
         public decimal Total { get; set; }
 
+        /// <summary>
+        /// Porcentaje de descuento que se aplica al lote entero
+        /// </summary>
+        public decimal Discount { get; set; }
+
         #endregion
 
         #region Bundle Date Values
@@ -69,6 +75,11 @@ namespace Models.Shopping
         /// </summary>
         public int CurrencyId { get; set; }
 
+        /// <summary>
+        /// Llave foranea de la entidad <see cref="Workflow.State"/>
+        /// </summary>
+        public int StateId { get; set; }
+
         #endregion
 
         #region Virtual Properties
@@ -77,7 +88,13 @@ namespace Models.Shopping
         /// <para>Propiedad virtual de la llave foranea de <see cref="CurrencyId"/></para>
         /// <para>Indica la moneda en que se encuntran los montos del Lote</para>
         /// </summary>
-        public Currency Currency { get; set; }
+        public virtual Currency Currency { get; set; }
+
+        /// <summary>
+        /// <para>Propiedad virtual de la llave foranea de <see cref="StateId"/></para>
+        /// <para>Indica el estado actual del lote</para>
+        /// </summary>
+        public virtual State State { get; set; }
 
         /// <summary>
         /// Lista de productos que pertenecen al Lote

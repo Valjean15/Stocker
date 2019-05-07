@@ -44,6 +44,11 @@ namespace Models.Shopping
         /// </summary>
         public decimal UnitValue { get; set; }
 
+        /// <summary>
+        /// Porcentaje de descuento del valor total del item
+        /// </summary>
+        public decimal Discount { get; set; }
+
         #endregion
 
         #region Foreing Keys

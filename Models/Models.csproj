@@ -4,9 +4,4 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Inventory\" />
-    <Folder Include="Sales\" />
-  </ItemGroup>
-
 </Project>

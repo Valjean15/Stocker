@@ -23,6 +23,16 @@ namespace Models.Contact
         public string LastName { get; set; }
 
         /// <summary>
+        /// Numero de contacto del contactos
+        /// </summary>
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// Direccion del contacto
+        /// </summary>
+        public string Address { get; set; }
+
+        /// <summary>
         /// Tipo de contacto
         /// </summary>
         public ContactType ContactType { get; set; }

@@ -19,5 +19,10 @@
         /// Simbolo que representa la moneda
         /// </summary>
         public string Symbol { get; set; }
+
+        /// <summary>
+        /// Indica si la moneda principal
+        /// </summary>
+        public bool Principal { get; set; }
     }
 }
