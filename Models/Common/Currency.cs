@@ -1,27 +1,22 @@
 ﻿namespace Models.Common
 {
     /// <summary>
-    /// Entidad que representa a la moneda
+    ///     Entidad que representa a la moneda
     /// </summary>
-    public class Currency
+    public class Currency : EntityBase<int>
     {
         /// <summary>
-        /// LLave primaria
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Nombre de la moneda
+        ///  Nombre de la moneda
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Simbolo que representa la moneda
+        ///     Simbolo que representa la moneda
         /// </summary>
         public string Symbol { get; set; }
 
         /// <summary>
-        /// Indica si la moneda principal
+        ///     Indica si la moneda principal
         /// </summary>
         public bool Principal { get; set; }
     }

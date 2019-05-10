@@ -1,17 +1,17 @@
 ﻿namespace Models.Enums
 {
     /// <summary>
-    /// Genero de contacto
+    ///     Genero de contacto
     /// </summary>
     public enum Gender
     {
         /// <summary>
-        /// Hombre
+        ///     Hombre
         /// </summary>
         Male = 1,
 
         /// <summary>
-        /// Mujer
+        ///     Mujer
         /// </summary>
         Female = 2
     }

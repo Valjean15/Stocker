@@ -1,17 +1,12 @@
 ﻿namespace Models.Common
 {
     /// <summary>
-    /// Entida representa una sucursal o lugar 
+    ///     Entida representa una sucursal o lugar 
     /// </summary>
-    public class Store
+    public class Store : EntityBase<int>
     {
         /// <summary>
-        /// Llave Primaria
-        /// </summary>
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Nombre de la sucursal
+        ///     Nombre de la sucursal
         /// </summary>
         public string Name { get; set; }
     }
