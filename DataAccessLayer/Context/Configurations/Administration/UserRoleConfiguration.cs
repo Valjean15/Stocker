@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Administration
 {
+    using Util.Constants;
     using System;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
@@ -18,7 +19,7 @@
         /// </param>
         public void Configure(EntityTypeBuilder<IdentityUserRole<String>> Builder)
         {
-            Builder.ToTable("UserRole", "Administration");
+            Builder.ToTable("UserRole", Modules.Administration);
         }
     }
 }

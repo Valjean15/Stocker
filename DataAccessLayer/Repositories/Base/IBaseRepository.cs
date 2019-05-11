@@ -1,11 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-
-namespace sis.DAL.Repositories.Base
+﻿namespace DataAccessLayer.Repositories.Base
 {
+    using Microsoft.EntityFrameworkCore;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Linq.Expressions;
+
+
     /// <summary>
     /// Repositorio base para implementarse de manera génerica
     /// </summary>

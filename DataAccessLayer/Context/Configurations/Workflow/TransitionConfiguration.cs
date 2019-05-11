@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Workflow
 {
+    using Util.Constants;
     using Models.Workflow;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,16 @@
         /// </param>
         public void Configure(EntityTypeBuilder<Transition> Builder)
         {
-            Builder.ToTable(nameof(Transition), "Workflow");
+            Builder.ToTable(nameof(Transition), Modules.Workflow);
+            Builder.HasKey(transition => transition.Id);
+
+            Builder.HasOne(transition => transition.StartState)
+                .WithMany(state => state.Transitions)
+                .HasForeignKey(transition => transition.StartStateId);
+
+            Builder.HasOne(transition => transition.EndState)
+                .WithMany(state => state.Transitions)
+                .HasForeignKey(transition => transition.EndStateId);
         }
     }
 }

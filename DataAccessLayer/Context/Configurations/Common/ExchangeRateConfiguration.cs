@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Common
 {
+    using Util.Constants;
     using Models.Common;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,16 @@
         /// </param>
         public void Configure(EntityTypeBuilder<ExchangeRate> Builder)
         {
-            Builder.ToTable(nameof(ExchangeRate), "Common");
+            Builder.ToTable(nameof(ExchangeRate), Modules.Common);
+            Builder.HasKey(exchageRate => exchageRate.Id);
+
+            Builder.HasOne(exchageRate => exchageRate.PrincipalCurrency)
+                .WithMany(principalCurrency => principalCurrency.ExchangesRates)
+                .HasForeignKey(exchageRate => exchageRate.PrincipalCurrencyId);
+
+            Builder.HasOne(exchageRate => exchageRate.Currency)
+                .WithMany(currency => currency.ExchangesRates)
+                .HasForeignKey(exchageRate => exchageRate.CurrencyId);
         }
     }
 }

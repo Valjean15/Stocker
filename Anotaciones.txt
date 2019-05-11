@@ -2,7 +2,7 @@ BussinessLayer
 - Encargado de la logica, rutinas propias del ambiente
 * Dependencias
 	- DataTransferObjectLayer
-	- StoreLayerS
+	- StoreLayer
 
 DataAccessLayer
 - Encargado de contener toda la logica del contexto y sus respectivas configuraciones

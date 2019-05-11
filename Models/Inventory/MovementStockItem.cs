@@ -8,6 +8,14 @@
     public class MovementStockItem : EntityBase<int>
     {
         /// <summary>
+        ///      Construtor base de la entidad
+        /// </summary>
+        public MovementStockItem()
+        {
+            StockItem = new StockItem();
+        }
+
+        /// <summary>
         ///     Fecha del movimiento
         /// </summary>
         public DateTime MovementDate { get; set; }
@@ -36,7 +44,7 @@
         ///     Indica a que elemento pertenece este movimiento
         /// </para>
         /// </summary>
-        public virtual StockItem? StockItem { get; set; }
+        public virtual StockItem StockItem { get; set; }
 
         #endregion
     }

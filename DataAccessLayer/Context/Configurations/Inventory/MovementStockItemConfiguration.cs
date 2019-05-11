@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Inventory
 {
+    using Util.Constants;
     using Models.Inventory;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,12 @@
         /// </param>
         public void Configure(EntityTypeBuilder<MovementStockItem> Builder)
         {
-            Builder.ToTable(nameof(MovementStockItem), "Inventory");
+            Builder.ToTable(nameof(MovementStockItem), Modules.Inventory);
+            Builder.HasKey(movementStockItem => movementStockItem.Id);
+
+            Builder.HasOne(movementStockItem => movementStockItem.StockItem)
+                .WithMany(stockItem => stockItem.Movements)
+                .HasForeignKey(movementStockItem => movementStockItem.StockItemId);
         }
     }
 }

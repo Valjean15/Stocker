@@ -1,7 +1,6 @@
-﻿namespace NewsApp.Database.DbContext
+﻿namespace DataAccessLayer.Context
 {
     using System.IO;
-    using DataAccessLayer.Context;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Design;
     using Microsoft.Extensions.Configuration;

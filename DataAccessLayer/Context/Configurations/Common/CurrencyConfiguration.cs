@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Common
 {
+    using Util.Constants;
     using Models.Common;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,8 @@
         /// </param>
         public void Configure(EntityTypeBuilder<Currency> Builder)
         {
-            Builder.ToTable(nameof(Currency), "Common");
+            Builder.ToTable(nameof(Currency), Modules.Common);
+            Builder.HasKey(currency => currency.Id);
         }
     }
 }

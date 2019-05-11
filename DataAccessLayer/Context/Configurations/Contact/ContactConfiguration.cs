@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Contact
 {
+    using Util.Constants;
     using Models.Contact;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,8 @@
         /// </param>
         public void Configure(EntityTypeBuilder<Contact> Builder)
         {
-            Builder.ToTable(nameof(Contact), "Contact");
+            Builder.ToTable(nameof(Contact), Modules.Contact);
+            Builder.HasKey(contact => contact.Id);
         }
     }
 }

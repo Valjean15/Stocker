@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Sale
 {
+    using Util.Constants;
     using Models.Sale;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,12 @@
         /// </param>
         public void Configure(EntityTypeBuilder<SaleQuota> Builder)
         {
-            Builder.ToTable(nameof(SaleQuota), "Sale");
+            Builder.ToTable(nameof(SaleQuota), Modules.Sale);
+            Builder.HasKey(saleQuota => saleQuota.Id);
+
+            Builder.HasOne(saleQuota => saleQuota.Sale)
+                .WithMany(sale => sale.Quotas)
+                .HasForeignKey(saleQuota => saleQuota.SaleId);
         }
     }
 }

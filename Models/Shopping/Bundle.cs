@@ -16,6 +16,9 @@
         public Bundle()
         {
             Reference = string.Empty;
+            Currency = new Currency();
+            State = new State();
+            Items = new HashSet<BundleItem>();
         }
 
         /// <summary>
@@ -95,7 +98,7 @@
         ///     Indica la moneda en que se encuntran los montos del Lote
         /// </para>
         /// </summary>
-        public virtual Currency? Currency { get; set; }
+        public virtual Currency Currency { get; set; }
 
         /// <summary>
         /// <para>
@@ -105,12 +108,12 @@
         ///     Indica el estado actual del lote
         /// </para>
         /// </summary>
-        public virtual State? State { get; set; }
+        public virtual State State { get; set; }
 
         /// <summary>
         ///     Lista de productos que pertenecen al Lote
         /// </summary>
-        public virtual ICollection<BundleItem>? Items { get; set; }
+        public virtual ICollection<BundleItem> Items { get; set; }
 
         #endregion
     }

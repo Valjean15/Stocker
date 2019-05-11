@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Workflow
 {
+    using Util.Constants;
     using Models.Workflow;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,8 @@
         /// </param>
         public void Configure(EntityTypeBuilder<Flow> Builder)
         {
-            Builder.ToTable(nameof(Flow), "Workflow");
+            Builder.ToTable(nameof(Flow), Modules.Workflow);
+            Builder.HasKey(flow => flow.Id);
         }
     }
 }

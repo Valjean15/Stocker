@@ -13,6 +13,8 @@
         public State()
         {
             Name = string.Empty;
+            Flow = new Flow();
+            Transitions = new HashSet<Transition>();
         }
 
         /// <summary>
@@ -39,12 +41,12 @@
         ///     Flujo de trabajo al cual pertenece
         /// </para>
         /// </summary>
-        public virtual Flow? Flow { get; set; }
+        public virtual Flow Flow { get; set; }
 
         /// <summary>
         ///     Transiciones relacionados al estado
         /// </summary>
-        public virtual ICollection<Transition>? Transitions { get; set; }
+        public virtual ICollection<Transition> Transitions { get; set; }
 
         #endregion
     }

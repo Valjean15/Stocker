@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Inventory
 {
+    using Util.Constants;
     using Models.Inventory;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,16 @@
         /// </param>
         public void Configure(EntityTypeBuilder<Stock> Builder)
         {
-            Builder.ToTable(nameof(Stock), "Inventory");
+            Builder.ToTable(nameof(Stock), Modules.Inventory);
+            Builder.HasKey(stock => stock.Id);
+
+            Builder.HasOne(stock => stock.Store)
+                .WithMany(store => store.Stocks)
+                .HasForeignKey(stock => stock.StoreId);
+
+            Builder.HasOne(stock => stock.State)
+                .WithMany()
+                .HasForeignKey(stock => stock.StateId);
         }
     }
 }

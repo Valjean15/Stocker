@@ -11,6 +11,8 @@
         public Transition()
         {
             Name = string.Empty;
+            StartState = new State();
+            EndState = new State();
         }
 
         /// <summary>
@@ -52,7 +54,7 @@
         ///     Estado de entrada de la transicion
         /// </para>
         /// </summary>
-        public virtual State? StartState { get; set; }
+        public virtual State StartState { get; set; }
 
         /// <summary>
         /// <para>
@@ -62,7 +64,7 @@
         ///     Estado de llegada de la transicion
         /// </para>
         /// </summary>
-        public virtual State? EndState { get; set; }
+        public virtual State EndState { get; set; }
 
         #endregion
     }

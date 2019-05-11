@@ -1,5 +1,7 @@
 ﻿namespace Models.Common
 {
+    using System.Collections.Generic;
+
     /// <summary>
     ///     Entidad que representa a la moneda
     /// </summary>
@@ -12,6 +14,7 @@
         {
             Name = string.Empty;
             Symbol = string.Empty;
+            ExchangesRates = new HashSet<ExchangeRate>();
         }
 
         /// <summary>
@@ -25,8 +28,17 @@
         public string Symbol { get; set; }
 
         /// <summary>
-        ///     Indica si la moneda principal
+        ///     Indica si es la moneda principal
         /// </summary>
         public bool Principal { get; set; }
+
+        #region Virtual Properties
+
+        /// <summary>
+        ///     Tasas de cambios asociadas a esta moneda
+        /// </summary>
+        public virtual ICollection<ExchangeRate> ExchangesRates { get; set; }
+
+        #endregion 
     }
 }

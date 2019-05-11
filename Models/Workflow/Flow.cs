@@ -26,6 +26,7 @@
         public Flow()
         {
             Name = string.Empty;
+            States = new HashSet<State>();
         }
 
         /// <summary>
@@ -38,7 +39,7 @@
         /// <summary>
         ///     Estados al cual pertenece al flujo
         /// </summary>
-        public virtual ICollection<State>? States { get; set; }
+        public virtual ICollection<State> States { get; set; }
 
         #endregion
     }

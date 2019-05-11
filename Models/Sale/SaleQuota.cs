@@ -8,6 +8,14 @@
     public class SaleQuota : EntityBase<int>
     {
         /// <summary>
+        ///     Construtor base de la entidad
+        /// </summary>
+        public SaleQuota()
+        {
+            Sale = new Sale();
+        }
+
+        /// <summary>
         ///     Valor de la cuota
         /// </summary>
         public decimal Value { get; set; }
@@ -46,7 +54,7 @@
         ///     Indica a que venta pertenece la cuota
         /// </para>
         /// </summary>
-        public virtual Sale? Sale { get; set; }
+        public virtual Sale Sale { get; set; }
 
         #endregion
     }

@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Administration
 {
+    using Util.Constants;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
     using Models.Administration;
@@ -17,7 +18,7 @@
         /// </param>
         public void Configure(EntityTypeBuilder<User> Builder)
         {
-            Builder.ToTable(nameof(User), "Administration");
+            Builder.ToTable(nameof(User), Modules.Administration);
         }
     }
 }

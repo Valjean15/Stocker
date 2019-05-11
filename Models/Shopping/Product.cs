@@ -1,6 +1,7 @@
 ﻿namespace Models.Shopping
 {
     using Models.Common;
+    using System.Collections.Generic;
 
     /// <summary>
     ///     Entidad que representa un item de compra
@@ -13,6 +14,9 @@
         public Product()
         {
             Name = string.Empty;
+            Brand = new Brand();
+            Currency = new Currency();
+            BundleItems = new HashSet<BundleItem>();
         }
 
         /// <summary>
@@ -44,7 +48,7 @@
         /// <summary>
         ///     Propiedad virtual de la llave foranea de <see cref="BrandId"/>
         /// </summary>
-        public virtual Brand? Brand { get; set; }
+        public virtual Brand Brand { get; set; }
 
         /// <summary>
         /// <para>
@@ -54,7 +58,12 @@
         ///     Indica la moneda en que se encuntran los montos del producto
         /// </para>
         /// </summary>
-        public virtual Currency? Currency { get; set; }
+        public virtual Currency Currency { get; set; }
+
+        /// <summary>
+        ///     Todos los items de compra asociados a este producto
+        /// </summary>
+        public virtual ICollection<BundleItem> BundleItems { get; set; }
 
         #endregion
     }

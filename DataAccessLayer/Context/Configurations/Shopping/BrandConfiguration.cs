@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Shopping
 {
+    using Util.Constants;
     using Models.Shopping;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,8 @@
         /// </param>
         public void Configure(EntityTypeBuilder<Brand> Builder)
         {
-            Builder.ToTable(nameof(Brand), "Shopping");
+            Builder.ToTable(nameof(Brand), Modules.Shopping);
+            Builder.HasKey(brand => brand.Id);
         }
     }
 }

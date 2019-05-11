@@ -1,5 +1,6 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Shopping
 {
+    using Util.Constants;
     using Models.Shopping;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -17,7 +18,20 @@
         /// </param>
         public void Configure(EntityTypeBuilder<BundleItem> Builder)
         {
-            Builder.ToTable(nameof(BundleItem), "Shopping");
+            Builder.ToTable(nameof(BundleItem), Modules.Shopping);
+            Builder.HasKey(bundleItem => bundleItem.Id);
+
+            Builder.HasOne(bundleItem => bundleItem.Currency)
+                .WithOne()
+                .HasForeignKey<BundleItem>(bundleItem => bundleItem.CurrencyId);
+
+            Builder.HasOne(bundleItem => bundleItem.Bundle)
+                .WithMany(bundle => bundle.Items)
+                .HasForeignKey(bundleItem => bundleItem.BundleId);
+
+            Builder.HasOne(bundleItem => bundleItem.Product)
+                .WithMany(product => product.BundleItems)
+                .HasForeignKey(bundleItem => bundleItem.ProductId);
         }
     }
 }

@@ -8,6 +8,15 @@
     public class ExchangeRate : EntityBase<int>
     {
         /// <summary>
+        ///      Construtor base de la entidad
+        /// </summary>
+        public ExchangeRate()
+        {
+            PrincipalCurrency = new Currency();
+            Currency = new Currency();
+        }
+
+        /// <summary>
         ///     Fecha de la tasa de cambio
         /// </summary>
         public DateTime ChangeRateDate { get; set; }
@@ -25,12 +34,13 @@
         #region Foreing Keys
 
         /// <summary>
-        ///     LLave foranea de la entidad <see cref="Common.Currency"/>
+        ///     LLave foranea de la entidad <see cref="Currency"/>
         /// </summary>
+        /// 
         public int PrincipalCurrencyId { get; set; }
 
         /// <summary>
-        ///     Llave foranea de la entidad <see cref="Common.Currency"/>
+        ///     Llave foranea de la entidad <see cref="Currency"/>
         /// </summary>
         public int CurrencyId { get; set; }
 
@@ -39,24 +49,16 @@
         #region Virtual Properties
 
         /// <summary>
-        /// <para>
-        ///     Propiedad virtual de la llave foranea de <see cref="PrincipalCurrencyId"/>
-        /// </para>
-        /// <para>
-        ///     Indica la moneda la moneda de referencia para la tasa de cambio
-        /// </para>
+        ///     LLave foranea de la entidad <see cref="Currency"/>
         /// </summary>
-        public virtual Currency? PrincipalCurrency { get; set; }
+        /// 
+        public virtual Currency PrincipalCurrency { get; set; }
 
         /// <summary>
-        /// <para>
-        ///     Propiedad virtual de la llave foranea de <see cref="CurrencyId"/>
-        /// </para>
-        /// <para>
-        ///     Indica la moneda a la cual se convierte la moneda principal
-        /// </para>
+        ///     Llave foranea de la entidad <see cref="Currency"/>
         /// </summary>
-        public virtual Currency? Currency { get; set; }
+        public virtual Currency Currency { get; set; }
+
 
         #endregion
     }
