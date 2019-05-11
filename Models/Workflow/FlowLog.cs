@@ -8,9 +8,22 @@
     public class FlowLog : EntityBase<int>
     {
         /// <summary>
+        ///     Construtor base de la entidad
+        /// </summary>
+        public FlowLog()
+        {
+            TableName = string.Empty;
+        }
+
+        /// <summary>
         ///     Fecha que se registro el Log
         /// </summary>
         public DateTime Log { get; set; }
+
+        /// <summary>
+        ///     Nombre de la tabla asociada al workflow
+        /// </summary>
+        public string TableName { get; set; }
 
         #region Foreing Keys
 

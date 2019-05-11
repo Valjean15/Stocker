@@ -18,7 +18,6 @@
     <ProjectReference Include="..\BusinessLiner\BusinessLayer.csproj" />
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
     <ProjectReference Include="..\DataTransferObjectLayer\DataTransferObjectLayer.csproj" />
-    <ProjectReference Include="..\HelperLayer\StoreLayer.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\RepositoryLayer\RepositoryLayer.csproj" />
     <ProjectReference Include="..\UtilLayer\Util.csproj" />
