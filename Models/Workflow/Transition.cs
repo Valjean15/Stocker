@@ -6,6 +6,14 @@
     public class Transition : EntityBase<int>
     {
         /// <summary>
+        ///     Construtor base de la entidad
+        /// </summary>
+        public Transition()
+        {
+            Name = string.Empty;
+        }
+
+        /// <summary>
         ///     Nombre de la transicion
         /// </summary>
         public string Name { get; set; }
@@ -44,7 +52,7 @@
         ///     Estado de entrada de la transicion
         /// </para>
         /// </summary>
-        public virtual State StartState { get; set; }
+        public virtual State? StartState { get; set; }
 
         /// <summary>
         /// <para>
@@ -54,7 +62,7 @@
         ///     Estado de llegada de la transicion
         /// </para>
         /// </summary>
-        public virtual State EndState { get; set; }
+        public virtual State? EndState { get; set; }
 
         #endregion
     }

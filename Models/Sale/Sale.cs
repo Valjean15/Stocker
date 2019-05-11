@@ -44,7 +44,7 @@
         ///     Indica la moneda en que se encuntran los montos de la venta
         /// </para>
         /// </summary>
-        public virtual Currency Currency { get; set; }
+        public virtual Currency? Currency { get; set; }
 
         /// <summary>
         /// <para>
@@ -54,17 +54,17 @@
         ///     Indica el estado actual de la venta
         /// </para>
         /// </summary>
-        public virtual State State { get; set; }
+        public virtual State? State { get; set; }
 
         /// <summary>
         ///     Cuotas asociadas a esta venta
         /// </summary>
-        public virtual ICollection<SaleQuota> Quotas { get; set; }
+        public virtual ICollection<SaleQuota>? Quotas { get; set; }
 
         /// <summary>
         ///     Items realacionados a la venta
         /// </summary>
-        public virtual ICollection<SaleItem> Items { get; set; }
+        public virtual ICollection<SaleItem>? Items { get; set; }
 
         #endregion
     }

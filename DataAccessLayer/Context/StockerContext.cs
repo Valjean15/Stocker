@@ -1,11 +1,13 @@
 ﻿namespace DataAccessLayer.Context
 {
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
+    using Models.Administration;
 
     /// <summary>
     ///     Contexto utilizado para comunicacion con la BD
     /// </summary>
-    partial class StockerContext : DbContext
+    public partial class StockerContext : IdentityDbContext<User>
     {
         /// <summary>
         ///     Constructor base del contexto

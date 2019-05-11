@@ -1,3 +1,41 @@
+BussinessLayer
+- Encargado de la logica, rutinas propias del ambiente
+* Dependencias
+	- DataTransferObjectLayer
+	- StoreLayerS
+
+DataAccessLayer
+- Encargado de contener toda la logica del contexto y sus respectivas configuraciones
+* Dependencias
+	- Models
+
+DataTransferObjectLayer
+- Encargado de contener todos los DTO y su respectivo map de los modelos
+* Dependencias
+	- Models
+
+Models
+- Encargado de contener toda la estructura de la base de datos, los modelos de las entidades
+
+StoreLayer
+- Encargado de gestionar y manejar la informacion recibida y procesarla con los contextos
+* Dependencias
+	- DataAccessLayer
+	- Models
+
+
+Rutina de trabajo
+
+Controller se recibe Dto
+Se invoca funcion de capa de negocio
+Capa de negocio invoca mapper de DTOLayer
+DTOLayer transforma Dto en Modelo correspondiente
+Capa de negocio ejecuta accion con dependencia de StoreLayer
+StoreLayer Ejecuta accion pedida por la capa de negocio
+DataAccessLayer Brinda la conexion con la BD
+Capa de negocio retorna resultados
+* En la capa de StoreLayer, DTOLayer y BuisnessLayer se maneja un ErrorHandler
+
 Controller(Dto){
     UnitOfWork(Dto){
         Mapper(Dto) => Model;

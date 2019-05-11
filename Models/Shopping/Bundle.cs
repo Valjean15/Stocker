@@ -11,6 +11,14 @@
     public class Bundle : EntityBase<int>
     {
         /// <summary>
+        ///     Construtor base de la entidad
+        /// </summary>
+        public Bundle()
+        {
+            Reference = string.Empty;
+        }
+
+        /// <summary>
         ///     Descripcion de referencia del lote
         /// </summary>
         public string Reference { get; set; }
@@ -87,7 +95,7 @@
         ///     Indica la moneda en que se encuntran los montos del Lote
         /// </para>
         /// </summary>
-        public virtual Currency Currency { get; set; }
+        public virtual Currency? Currency { get; set; }
 
         /// <summary>
         /// <para>
@@ -97,12 +105,12 @@
         ///     Indica el estado actual del lote
         /// </para>
         /// </summary>
-        public virtual State State { get; set; }
+        public virtual State? State { get; set; }
 
         /// <summary>
         ///     Lista de productos que pertenecen al Lote
         /// </summary>
-        public virtual ICollection<BundleItem> Items { get; set; }
+        public virtual ICollection<BundleItem>? Items { get; set; }
 
         #endregion
     }

@@ -17,6 +17,7 @@
         /// </param>
         public void Configure(EntityTypeBuilder<User> Builder)
         {
+            Builder.ToTable(nameof(User), "Administration");
         }
     }
 }

@@ -12,7 +12,7 @@
     ///     Contiene todos los <see cref="DbSet{TEntity}"/> de la aplicacion segmentados
     ///     por regiones de cada modulo
     /// </summary>
-    partial class StockerContext
+    public partial class StockerContext
     {
         #region Common
 

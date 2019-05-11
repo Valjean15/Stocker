@@ -36,7 +36,7 @@
         ///     Indica a que elemento pertenece este movimiento
         /// </para>
         /// </summary>
-        public virtual StockItem StockItem { get; set; }
+        public virtual StockItem? StockItem { get; set; }
 
         #endregion
     }

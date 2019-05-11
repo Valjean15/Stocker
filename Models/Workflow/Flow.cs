@@ -21,6 +21,14 @@
     public class Flow : EntityBase<int>
     {
         /// <summary>
+        ///     Construtor base de la entidad
+        /// </summary>
+        public Flow()
+        {
+            Name = string.Empty;
+        }
+
+        /// <summary>
         ///     Nombre del flujo
         /// </summary>
         public string Name { get; set; }
@@ -30,7 +38,7 @@
         /// <summary>
         ///     Estados al cual pertenece al flujo
         /// </summary>
-        public virtual ICollection<State> States { get; set; }
+        public virtual ICollection<State>? States { get; set; }
 
         #endregion
     }

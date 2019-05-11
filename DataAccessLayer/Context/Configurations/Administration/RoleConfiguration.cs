@@ -1,10 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DataAccessLayer.Context.Configurations.Administration
+﻿namespace DataAccessLayer.Context.Configurations.Administration
 {
-    class RoleConfiguration
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+    /// <summary>
+    ///     Configuraciones de la tabla de roles del sistema.
+    /// </summary>
+    internal class RoleConfiguration : IEntityTypeConfiguration<IdentityRole>
     {
+        /// <summary>
+        ///     Método llamado para configurar un tipo de entidad.
+        /// </summary>
+        /// <param name="Builder">
+        ///     Constructor que se utilizará para configurar el tipo de entidad.
+        /// </param>
+        public void Configure(EntityTypeBuilder<IdentityRole> Builder)
+        {
+            Builder.ToTable("Role", "Administration");
+        }
     }
 }

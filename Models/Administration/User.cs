@@ -29,7 +29,12 @@
         ///     Regresa true, si ambas entidades tienen el mismo Id, en caso contrario false
         /// </returns>
 
-        public override bool Equals(object Obj) => Equals(Obj as IEntityBase<String>);
+        public override bool Equals(object Obj)
+        {
+            if (Obj is null) return false;
+            var ObjParsed = Obj as IEntityBase<string>;
+            return ObjParsed is null ? false : Equals(ObjParsed);
+        }
 
         /// <summary>
         ///     Obtiene el código hash del Id

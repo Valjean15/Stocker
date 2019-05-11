@@ -8,6 +8,14 @@
     public class Product : EntityBase<int>
     {
         /// <summary>
+        ///     Construtor base de la entidad
+        /// </summary>
+        public Product()
+        {
+            Name = string.Empty;
+        }
+
+        /// <summary>
         ///     Nombre del producto
         /// </summary>
         public string Name { get; set; }
@@ -36,7 +44,7 @@
         /// <summary>
         ///     Propiedad virtual de la llave foranea de <see cref="BrandId"/>
         /// </summary>
-        public virtual Brand Brand { get; set; }
+        public virtual Brand? Brand { get; set; }
 
         /// <summary>
         /// <para>
@@ -46,7 +54,7 @@
         ///     Indica la moneda en que se encuntran los montos del producto
         /// </para>
         /// </summary>
-        public virtual Currency Currency { get; set; }
+        public virtual Currency? Currency { get; set; }
 
         #endregion
     }

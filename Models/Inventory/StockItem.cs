@@ -38,7 +38,7 @@
         ///     Indica a que almacen pertenece
         /// </para>
         /// </summary>
-        public virtual Stock Stock { get; set; }
+        public virtual Stock? Stock { get; set; }
 
         /// <summary>
         /// <para>
@@ -48,12 +48,12 @@
         ///     Indica a que elemento de lote representa
         /// </para>
         /// </summary>
-        public virtual BundleItem BundleItem { get; set; }
+        public virtual BundleItem? BundleItem { get; set; }
 
         /// <summary>
         ///     Representa todos los movientos que sufre este elemento en este inventario
         /// </summary>
-        public virtual ICollection<MovementStockItem> Movements { get; set; }
+        public virtual ICollection<MovementStockItem>? Movements { get; set; }
 
         #endregion
     }

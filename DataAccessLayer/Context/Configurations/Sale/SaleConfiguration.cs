@@ -1,13 +1,13 @@
-﻿namespace DataAccessLayer.Context.Configurations.Contact
+﻿namespace DataAccessLayer.Context.Configurations.Sale
 {
-    using Models.Contact;
+    using Models.Sale;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
     /// <summary>
-    ///     Configuraciones de la tabla de contactos
+    ///     Configuraciones de la tabla de ventas
     /// </summary>
-    internal class ContactConfiguration : IEntityTypeConfiguration<Contact>
+    internal class SaleConfiguration : IEntityTypeConfiguration<Sale>
     {
         /// <summary>
         ///     Método llamado para configurar un tipo de entidad.
@@ -15,9 +15,9 @@
         /// <param name="Builder">
         ///     Constructor que se utilizará para configurar el tipo de entidad.
         /// </param>
-        public void Configure(EntityTypeBuilder<Contact> Builder)
+        public void Configure(EntityTypeBuilder<Sale> Builder)
         {
-            Builder.ToTable(nameof(Contact), "Contact");
+            Builder.ToTable(nameof(Sale), "Sale");
         }
     }
 }

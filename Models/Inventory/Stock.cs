@@ -10,6 +10,14 @@
     public class Stock : EntityBase<int>
     {
         /// <summary>
+        ///     Construtor base de la entidad
+        /// </summary>
+        public Stock()
+        {
+            Name = string.Empty;
+        }
+
+        /// <summary>
         ///     Nombre del inventario
         /// </summary>
         public string Name { get; set; }
@@ -38,7 +46,7 @@
         ///     Inidica la sucursal donde se encuentra este inventario
         /// </para>
         /// </summary>
-        public virtual Store Store { get; set; }
+        public virtual Store? Store { get; set; }
 
         /// <summary>
         /// <para>
@@ -48,12 +56,12 @@
         ///     Indica el estado actual del inventario
         /// </para>
         /// </summary>
-        public virtual State State { get; set; }
+        public virtual State? State { get; set; }
 
         /// <summary>
         ///     Items asociados al almacen
         /// </summary>
-        public virtual ICollection<StockItem> Items { get; set; }
+        public virtual ICollection<StockItem>? Items { get; set; }
 
         #endregion
     }

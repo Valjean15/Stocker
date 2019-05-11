@@ -75,7 +75,7 @@
         ///     Indica la moneda en que se encuntran los montos del Lote
         /// </para>
         /// </summary>
-        public Currency Currency { get; set; }
+        public Currency? Currency { get; set; }
 
         /// <summary>
         /// <para>
@@ -85,7 +85,7 @@
         ///     Lote al cual pertenece el respectivo Item
         /// </para>
         /// </summary>
-        public virtual Bundle Bundle { get; set; }
+        public virtual Bundle? Bundle { get; set; }
 
         /// <summary>
         /// <para>
@@ -95,7 +95,7 @@
         ///     Producto al cual reprenta el item
         /// </para>
         /// </summary>
-        public virtual Product Product { get; set; }
+        public virtual Product? Product { get; set; }
 
         #endregion
     }

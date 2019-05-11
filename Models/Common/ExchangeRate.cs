@@ -46,7 +46,7 @@
         ///     Indica la moneda la moneda de referencia para la tasa de cambio
         /// </para>
         /// </summary>
-        public virtual Currency PrincipalCurrency { get; set; }
+        public virtual Currency? PrincipalCurrency { get; set; }
 
         /// <summary>
         /// <para>
@@ -56,7 +56,7 @@
         ///     Indica la moneda a la cual se convierte la moneda principal
         /// </para>
         /// </summary>
-        public virtual Currency Currency { get; set; }
+        public virtual Currency? Currency { get; set; }
 
         #endregion
     }

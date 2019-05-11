@@ -8,6 +8,14 @@
     public class State : EntityBase<int>
     {
         /// <summary>
+        ///     Construtor base de la entidad
+        /// </summary>
+        public State()
+        {
+            Name = string.Empty;
+        }
+
+        /// <summary>
         ///     Nombre del estado
         /// </summary>
         public string Name { get; set; }
@@ -31,12 +39,12 @@
         ///     Flujo de trabajo al cual pertenece
         /// </para>
         /// </summary>
-        public virtual Flow Flow { get; set; }
+        public virtual Flow? Flow { get; set; }
 
         /// <summary>
         ///     Transiciones relacionados al estado
         /// </summary>
-        public virtual ICollection<Transition> Transitions { get; set; }
+        public virtual ICollection<Transition>? Transitions { get; set; }
 
         #endregion
     }

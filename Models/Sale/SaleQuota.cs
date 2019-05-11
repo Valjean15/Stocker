@@ -46,7 +46,7 @@
         ///     Indica a que venta pertenece la cuota
         /// </para>
         /// </summary>
-        public virtual Sale Sale { get; set; }
+        public virtual Sale? Sale { get; set; }
 
         #endregion
     }

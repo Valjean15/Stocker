@@ -8,6 +8,17 @@
     public class Contact : EntityBase<int>
     {
         /// <summary>
+        ///     Constructor base de la entidad
+        /// </summary>
+        public Contact()
+        {
+            Name = string.Empty;
+            LastName = string.Empty;
+            PhoneNumber = string.Empty;
+            Address = string.Empty;
+        }
+
+        /// <summary>
         ///     Nombre del contacto
         /// </summary>
         public string Name { get; set; }

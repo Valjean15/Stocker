@@ -41,7 +41,7 @@
         ///     Indica a que venta pertenece el elemtento
         /// </para>
         /// </summary>
-        public virtual Sale Sale { get; set; }
+        public virtual Sale? Sale { get; set; }
 
         /// <summary>
         /// <para>
@@ -51,7 +51,7 @@
         ///     Indica que elemento de que inventario pertenece
         /// </para>
         /// </summary>
-        public virtual StockItem StockItem { get; set; }
+        public virtual StockItem? StockItem { get; set; }
 
         #endregion
     }
