@@ -1,4 +1,4 @@
-﻿namespace RepositoryLayer.Contracts
+﻿namespace RepositoryLayer.Contracts.Action
 {
     using Store;
     using System.Collections.Generic;

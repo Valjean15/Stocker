@@ -1,6 +1,8 @@
 ﻿namespace RepositoryLayer.Store
 {
     using System;
+    using System.Linq;
+    using System.Linq.Expressions;
     using System.Threading;
     using System.Threading.Tasks;
     using Models;
@@ -54,5 +56,25 @@
         /// </param>
         /// <seealso cref="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netframework-4.8"/>
         Task DeleteAsync(TEntity entity, CancellationToken cancellationToken);
+
+        /// <summary>
+        ///     Busca una entidad por su llave primaria
+        /// </summary>
+        /// <param name="key">
+        ///     Valor de la entidad a buscar
+        /// </param>
+        /// <param name="cancellationToken">
+        ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
+        /// </param>
+        /// <seealso cref="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netframework-4.8"/>
+        Task<TEntity> FindByKey(Tkey key, CancellationToken cancellationToken);
+
+        /// <summary>
+        ///     Busca todas las entidades que cumplan con una condicion
+        /// </summary>
+        /// <param name="condition">
+        ///     Condicion a filtrar
+        /// </param>
+        IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> condition);
     }
 }

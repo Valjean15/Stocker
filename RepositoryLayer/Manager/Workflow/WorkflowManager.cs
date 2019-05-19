@@ -1,7 +1,7 @@
 ﻿namespace RepositoryLayer.Manager.Workflow
 {
     using Store;
-    using Contracts;
+    using Contracts.Action;
     using DataAccessLayer.Context;
     using Models.Workflow;
     using System.Collections.Generic;

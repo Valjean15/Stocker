@@ -1,6 +1,8 @@
 ﻿namespace RepositoryLayer.Store
 {
     using System;
+    using System.Linq;
+    using System.Linq.Expressions;
     using System.Threading;
     using System.Threading.Tasks;
     using Microsoft.EntityFrameworkCore;
@@ -18,7 +20,7 @@
     /// <typeparam name="TKey">
     ///     Tipo de la llave primaria de la entidad
     /// </typeparam>
-    public class EntityStore<TEntity, TContext, TKey> : IEntityStore<TEntity, TKey>, IDbContext<TContext>
+    internal abstract class EntityStore<TEntity, TContext, TKey> : IEntityStore<TEntity, TKey>, IDbContext<TContext>
         where TEntity : class, IEntityBase<TKey>
         where TKey : IEquatable<TKey>
         where TContext : DbContext
@@ -30,10 +32,36 @@
         /// <param name="context">
         ///     Contexto a utilizar en el Store
         /// </param>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="context"/> es un valor nulo
+        /// </exception>
         public EntityStore(TContext context)
         {
+            if (Context is null)
+                throw new ArgumentNullException();
+
             Context = context;
         }
+
+        /// <summary>
+        ///     Indica si el store ya fue eliminado
+        /// </summary>
+        private bool _Disposed;
+
+        /// <summary>
+        /// <para> 
+        ///     Indica si al final de cada operacion realizara <see cref="DbContext.SaveChanges"/>
+        /// </para>
+        /// <para>
+        ///     Valor por defecto es <see langword="true"/>
+        /// </para>
+        /// </summary>
+        private bool AutoSaveChanges { get; set; } = true;
+
+        /// <summary>
+        ///     Una propiedad de navegación para las entidades que contiene este Store.
+        /// </summary>
+        protected IQueryable<TEntity> Entities => Context.Set<TEntity>();
 
         /// <summary>
         ///     Contexto a utilizar en el Store
@@ -49,9 +77,11 @@
         /// <param name="cancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        public Task CreateAsync(TEntity entity, CancellationToken cancellationToken)
+        public async Task CreateAsync(TEntity entity, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            ValidateState(entity, cancellationToken);
+            Context.Add(entity);
+            await SaveChanges(cancellationToken); 
         }
 
         /// <summary>
@@ -63,9 +93,20 @@
         /// <param name="cancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        public Task UpdateAsync(TEntity entity, CancellationToken cancellationToken)
+        public async Task UpdateAsync(TEntity entity, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            ValidateState(entity, cancellationToken);
+            Context.Attach(entity);
+            Context.Update(entity);
+
+            try
+            {
+                await SaveChanges(cancellationToken);
+            }
+            catch (DbUpdateConcurrencyException exception)
+            {
+                throw exception;
+            }
         }
 
         /// <summary>
@@ -77,17 +118,84 @@
         /// <param name="cancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        public Task DeleteAsync(TEntity entity, CancellationToken cancellationToken)
+        public async Task DeleteAsync(TEntity entity, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            ValidateState(entity, cancellationToken);
+            Context.Remove(entity);
+
+            try
+            {
+                await SaveChanges(cancellationToken);
+            }
+            catch (DbUpdateConcurrencyException exception)
+            {
+                throw exception;
+            }
         }
+
+        /// <summary>
+        ///     Realiza busqueda por llave primaria
+        /// </summary>
+        /// <param name="key">
+        ///     Valor a buscar
+        /// </param>
+        /// <param name="cancellationToken">
+        ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
+        /// </param>
+        public async Task<TEntity> FindByKey(TKey key, CancellationToken cancellationToken)
+            => await Entities.FirstOrDefaultAsync(entity => entity.Id.Equals(key), cancellationToken);
+
+        /// <summary>
+        ///     Realiza busqueda en base a una condicion
+        /// </summary>
+        /// <param name="condition">
+        ///     Condicion de busqueda
+        /// </param>
+        public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> condition)
+            => Entities.Where(condition);
 
         /// <summary>
         ///     Liberacion de Recursos
         /// </summary>
-        public void Dispose()
+        public void Dispose() => _Disposed = true;
+
+
+        /// <summary>
+        ///     Accion de guardar.
+        /// </summary>
+        /// <param name="CancellationToken">
+        ///     El <see cref="CancellationToken "/> se usa para propagar notificaciones de que la operación debe cancelarse.
+        /// </param>
+        /// <returns>
+        ///     El <see cref="Task" /> que representa la operación asíncrona.
+        /// </returns>
+        private async Task SaveChanges(CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            if (AutoSaveChanges)
+                await Context.SaveChangesAsync(cancellationToken);
+        }
+
+        /// <summary>
+        ///     Realiza validacione generales para ejecuciones de las operaciones
+        ///     del Store
+        /// </summary>
+        /// <param name="cancellationToken">
+        ///     Token de cancelacion
+        /// </param>
+        /// <exception cref="CancellationToken.ThrowIfCancellationRequested">
+        ///     Excepcion lanzada cuando el <see cref="CancellationToken"/> indica que la operacion ha sido cancelada
+        /// </exception>
+        /// <exception cref="ObjectDisposedException">
+        ///     Excepcion lanzada cuando se indica que el <see cref="EntityStore{TEntity, TContext, TKey}"/> fue liberado
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        ///     Excepcion lanzada cuando la <see cref="TEntity"/> a interactuar es <see langword="null"/>
+        /// </exception>
+        private void ValidateState(TEntity entity, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            if (_Disposed) throw new ObjectDisposedException(GetType().Name);
+            if (entity is null) throw new ArgumentNullException(entity.GetType().Name);
         }
     }
 }

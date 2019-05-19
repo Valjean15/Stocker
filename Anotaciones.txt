@@ -1,3 +1,11 @@
+Progress
+- Model Layer			100%
+- Data Access Layer		100%
+- Repository Layer		0%
+- Data Transfer Layer	0%
+- Business Layer		0%
+
+
 BussinessLayer
 - Encargado de la logica, rutinas propias del ambiente
 * Dependencias

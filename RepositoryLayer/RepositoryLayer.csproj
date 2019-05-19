@@ -13,5 +13,10 @@
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\UtilLayer\Util.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Contracts\Query\" />
+    <Folder Include="Contracts\Validator\" />
+  </ItemGroup>
 
 </Project>
