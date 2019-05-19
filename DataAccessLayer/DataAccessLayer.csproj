@@ -13,6 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Migrations\20190519231838_InitialMigration.cs" />
+    <Compile Include="Migrations\20190519231838_InitialMigration.designer.cs" />
+    <Compile Include="Migrations\StockerContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   

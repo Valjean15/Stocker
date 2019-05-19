@@ -23,7 +23,8 @@
 
             Builder.HasOne(stockItem => stockItem.Stock)
                 .WithMany(stock => stock.Items)
-                .HasForeignKey(stockItem => stockItem.StockId);
+                .HasForeignKey(stockItem => stockItem.StockId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             Builder.HasOne(stockItem => stockItem.BundleItem)
                 .WithMany(bundleItem => bundleItem.StockItems)

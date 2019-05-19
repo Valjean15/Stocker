@@ -20,7 +20,7 @@
     /// <typeparam name="TKey">
     ///     Tipo de la llave primaria de la entidad
     /// </typeparam>
-    internal abstract class EntityStore<TEntity, TContext, TKey> : IEntityStore<TEntity, TKey>, IDbContext<TContext>
+    public abstract class EntityStore<TEntity, TContext, TKey> : IEntityStore<TEntity, TKey>, IDbContext<TContext>
         where TEntity : class, IEntityBase<TKey>
         where TKey : IEquatable<TKey>
         where TContext : DbContext

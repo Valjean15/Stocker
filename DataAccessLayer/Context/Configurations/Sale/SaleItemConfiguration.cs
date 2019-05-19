@@ -27,7 +27,8 @@
 
             Builder.HasOne(saleItem => saleItem.StockItem)
                 .WithOne()
-                .HasForeignKey<SaleItem>(saleItem => saleItem.StockItemId);
+                .HasForeignKey<SaleItem>(saleItem => saleItem.StockItemId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

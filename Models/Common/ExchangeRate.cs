@@ -12,8 +12,6 @@
         /// </summary>
         public ExchangeRate()
         {
-            PrincipalCurrency = new Currency();
-            Currency = new Currency();
         }
 
         /// <summary>
@@ -43,22 +41,6 @@
         ///     Llave foranea de la entidad <see cref="Currency"/>
         /// </summary>
         public int CurrencyId { get; set; }
-
-        #endregion
-
-        #region Virtual Properties
-
-        /// <summary>
-        ///     LLave foranea de la entidad <see cref="Currency"/>
-        /// </summary>
-        /// 
-        public virtual Currency PrincipalCurrency { get; set; }
-
-        /// <summary>
-        ///     Llave foranea de la entidad <see cref="Currency"/>
-        /// </summary>
-        public virtual Currency Currency { get; set; }
-
 
         #endregion
     }

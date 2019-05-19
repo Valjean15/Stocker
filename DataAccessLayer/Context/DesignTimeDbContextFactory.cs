@@ -24,9 +24,14 @@
         /// </returns>
         public StockerContext CreateDbContext(string[] Arguments)
         {
-            IConfigurationRoot Configuration = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
             var OptionsBuilder = new DbContextOptionsBuilder<StockerContext>();
-            var ConnectionString = Configuration.GetConnectionString("DefaultConnection");
+            //var ConnectionString = builder.GetConnectionString("DefaultConnections");
+            var ConnectionString = "Server=DESKTOP-2ARC100;Database=StockerDatabase;Integrated Security=true;MultipleActiveResultSets=true;";
             OptionsBuilder.UseSqlServer(ConnectionString, Options => Options.MigrationsAssembly("DataAccessLayer"));
             return new StockerContext(OptionsBuilder.Options);
         }

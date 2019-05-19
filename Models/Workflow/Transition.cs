@@ -11,8 +11,6 @@
         public Transition()
         {
             Name = string.Empty;
-            StartState = new State();
-            EndState = new State();
         }
 
         /// <summary>
@@ -41,30 +39,6 @@
         /// </para>
         /// </summary>
         public int EndStateId { get; set; }
-
-        #endregion
-
-        #region Virtual Properties
-
-        /// <summary>
-        /// <para>
-        ///     Propiedad virtual de la llave foranea de <see cref="FlowId"/>
-        /// </para>
-        /// <para>
-        ///     Estado de entrada de la transicion
-        /// </para>
-        /// </summary>
-        public virtual State StartState { get; set; }
-
-        /// <summary>
-        /// <para>
-        ///     Propiedad virtual de la llave foranea de <see cref="FlowId"/>
-        /// </para>
-        /// <para>
-        ///     Estado de llegada de la transicion
-        /// </para>
-        /// </summary>
-        public virtual State EndState { get; set; }
 
         #endregion
     }

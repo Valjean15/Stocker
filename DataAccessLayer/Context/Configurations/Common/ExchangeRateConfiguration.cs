@@ -20,14 +20,6 @@
         {
             Builder.ToTable(nameof(ExchangeRate), Modules.Common);
             Builder.HasKey(exchageRate => exchageRate.Id);
-
-            Builder.HasOne(exchageRate => exchageRate.PrincipalCurrency)
-                .WithMany(principalCurrency => principalCurrency.ExchangesRates)
-                .HasForeignKey(exchageRate => exchageRate.PrincipalCurrencyId);
-
-            Builder.HasOne(exchageRate => exchageRate.Currency)
-                .WithMany(currency => currency.ExchangesRates)
-                .HasForeignKey(exchageRate => exchageRate.CurrencyId);
         }
     }
 }
