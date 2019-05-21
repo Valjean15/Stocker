@@ -19,13 +19,11 @@
         <script language="javascript">
             <![CDATA[
             var f = new java.io.File(project.getProperty("basedir"));
-            var sub = ".sencha/workspace/sencha.cfg"
-            var sub2 = "workspace.json";
+            var sub = ".sencha/workspace/sencha.cfg";
 
             for (var p = f; p; p = p.getParentFile()) {
                 var t = new java.io.File(p, sub);
-                var t2 = new java.io.File(p, sub2);
-                if (t.exists() || t2.exists()) {
+                if (t.exists()) {
                     // we found the workspace folder!
 
                     t = new java.io.File(p, "local.properties");
@@ -89,17 +87,10 @@
         <!--
         calculate the appropriate build.compression value
         -->
-        <condition property="build.compression" value="-cmd">
+        <condition property="build.compression" value="-yui">
             <or>
                 <x-is-true value="${build.compression.yui}"/>
                 <equals arg1="yui" arg2="${app.compressor.type}"/>
-            </or>
-        </condition>
-
-        <condition property="build.compression" value="-cmd">
-            <or>
-                <x-is-true value="${build.compression.cmd}"/>
-                <equals arg1="cmd" arg2="${app.compressor.type}"/>
             </or>
         </condition>
 
@@ -231,23 +222,6 @@
         </if>
 
         <if>
-            <or>
-                <equals arg1="${app.output.js.filter}" arg2="all"/>
-                <equals arg1="${app.output.js.filter}" arg2="minimum"/>
-            </or>
-            <then>
-                <property name="enable.used.deps" value="false"/>
-            </then>
-        </if>
-        
-        <if>
-            <equals arg1="${app.output.js.filter}" arg2="used"/>
-            <then>
-                <property name="enable.used.deps" value="true"/>
-            </then>
-        </if>
-        
-        <if>
             <equals arg1="${app.toolkit}" arg2="modern"/>
             <then>
                 <property name="skip.slice" value="1"/>
@@ -267,18 +241,6 @@
             </then>
         </if>
 
-        <if>
-            <or>
-                <x-is-false value="${app.output.progressive.enable}"/>
-                <not>
-                    <isset property="${app.output.progressive.enable}"/>
-                </not>
-            </or>
-            <then>
-                <property name="${skip.progressive}" value="1"/>
-            </then>
-        </if>
-        
         <if>
             <!--If Deltas are FALSE, deltas do not exist, or caching is disabled then skip delta patching-->
             <or>
@@ -380,19 +342,6 @@
         </condition>
         <property name="enable.split.framework" value="false"/>
 
-        <if>
-            <equals arg1="${app.output.js.filter}" arg2="used"/>
-            <then>
-                <property name="include.used.package.deps">
-                    include
-                        -usedPackagesDeps
-                    and
-                </property>
-            </then>
-        </if>
-        <property name="include.used.package.deps">
-            # no-op
-        </property> 
 
         <x-compile refid="${compiler.ref.id}"
                    dir="${app.dir}"
@@ -425,7 +374,6 @@
                 ${build.operations}
                 and
                 ${exclude.boot}
-                ${include.used.package.deps}
                 save
                     page
             ]]>
@@ -445,7 +393,6 @@
                 ${build.operations}
                 and
                 ${exclude.boot}
-                ${include.used.package.deps}
                 save
                     page
             ]]>

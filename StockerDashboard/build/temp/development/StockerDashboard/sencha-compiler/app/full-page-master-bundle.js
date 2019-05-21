@@ -1,2 +1,2 @@
 // @tag full-page
-// @require D:\Apps\Stocker\StockerDashboard\app.js
+// @require C:\Users\Jean Lanza\source\repos\Stocker\StockerDashboard\app.js
