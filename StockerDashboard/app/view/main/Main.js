@@ -1,61 +1,84 @@
 /**
- * This class is the main view for the application. It is specified in app.js as the
- * "mainView" property. That setting causes an instance of this class to be created and
- * added to the Viewport container.
- *
- * TODO - Replace the content of this view to suit the needs of your application.
+ * Vista principal - modern
  */
 Ext.define('StockerDashboard.view.main.Main', {
-    extend: 'Ext.tab.Panel',
-    xtype: 'app-main',
+    extend: 'Ext.Container',
 
+    /**
+     * Dependencias de la vista
+     */
     requires: [
-        'Ext.MessageBox',
-
-        'StockerDashboard.view.main.MainController',
-        'StockerDashboard.view.main.MainModel',
-        'StockerDashboard.view.main.List'
+        'Ext.Button',
+        'Ext.list.Tree',
+        'Ext.navigation.View'
     ],
 
+    /**
+     * Controlador de la vista principal - modern
+     */
     controller: 'main',
-    viewModel: 'main',
 
-    defaults: {
-        tab: {
-            iconAlign: 'top'
-        },
-        styleHtmlContent: true
+    /**
+     * Configuarciones de la vista
+     */
+    platformConfig: {
+        phone: {
+            controller: 'phone-main'
+        }
     },
 
-    tabBarPosition: 'bottom',
+    /**
+     * Layout de la vista
+     */
+    layout: 'hbox',
 
+    /**
+     * Elementos de la vista
+     */
     items: [
+        /**
+         * Barra de herramientas de la aplicacion
+         */
         {
-            title: 'Home',
-            iconCls: 'x-fa fa-home',
-            layout: 'fit',
-            // The following grid shares a store with the classic version's grid as well!
-            items: [{
-                xtype: 'mainlist'
-            }]
-        },{
-            title: 'Users',
-            iconCls: 'x-fa fa-user',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Groups',
-            iconCls: 'x-fa fa-users',
-            bind: {
-                html: '{loremIpsum}'
-            }
-        },{
-            title: 'Settings',
-            iconCls: 'x-fa fa-cog',
-            bind: {
-                html: '{loremIpsum}'
-            }
+            xtype: 'maintoolbar',
+            docked: 'top',
+            userCls: 'main-toolbar shadow'
+        },
+        /**
+         * Contenedor del arbol de navegacion
+         */
+        {
+            xtype: 'container',
+            userCls: 'main-nav-container',
+            reference: 'navigation',
+            scrollable: true,
+            items: [
+                /**
+                 * Arbol de navegacion de la aplicacion
+                 */
+                {
+                    xtype: 'treelist',
+                    reference: 'navigationTree',
+                    ui: 'navigation',
+                    store: 'NavigationTree',
+                    expanderFirst: false,
+                    expanderOnly: false,
+                    listeners: {
+                        itemclick: 'onNavigationItemClick',
+                        selectionchange: 'onNavigationTreeSelectionChange'
+                    }
+                }
+            ]
+        },
+        /**
+         * Contenedor principal de las vistas de la apliacion
+         */
+        {
+            xtype: 'navigationview',
+            flex: 1,
+            reference: 'mainContainer',
+            userCls: 'main-container',
+            navigationBar: false
         }
     ]
 });

@@ -1,28 +1,36 @@
 /**
- * The main application class. An instance of this class is created by app.js when it
- * calls Ext.application(). This is the ideal place to handle application launch and
- * initialization details.
+ * Inicio de la aplicacion cuando es inciado por un movil
  */
 Ext.define('StockerDashboard.Application', {
     extend: 'Ext.app.Application',
     
+    /**
+     * Nombre de la aplicacion
+     */
     name: 'StockerDashboard',
 
-    stores: [
-        // TODO: add global / shared stores here
-    ],
-    
-    launch: function () {
-        // TODO - Launch the application
-    },
+    /**
+     * Ventana de entrada
+     */
+    defaultToken : 'dashboard',
 
-    onAppUpdate: function () {
-        Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
-            function (choice) {
-                if (choice === 'yes') {
-                    window.location.reload();
-                }
-            }
-        );
-    }
+    /**
+     * Ventana principal
+     */
+    mainView: 'StockerDashboard.view.main.Main',
+
+    /**
+     * Perfiles de entrada
+     */
+    profiles: [
+        'Phone',
+        'Tablet'
+    ],
+
+    /**
+     * Stores compartidados
+     */
+    stores: [
+        'NavigationTree'
+    ]
 });
