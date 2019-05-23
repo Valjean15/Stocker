@@ -50,6 +50,7 @@ Ext.define('StockerDashboard.view.main.MainController', {
             references = me.getReferences();
 
         me.callParent([ view ]);
+        me.logo = references.logo;
         me.navigation = references.navigation;
         me.navigationTree = references.navigationTree;
     },
@@ -118,11 +119,12 @@ Ext.define('StockerDashboard.view.main.MainController', {
         // Si la vista a el panel a buscar no existe, se crea
         if (!item) {
             try {
-                item = Ext.create({
+                item = mainContainer.add({
                     xtype: node.get('viewType'),
                     routeId: destinationId,
                 });
             } catch (error) {
+                console.log(error);
                 return;
             }
         }
@@ -144,9 +146,11 @@ Ext.define('StockerDashboard.view.main.MainController', {
 
         var me = this,
             navigation = me.navigation,
+            logo = me.logo,
             rootEl = me.navigationTree.rootItem.el;
 
         me.navigation.toggleCls(me.collapsedCls);
+        logo.toggleCls(me.collapsedCls);
 
         if (newValue)
         // Restaure el texto y otras decoraciones antes de expandirlas 
@@ -157,6 +161,16 @@ Ext.define('StockerDashboard.view.main.MainController', {
         // mientras estamos colapsados.
         else
             rootEl.setWidth(rootEl.getWidth());
+
+        logo.element.on({
+            transitioned: function() {
+                if (showNavigation)
+                    rootEl.setWidth('');
+                else
+                    navigationTree.setMicro(true);
+            },
+            single: true
+        });
     },
 
     /**

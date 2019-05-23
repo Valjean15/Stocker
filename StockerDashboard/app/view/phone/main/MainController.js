@@ -30,6 +30,10 @@ Ext.define('StockerDashboard.view.phone.main.MainController', {
         me.navigation.getRefOwner = function () {
             return view;
         };
+        
+        // Agregamos el logo del toolbar a la barra de navegacion
+        me.navigation.add(me.logo);
+        me.logo.setDocked('top');
 
         Ext.getBody().appendChild(me.navigation.element);
     },

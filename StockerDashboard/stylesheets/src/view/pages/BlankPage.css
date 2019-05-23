@@ -1,0 +1,27 @@
+/* line 1, ../../../../sass/src/view/pages/BlankPage.scss */
+.blank-page-container {
+  text-align: center;
+  color: #cacaca;
+}
+/* line 4, ../../../../sass/src/view/pages/BlankPage.scss */
+.blank-page-container .fa-outer-class {
+  margin: auto;
+  background-color: #ebebeb;
+  width: 10rem;
+  border-radius: 5rem;
+}
+/* line 9, ../../../../sass/src/view/pages/BlankPage.scss */
+.blank-page-container .fa-outer-class .x-fa:before {
+  line-height: 10rem;
+  font-size: 12rem;
+  color: #cacaca;
+}
+/* line 15, ../../../../sass/src/view/pages/BlankPage.scss */
+.blank-page-container h1 {
+  margin: .75rem;
+  font-size: 2.5rem;
+}
+/* line 19, ../../../../sass/src/view/pages/BlankPage.scss */
+.blank-page-container .blank-page-text {
+  font-size: 1.5rem;
+}

@@ -9,7 +9,7 @@ Ext.application({
     extend: 'StockerDashboard.Application',
 
     requires: [
-        'StockerDashboard.view.main.Main'
+        'StockerDashboard.*'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class

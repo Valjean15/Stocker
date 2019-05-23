@@ -35,6 +35,6 @@ Ext.define('StockerDashboard.profile.Phone', {
     launch: function () {
         // Se utiliza para un reemplazo mas rapido de los estilos
         // para cuando el perfil es telefono
-        Ext.getBody().addCls('phone');
+        //Ext.getBody().addCls('phone');
     }
 });

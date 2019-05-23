@@ -316,13 +316,13 @@
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:560 */
 .x-treelist {
-    background-position: 24px 0%;
+    background-position: 16px 0%;
     overflow: hidden;
     padding: 0 0 0 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:565 */
 .x-big .x-treelist {
-    background-position: 30px 0%;
+    background-position: 24px 0%;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:573 */
 .x-treelist-container,
@@ -403,7 +403,7 @@
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:131 */
 .x-treelist-item-selected > .x-treelist-row {
-    background-color: #d1d1d1;
+    background-color: #ffefbb;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:140 */
 .x-treelist-item-tool {
@@ -440,63 +440,63 @@
 .x-treelist-item-tool {
     color: #35baf6;
     font-size: 16px;
-    width: 24px;
+    width: 16px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:196 */
 .x-big .x-treelist-item-icon,
 .x-big .x-treelist-item-tool {
     font-size: 24px;
-    width: 30px;
+    width: 24px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:203 */
 .x-treelist-item-tool {
-    width: 44px;
+    width: 36px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:207 */
 .x-big .x-treelist-item-tool {
-    width: 50px;
+    width: 44px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:213 */
 .x-treelist-item-expander {
     color: #35baf6;
-    font-size: 14px;
-    width: 14px;
+    font-size: 16px;
+    width: 16px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:217 */
 .x-big .x-treelist-item-expander {
-    font-size: 20px;
+    font-size: 24px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:223 */
 .x-big .x-treelist-item-expander {
-    width: 20px;
+    width: 24px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:229 */
 .x-treelist-item-expander:after {
-    content: "\e903";
+    content: "\f0da";
     font-feature-settings: 'liga';
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:233 */
 .x-treelist-item-expanded > * > * > .x-treelist-item-expander:after {
-    content: "\e901";
+    content: "\f0d7";
     font-feature-settings: 'liga';
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:242 */
 .x-treelist-item-text {
-    color: #000;
-    margin-left: 30px;
-    margin-right: 14px;
+    color: #404040;
+    margin-left: 22px;
+    margin-right: 16px;
     line-height: 32px;
     text-overflow: ellipsis;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:249 */
 .x-big .x-treelist-item-text {
-    margin-left: 36px;
+    margin-left: 30px;
     line-height: 44px;
-    margin-right: 20px;
+    margin-right: 24px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:258 */
 .x-treelist-row {
@@ -513,11 +513,11 @@
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:296 */
 .x-treelist-item-floated > .x-treelist-container {
-    margin-left: -24px;
+    margin-left: -16px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:299 */
 .x-big .x-treelist-item-floated > .x-treelist-container {
-    margin-left: -30px;
+    margin-left: -24px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:305 */
 .x-treelist-item-floated > * > * > .x-treelist-item-text {
@@ -537,20 +537,20 @@
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:320 */
 .x-treelist-item-floated > .x-treelist-row-over > * > .x-treelist-item-text {
-    color: #000;
+    color: #404040;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:333 */
 .x-treelist-item-expanded > .x-treelist-item-expander:after {
-    content: "\e901";
+    content: "\f0d7";
     font-feature-settings: 'liga';
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:338 */
 .x-treelist-item-collapsed > * > .x-treelist-item-expander:after {
-    content: "\e903";
+    content: "\f0da";
     font-feature-settings: 'liga';
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:344 */
@@ -560,7 +560,7 @@
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:348 */
 &.x-treelist-highlight-path .x-treelist-item-over > * > .x-treelist-item-text {
-    color: #000;
+    color: #404040;
     transition: color 0.5s;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:352 */
@@ -575,7 +575,7 @@
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:366 */
 .x-treelist-row-over > * > .x-treelist-item-text {
-    color: #000;
+    color: #404040;
     transition: color 0.5s;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:370 */
@@ -585,28 +585,28 @@
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:377 */
 .x-treelist-expander-first .x-treelist-item-icon {
-    left: 14px;
+    left: 16px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:380 */
 .x-big .x-treelist-expander-first .x-treelist-item-icon {
-    left: 20px;
+    left: 24px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:386 */
 .x-treelist-expander-first .x-treelist-item-text {
-    margin-left: 44px;
+    margin-left: 38px;
     margin-right: 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:389 */
 .x-big .x-treelist-expander-first .x-treelist-item-text {
-    margin-left: 56px;
+    margin-left: 54px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:396 */
 .x-treelist-expander-first .x-treelist-item-hide-icon > * > * > .x-treelist-item-text {
-    margin-left: 20px;
+    margin-left: 22px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:399 */
 .x-big .x-treelist-expander-first .x-treelist-item-hide-icon > * > * > .x-treelist-item-text {
-    margin-left: 26px;
+    margin-left: 30px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/core/sass/src/list/TreeItem.scss:406 */
 .x-treelist-item-hide-icon > * > * > .x-treelist-item-text {
@@ -5848,8 +5848,8 @@ div.x-expandercell {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Component.scss:2 */
 html {
-    font: 400 87.5%/1.25 '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    color: #000;
+    font: 400 81.25%/1.25 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #404040;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Component.scss:6 */
 html.x-big {
@@ -5857,7 +5857,7 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Component.scss:11 */
 .x-font-icon {
-    font-family: 'iOS';
+    font-family: FontAwesome;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins.scss:253 */
 .x-loading-spinner {
@@ -5981,14 +5981,14 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Progress.scss:205 */
 .x-progress {
-    background-color: #eee;
-    min-height: 2px;
+    background-color: #ececec;
+    min-height: 20px;
     color: #fff;
     font-weight: 500;
     font-size: 1rem;
-    font-family: '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
     text-align: center;
-    line-height: 1.42858em;
+    line-height: 1.53847em;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
@@ -5997,19 +5997,19 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Progress.scss:217 */
 .x-big .x-progress {
-    min-height: 2px;
+    min-height: 24px;
     font-size: 1rem;
-    line-height: 1.5em;
+    line-height: 2.13334em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Progress.scss:227 */
 .x-progress .x-progress-bar {
-    min-height: 2px;
+    min-height: 20px;
     background-color: #458fd2;
     background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Progress.scss:230 */
 .x-big .x-progress .x-progress-bar {
-    min-height: 2px;
+    min-height: 24px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Progress.scss:243 */
 .x-progress .x-progress-text-back {
@@ -6018,7 +6018,7 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Mask.scss:1 */
 .x-mask {
     opacity: 0.5;
-    background-color: #dcdcdc;
+    background-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/layout/Default.scss:2 */
 .x-managed-borders .x-docked-top {
@@ -6043,25 +6043,25 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:534 */
 .x-panel .x-anchor-top {
     border-top-width: 0;
-    border-bottom: 0.7em solid #e8e8e8;
+    border-bottom: 0.7em solid #1db2f5;
     top: calc(-0.7em + 1px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:544 */
 .x-panel .x-anchor-bottom {
     border-bottom-width: 0;
-    border-top: 0.7em solid #e8e8e8;
+    border-top: 0.7em solid #1db2f5;
     bottom: calc(-0.7em + 1px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:554 */
 .x-panel .x-anchor-left {
     border-left-width: 0;
-    border-right: 0.7em solid #e8e8e8;
+    border-right: 0.7em solid #1db2f5;
     left: calc(-0.7em + 1px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:564 */
 .x-panel .x-anchor-right {
     border-right-width: 0;
-    border-left: 0.7em solid #e8e8e8;
+    border-left: 0.7em solid #1db2f5;
     right: calc(-0.7em + 1px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:576 */
@@ -6099,35 +6099,35 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:611 */
 .x-panel-inner {
     background-color: #fff;
-    color: #000;
-    border: 1px solid #f5f5f5;
-    font: 400 1rem/1.25 '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #404040;
+    border: 1px solid #b0b0b0;
+    font: 400 1rem/1.25 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:632 */
 .x-panel-header {
     background-color: #35baf6;
     background-image: none;
-    color: #000;
-    padding: 0.6429em;
-    font: 500 1rem/1.2858em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    border: 1px solid #f5f5f5;
+    color: #f0f0f0;
+    padding: 0.75em 0.94em;
+    font: 500 1.23rem/1.25em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    border: 1px solid #35baf6;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:646 */
 .x-big .x-panel-header {
-    padding: 0.625em 0.9375em;
-    font-size: 1rem;
-    line-height: 1.5em;
+    padding: 0.8em 0.75em;
+    font-size: 1.25rem;
+    line-height: 1.2em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:653 */
 .x-panel-header .x-tool {
     width: 1em;
     height: 1em;
     line-height: 1em;
-    font-size: 1.2858em;
+    font-size: 1em;
     opacity: 0.8;
     cursor: pointer;
     margin-left: 0.375em;
-    color: #35baf6;
+    color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:664 */
 .x-panel-header .x-tool:hover {
@@ -6142,7 +6142,7 @@ html.x-big {
     width: 1em;
     height: 1em;
     line-height: 1em;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:684 */
 .x-panel-title .x-panel-title-icon {
@@ -6193,223 +6193,223 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:2 */
 .x-panel-outer-border-l {
-    border-left-color: #f5f5f5 !important;
+    border-left-color: #35baf6 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:6 */
 .x-panel-outer-border-b {
-    border-bottom-color: #f5f5f5 !important;
+    border-bottom-color: #35baf6 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:10 */
 .x-panel-outer-border-bl {
-    border-bottom-color: #f5f5f5 !important;
+    border-bottom-color: #35baf6 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #f5f5f5 !important;
+    border-left-color: #35baf6 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:16 */
 .x-panel-outer-border-r {
-    border-right-color: #f5f5f5 !important;
+    border-right-color: #35baf6 !important;
     border-right-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:20 */
 .x-panel-outer-border-rl {
-    border-right-color: #f5f5f5 !important;
+    border-right-color: #35baf6 !important;
     border-right-width: 1px !important;
-    border-left-color: #f5f5f5 !important;
+    border-left-color: #35baf6 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:26 */
 .x-panel-outer-border-rb {
-    border-right-color: #f5f5f5 !important;
+    border-right-color: #35baf6 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #f5f5f5 !important;
+    border-bottom-color: #35baf6 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:32 */
 .x-panel-outer-border-rbl {
-    border-right-color: #f5f5f5 !important;
+    border-right-color: #35baf6 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #f5f5f5 !important;
+    border-bottom-color: #35baf6 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #f5f5f5 !important;
+    border-left-color: #35baf6 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:40 */
 .x-panel-outer-border-t {
-    border-top-color: #f5f5f5 !important;
+    border-top-color: #35baf6 !important;
     border-top-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:44 */
 .x-panel-outer-border-tl {
-    border-top-color: #f5f5f5 !important;
+    border-top-color: #35baf6 !important;
     border-top-width: 1px !important;
-    border-left-color: #f5f5f5 !important;
+    border-left-color: #35baf6 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:50 */
 .x-panel-outer-border-tb {
-    border-top-color: #f5f5f5 !important;
+    border-top-color: #35baf6 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #f5f5f5 !important;
+    border-bottom-color: #35baf6 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:56 */
 .x-panel-outer-border-tbl {
-    border-top-color: #f5f5f5 !important;
+    border-top-color: #35baf6 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #f5f5f5 !important;
+    border-bottom-color: #35baf6 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #f5f5f5 !important;
+    border-left-color: #35baf6 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:64 */
 .x-panel-outer-border-tr {
-    border-top-color: #f5f5f5 !important;
+    border-top-color: #35baf6 !important;
     border-top-width: 1px !important;
-    border-right-color: #f5f5f5 !important;
+    border-right-color: #35baf6 !important;
     border-right-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:70 */
 .x-panel-outer-border-trl {
-    border-top-color: #f5f5f5 !important;
+    border-top-color: #35baf6 !important;
     border-top-width: 1px !important;
-    border-right-color: #f5f5f5 !important;
+    border-right-color: #35baf6 !important;
     border-right-width: 1px !important;
-    border-left-color: #f5f5f5 !important;
+    border-left-color: #35baf6 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:78 */
 .x-panel-outer-border-trb {
-    border-top-color: #f5f5f5 !important;
+    border-top-color: #35baf6 !important;
     border-top-width: 1px !important;
-    border-right-color: #f5f5f5 !important;
+    border-right-color: #35baf6 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #f5f5f5 !important;
+    border-bottom-color: #35baf6 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:86 */
 .x-panel-outer-border-trbl {
-    border-color: #f5f5f5 !important;
+    border-color: #35baf6 !important;
     border-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:611 */
 .x-panel-inner-light {
-    border-color: #dcdcdc;
+    border-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:632 */
 .x-panel-header-light {
     background-color: #fff;
     background-image: none;
-    color: #919191;
-    border-color: #dcdcdc;
+    color: #606060;
+    border-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:653 */
 .x-panel-header-light .x-tool {
-    color: #bbb;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:2 */
 .x-panel-light-outer-border-l {
-    border-left-color: #dcdcdc !important;
+    border-left-color: #d0d0d0 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:6 */
 .x-panel-light-outer-border-b {
-    border-bottom-color: #dcdcdc !important;
+    border-bottom-color: #d0d0d0 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:10 */
 .x-panel-light-outer-border-bl {
-    border-bottom-color: #dcdcdc !important;
+    border-bottom-color: #d0d0d0 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #dcdcdc !important;
+    border-left-color: #d0d0d0 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:16 */
 .x-panel-light-outer-border-r {
-    border-right-color: #dcdcdc !important;
+    border-right-color: #d0d0d0 !important;
     border-right-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:20 */
 .x-panel-light-outer-border-rl {
-    border-right-color: #dcdcdc !important;
+    border-right-color: #d0d0d0 !important;
     border-right-width: 1px !important;
-    border-left-color: #dcdcdc !important;
+    border-left-color: #d0d0d0 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:26 */
 .x-panel-light-outer-border-rb {
-    border-right-color: #dcdcdc !important;
+    border-right-color: #d0d0d0 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #dcdcdc !important;
+    border-bottom-color: #d0d0d0 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:32 */
 .x-panel-light-outer-border-rbl {
-    border-right-color: #dcdcdc !important;
+    border-right-color: #d0d0d0 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #dcdcdc !important;
+    border-bottom-color: #d0d0d0 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #dcdcdc !important;
+    border-left-color: #d0d0d0 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:40 */
 .x-panel-light-outer-border-t {
-    border-top-color: #dcdcdc !important;
+    border-top-color: #d0d0d0 !important;
     border-top-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:44 */
 .x-panel-light-outer-border-tl {
-    border-top-color: #dcdcdc !important;
+    border-top-color: #d0d0d0 !important;
     border-top-width: 1px !important;
-    border-left-color: #dcdcdc !important;
+    border-left-color: #d0d0d0 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:50 */
 .x-panel-light-outer-border-tb {
-    border-top-color: #dcdcdc !important;
+    border-top-color: #d0d0d0 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #dcdcdc !important;
+    border-bottom-color: #d0d0d0 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:56 */
 .x-panel-light-outer-border-tbl {
-    border-top-color: #dcdcdc !important;
+    border-top-color: #d0d0d0 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #dcdcdc !important;
+    border-bottom-color: #d0d0d0 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #dcdcdc !important;
+    border-left-color: #d0d0d0 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:64 */
 .x-panel-light-outer-border-tr {
-    border-top-color: #dcdcdc !important;
+    border-top-color: #d0d0d0 !important;
     border-top-width: 1px !important;
-    border-right-color: #dcdcdc !important;
+    border-right-color: #d0d0d0 !important;
     border-right-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:70 */
 .x-panel-light-outer-border-trl {
-    border-top-color: #dcdcdc !important;
+    border-top-color: #d0d0d0 !important;
     border-top-width: 1px !important;
-    border-right-color: #dcdcdc !important;
+    border-right-color: #d0d0d0 !important;
     border-right-width: 1px !important;
-    border-left-color: #dcdcdc !important;
+    border-left-color: #d0d0d0 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:78 */
 .x-panel-light-outer-border-trb {
-    border-top-color: #dcdcdc !important;
+    border-top-color: #d0d0d0 !important;
     border-top-width: 1px !important;
-    border-right-color: #dcdcdc !important;
+    border-right-color: #d0d0d0 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #dcdcdc !important;
+    border-bottom-color: #d0d0d0 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:86 */
 .x-panel-light-outer-border-trbl {
-    border-color: #dcdcdc !important;
+    border-color: #d0d0d0 !important;
     border-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Sheet.scss:1 */
@@ -6418,7 +6418,7 @@ html.x-big {
 .x-sheet-action {
     padding: 0.6em;
     background-color: #fff;
-    border-top: 1px solid #dcdcdc;
+    border-top: 1px solid #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Sheet.scss:11 */
 .x-sheet-inner > .x-button,
@@ -6432,58 +6432,49 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:650 */
 .x-button {
-    color: #35baf6;
-    padding: 0.2143em 0;
-    font: 400 1rem/1.1429em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    border: 1px solid transparent;
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
-    -ms-border-radius: 0.5em;
-    -o-border-radius: 0.5em;
-    border-radius: 0.5em;
-    background-color: transparent;
+    color: #606060;
+    padding: 0.5385em 0.6em;
+    font: 500 1rem/1.2308em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    border: 1px solid #e4e4e4;
+    background-color: #f6f6f6;
     background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:662 */
 .x-big .x-button {
-    padding: 0.3125em 0;
-    line-height: 1.25em;
+    padding: 0.625em 0.6em;
+    line-height: 1.375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:672 */
 .x-button.x-button-pressing,
 .x-button.x-button-pressed {
-    color: #cdeefd;
-    background-color: transparent;
+    color: #606060;
+    background-color: #d7d7d7;
     background-image: none;
-    border-color: transparent;
+    border-color: #c3c3c3;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button .x-button-icon {
-    width: 1.14286em;
-    height: 1.14286em;
-    color: #35baf6;
+    width: 1.2308em;
+    height: 1.2308em;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-button .x-button-icon:before {
-    font-size: 1.14286em;
+    font-size: 1.2308em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
 .x-big .x-button .x-button-icon:before {
-    font-size: 1.5em;
+    font-size: 1.375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:685 */
 .x-big .x-button .x-button-icon {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.375em;
+    height: 1.375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:696 */
 .x-button.x-button-pressing .x-button-icon,
 .x-button.x-button-pressed .x-button-icon {
-    color: #cdeefd;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:701 */
-.x-button.x-disabled .x-button-icon {
-    color: #bbb;
+    color: #606060;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:705 */
 .x-button.x-iconalign-left .x-button-icon {
@@ -6503,28 +6494,27 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:745 */
 .x-button .x-button-label {
-    min-height: 1.1429em;
+    min-height: 1.2308em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:762 */
 .x-button.x-iconalign-right > .x-button-label {
-    padding-left: calc(1.14286em + 0.6em);
+    padding-left: calc(1.2308em + 0.6em);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:766 */
 .x-button.x-iconalign-left > .x-button-label {
-    padding-right: calc(1.14286em + 0.6em);
+    padding-right: calc(1.2308em + 0.6em);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:784 */
 .x-big .x-button.x-iconalign-right > .x-button-label {
-    padding-left: calc(1.5em + 0.6em);
+    padding-left: calc(1.375em + 0.6em);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:790 */
 .x-big .x-button.x-iconalign-left > .x-button-label {
-    padding-right: calc(1.5em + 0.6em);
+    padding-right: calc(1.375em + 0.6em);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:796 */
 .x-button.x-disabled {
     opacity: 0.5;
-    color: #bbb;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:801 */
 .x-button .x-badge {
@@ -6547,72 +6537,100 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:650 */
 .x-button-action {
-    font-weight: 500;
+    color: #f0f0f0;
+    border-color: #0eadf4;
+    background-color: #35baf6;
+    background-image: none;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:672 */
+.x-button-action.x-button-pressing,
+.x-button-action.x-button-pressed {
+    color: #fff;
+    background-color: #0aa0e4;
+    background-image: none;
+    border-color: #0885bd;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
+.x-button-action .x-button-icon {
+    color: #f0f0f0;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:696 */
+.x-button-action.x-button-pressing .x-button-icon,
+.x-button-action.x-button-pressed .x-button-icon {
+    color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:650 */
 .x-button-alt {
-    color: #fff;
-    padding: 0.2143em 0.714em;
-    border-color: #007aff;
-    background-color: #007aff;
+    color: #f0f0f0;
+    border-width: 0;
+    border-color: #0eadf4;
+    background-color: #35baf6;
     background-image: none;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:662 */
-.x-big .x-button-alt {
-    padding: 0.3125em 0.9375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:672 */
 .x-button-alt.x-button-pressing,
 .x-button-alt.x-button-pressed {
-    color: #011017;
-    background-color: #cdeefd;
+    color: #fff;
+    background-color: #0aa0e4;
     background-image: none;
-    border-color: #cdeefd;
+    border-color: #0885bd;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-alt .x-button-icon {
-    color: #fff;
+    color: #f0f0f0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:696 */
 .x-button-alt.x-button-pressing .x-button-icon,
 .x-button-alt.x-button-pressed .x-button-icon {
-    color: #011017;
+    color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:650 */
 .x-button-confirm {
-    color: #53d769;
+    color: #fff;
+    border-color: #507003;
+    background-color: #6c9804;
+    background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:672 */
 .x-button-confirm.x-button-pressing,
 .x-button-confirm.x-button-pressed {
-    color: #cbf3d2;
+    color: #fff;
+    background-color: #425c02;
+    background-image: none;
+    border-color: #263501;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-confirm .x-button-icon {
-    color: #53d769;
+    color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:696 */
 .x-button-confirm.x-button-pressing .x-button-icon,
 .x-button-confirm.x-button-pressed .x-button-icon {
-    color: #cbf3d2;
+    color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:650 */
 .x-button-decline {
-    color: #fc3e39;
+    color: #fff;
+    border-color: #6d1d03;
+    background-color: #952804;
+    background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:672 */
 .x-button-decline.x-button-pressing,
 .x-button-decline.x-button-pressed {
-    color: #fec5c4;
+    color: #fff;
+    background-color: #5a1802;
+    background-image: none;
+    border-color: #320d01;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-decline .x-button-icon {
-    color: #fc3e39;
+    color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:696 */
 .x-button-decline.x-button-pressing .x-button-icon,
 .x-button-decline.x-button-pressed .x-button-icon {
-    color: #fec5c4;
+    color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:650 */
 .x-button-round {
@@ -6642,68 +6660,34 @@ html.x-big {
     background-color: transparent;
     background-image: none;
 }
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:650 */
-.x-button-segmented {
-    color: #35baf6;
-    padding: 0.2143em 0.714em;
-    border-color: #35baf6;
-    -webkit-border-radius: 0.3rem;
-    -moz-border-radius: 0.3rem;
-    -ms-border-radius: 0.3rem;
-    -o-border-radius: 0.3rem;
-    border-radius: 0.3rem;
-    background-color: #fff;
-    background-image: none;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:662 */
-.x-big .x-button-segmented {
-    padding: 0.3125em 0.9375em;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:672 */
-.x-button-segmented.x-button-pressing,
-.x-button-segmented.x-button-pressed {
-    color: #fff;
-    background-color: #35baf6;
-    background-image: none;
-    border-color: #35baf6;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
-.x-button-segmented .x-button-icon {
-    color: #35baf6;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:696 */
-.x-button-segmented.x-button-pressing .x-button-icon,
-.x-button-segmented.x-button-pressed .x-button-icon {
-    color: #fff;
-}
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Menu.scss:1 */
 .x-menu {
-    padding: 0;
+    padding: 0.6em;
     background-color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Menu.scss:5 */
 .x-menu.x-top {
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: #dcdcdc;
+    border-bottom-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Menu.scss:9 */
 .x-menu.x-right {
     border-left-width: 1px;
     border-left-style: solid;
-    border-left-color: #dcdcdc;
+    border-left-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Menu.scss:13 */
 .x-menu.x-bottom {
     border-top-width: 1px;
     border-top-style: solid;
-    border-top-color: #dcdcdc;
+    border-top-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Menu.scss:17 */
 .x-menu.x-left {
     border-right-width: 1px;
     border-right-style: solid;
-    border-right-color: #dcdcdc;
+    border-right-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Menu.scss:21 */
 .x-menu .x-menu-inner {
@@ -6719,14 +6703,14 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Field.scss:294 */
 .x-field .x-label-el {
-    color: #000;
-    padding: 0.2143em 0.7143em;
-    font: 500 1rem/1.1429em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #404040;
+    padding: 0.5385em 0.6em 0.5385em 0;
+    font: 500 1rem/1.23077em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Field.scss:302 */
 .x-big .x-field .x-label-el {
-    padding: 0.3125em 0.9375em;
-    line-height: 1.25em;
+    padding: 0.625em 0.6em 0.625em 0;
+    line-height: 1.375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Field.scss:333 */
 .x-field.x-disabled .x-label-el {
@@ -6739,14 +6723,14 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Field.scss:32 */
 .x-field.x-layout-auto-item,
 .x-field.x-layout-vbox-item {
-    margin-top: 0.35715em;
-    padding-bottom: 0.35715em;
+    margin-top: 0.385em;
+    padding-bottom: 0.385em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Field.scss:43 */
 .x-big .x-field.x-layout-auto-item,
 .x-big .x-field.x-layout-vbox-item {
-    margin-top: 0.4375em;
-    padding-bottom: 0.4375em;
+    margin-top: 0.3125em;
+    padding-bottom: 0.3125em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Field.scss:49 */
 .x-field.x-layout-auto-item:first-child,
@@ -6760,40 +6744,39 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/trigger/Trigger.scss:191 */
 .x-trigger {
-    width: 1.57143em;
+    width: 2.3077em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/trigger/Trigger.scss:196 */
 .x-big .x-trigger {
-    width: 1.875em;
+    width: 2.625em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/trigger/Trigger.scss:201 */
 .x-trigger .x-icon-el {
-    height: 1.14286em;
-    width: 1.14286em;
-    color: #35baf6;
+    height: 1.23077em;
+    width: 1.23077em;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-trigger .x-icon-el:before {
-    content: "\e901";
-    font-family: iOS;
-    font-size: 1.14286em;
+    content: "\f0d7";
+    font-size: 1.23077em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
 .x-big .x-trigger .x-icon-el:before {
-    font-size: 1.5em;
+    font-size: 1.33334em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/trigger/Trigger.scss:215 */
 .x-big .x-trigger .x-icon-el {
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.33334em;
+    width: 1.33334em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/trigger/Trigger.scss:226 */
 .x-trigger.x-interactive:hover .x-icon-el {
-    color: #31abe2;
+    color: #858585;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/trigger/Trigger.scss:235 */
 .x-trigger.x-interactive:active .x-icon-el {
-    color: #2d9ed1;
+    color: #7b7b7b;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/trigger/Trigger.scss:21 */
 .x-trigger.x-grouped {
@@ -6830,37 +6813,40 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-cleartrigger .x-icon-el:before {
-    content: "\e90c";
-    font-family: 'iOS';
+    content: "\f057";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Text.scss:320 */
 .x-textfield .x-input {
-    font: 400 1rem/1.1429em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    border: 1px solid #dcdcdc;
+    font: 400 1rem/1.23077em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    border: 1px solid #d0d0d0;
     background-color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Text.scss:326 */
 .x-textfield .x-input-el {
-    color: #000;
-    padding: 0.2143em 0.7143em;
-    line-height: 1.1429em;
+    color: #404040;
+    padding: 0.5385em 0.4em;
+    line-height: 1.23077em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Text.scss:333 */
 .x-big .x-textfield .x-input-el {
-    padding: 0.3125em 0.9375em;
-    line-height: 1.25em;
+    padding: 0.625em 0.4em;
+    line-height: 1.375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Text.scss:343 */
 .x-textfield .x-input-el::-webkit-input-placeholder {
-    color: #cacaca;
+    color: #b0b0b0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Text.scss:346 */
 .x-textfield .x-input-el::-moz-placeholder {
-    color: #cacaca;
+    color: #b0b0b0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Text.scss:349 */
 .x-textfield .x-input-el:-ms-input-placeholder {
-    color: #cacaca;
+    color: #b0b0b0;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Text.scss:355 */
+.x-textfield.x-focused .x-input {
+    border-color: #3892d4;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Text.scss:366 */
 .x-textfield.x-invalid .x-input {
@@ -6876,14 +6862,9 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/MessageBox.scss:5 */
 .x-msgbox {
-    border: 2px solid #f5f5f5;
+    border: 2px solid #35baf6;
     background-color: #fff;
     border-width: 2px !important;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
-    border-radius: 0.5rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/MessageBox.scss:23 */
 .x-msgbox .x-toolbar {
@@ -6895,16 +6876,16 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/MessageBox.scss:32 */
 .x-msgbox-title {
-    padding-top: calc(0.4286em - 2px);
+    padding-top: calc(0.4616em - 2px);
     background-color: #35baf6;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/MessageBox.scss:36 */
 .x-big .x-msgbox-title {
-    padding-top: calc(0 - 2px);
+    padding-top: calc(0.375em - 2px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/MessageBox.scss:42 */
 .x-msgbox-title .x-title {
-    color: #fff;
+    color: #f0f0f0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/MessageBox.scss:47 */
 .x-msgbox-inner {
@@ -6912,7 +6893,7 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/MessageBox.scss:51 */
 .x-msgbox-buttons {
-    background-color: #eee;
+    background-color: #ececec;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/MessageBox.scss:56 */
 .x-msgbox .x-field {
@@ -6976,11 +6957,11 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:318 */
 .x-titlebar {
-    background-color: #f5f5f5;
+    background-color: #35baf6;
     background-image: none;
-    border: 1px solid #dcdcdc;
-    font: 500 1rem/1.25em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    color: #000;
+    border: 1px solid #b0b0b0;
+    font: 500 1rem/1.25em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:333 */
 .x-titlebar .x-titlebar-inner.x-horizontal > * {
@@ -7008,10 +6989,10 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:364 */
 .x-titlebar .x-title {
-    color: #000;
+    color: #fff;
     font-weight: 500;
-    font-size: 1rem;
-    font-family: '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-size: 1.23rem;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:374 */
 .x-big .x-titlebar .x-title {
@@ -7019,13 +7000,13 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:382 */
 .x-titlebar-inner {
-    padding: 0.4286em 0.714em;
-    min-height: 2.5715em;
+    padding: 0.4616em 0.5em;
+    min-height: 3.26em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:387 */
 .x-big .x-titlebar-inner {
-    padding: 0 0.625em;
-    min-height: 2.75em;
+    padding: 0.375em 0.67em;
+    min-height: 3.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Toast.scss:5 */
 .x-toast {
@@ -7033,26 +7014,31 @@ html.x-big {
  * @class Ext.Toast
  */
     margin: 0.5em;
+    border-width: 0.15em solid #35baf6;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 0.5em;
+    -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0.1em 0.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Toast.scss:10 */
 .x-toast .x-toast-inner {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.35715rem;
+    color: #f0f0f0;
+    background-color: #747474;
+    line-height: 1.4em;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    padding: 6px 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/Toast.scss:18 */
 .x-big .x-toast .x-toast-inner {
-    font-size: 1rem;
-    font-family: '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    padding: 0.625rem;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    padding: 6px 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:318 */
 .x-toolbar {
-    background-color: #f5f5f5;
+    background-color: #fff;
     background-image: none;
-    border: 1px solid #dcdcdc;
-    font: 500 1rem/1.25em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    color: #000;
+    border: 1px solid #b0b0b0;
+    font: 500 1rem/1.25em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #404040;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:333 */
 .x-toolbar .x-toolbar-inner.x-horizontal > * {
@@ -7060,7 +7046,7 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:337 */
 .x-big .x-toolbar .x-toolbar-inner.x-horizontal > * {
-    margin-right: 0.4rem;
+    margin-right: 0.3rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:342 */
 .x-toolbar .x-toolbar-inner.x-horizontal > *:last-child {
@@ -7080,10 +7066,10 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:364 */
 .x-toolbar .x-title {
-    color: #000;
+    color: #606060;
     font-weight: 500;
-    font-size: 1rem;
-    font-family: '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-size: 1.23rem;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:374 */
 .x-big .x-toolbar .x-title {
@@ -7091,13 +7077,13 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:382 */
 .x-toolbar-inner {
-    padding: 0.4286em 0.714em;
-    min-height: 2.5715em;
+    padding: 0.4616em 0.5em;
+    min-height: 3.26em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:387 */
 .x-big .x-toolbar-inner {
-    padding: 0 0.625em;
-    min-height: 2.75em;
+    padding: 0.375em 0.67em;
+    min-height: 3.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/carousel/Carousel.scss:5 */
 .x-carousel-indicator span {
@@ -7123,22 +7109,22 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/carousel/Carousel.scss:53 */
 .x-carousel-indicator-light span {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
     background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/carousel/Carousel.scss:56 */
 .x-carousel-indicator-light span.x-carousel-indicator-active {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
     background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/carousel/Carousel.scss:53 */
 .x-carousel-indicator-dark span {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/carousel/Carousel.scss:56 */
 .x-carousel-indicator-dark span.x-carousel-indicator-active {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
     background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/DataView.scss:117 */
@@ -7147,8 +7133,8 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/DataView.scss:120 */
 .x-dataview .x-empty-text {
-    color: #919191;
-    font: 400 1rem/1.2 '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #606060;
+    font: 400 1rem/1.2 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
     padding: 1em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/DataView.scss:126 */
@@ -7157,12 +7143,16 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/IndexBar.scss:308 */
 .x-indexbar {
-    color: #35baf6;
+    color: #2a95c5;
     border-radius: 1.15rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/IndexBar.scss:315 */
 .x-big .x-indexbar {
     font-size: 0.8rem;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/IndexBar.scss:321 */
+.x-indexbar.x-pressed {
+    background-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/IndexBar.scss:326 */
 .x-indexbar.x-vertical {
@@ -7179,7 +7169,7 @@ html.x-big {
 .x-indexbar .x-indexbar-item {
     font-weight: 500;
     font-size: 0.77rem;
-    font-family: '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/IndexBar.scss:348 */
 .x-indexbar.x-horizontal {
@@ -7200,39 +7190,57 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ItemHeader.scss:183 */
 .x-itemheader {
-    color: #000;
-    background-color: #eee;
-    font: 500 1rem/1.2858em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    padding: 0.1429em 0.714em;
+    color: #606060;
+    background-color: #fff;
+    font: 500 1rem/1.2308em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    padding: 0.6154em 0.77em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ItemHeader.scss:190 */
 .x-big .x-itemheader {
     line-height: 1.25em;
-    padding: 0.25em 0.9375em;
+    padding: 0.75em 0.9735em;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ItemHeader.scss:205 */
+.x-itemheader,
+.x-itemheader + div.x-group-first.x-listitem {
+    border-top: 1px solid #b0b0b0;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ItemHeader.scss:214 */
+.x-itemheader.x-pinned {
+    border-bottom: 1px solid #b0b0b0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:417 */
 .x-listitem {
-    font: 400 1rem/1.2858em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    color: #000;
+    font: 400 1rem/1.2308em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #404040;
     background-color: #fff;
-    border-top: 1px solid #e8e8e8;
+    border-top: 1px solid #e9e9e9;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:529 */
 .x-listitem.x-last {
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e9e9e9;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:533 */
 .x-listitem.x-odd {
-    background-color: #f5f5f5;
+    background-color: #f6f6f6;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:537 */
+.x-listitem.x-hovered {
+    background-color: #e6f1f6;
+    border-color: #dbe5ea;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:542 */
+.x-listitem.x-hovered + .x-listitem {
+    border-top-color: #dbe5ea;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:550 */
 .x-listitem.x-listitem.x-selected {
-    background-color: #d1d1d1;
-    border-color: #d1d1d1;
+    background-color: #ffefbb;
+    border-color: #f2e3b2;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:556 */
 .x-listitem.x-selected + .x-listitem {
-    border-top-color: #d1d1d1;
+    border-top-color: #f2e3b2;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:440 */
 .x-big .x-listitem {
@@ -7240,7 +7248,7 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:447 */
 .x-listitem-body {
-    padding: 0.5em 0.714em;
+    padding: 0.6154em 0.77em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:451 */
 .x-big .x-listitem-body {
@@ -7257,24 +7265,23 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:466 */
 .x-listitem-disclosure .x-icon-el {
-    color: #bbb;
-    height: 0.875em;
-    width: 0.875em;
+    color: #919191;
+    height: 1.23em;
+    width: 1.23em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/dataview/ListItem.scss:480 */
 .x-big .x-listitem-disclosure .x-icon-el {
-    height: 0.875em;
-    width: 0.875em;
+    height: 2em;
+    width: 2em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-listitem-disclosure .x-icon-el:before {
-    content: "\e903";
-    font-family: iOS;
-    font-size: 0.875em;
+    content: "\f0a9";
+    font-size: 1.23em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
 .x-big .x-listitem-disclosure .x-icon-el:before {
-    font-size: 0.875em;
+    font-size: 2em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:530 */
 .x-panel-tooltip .x-anchor {
@@ -7283,26 +7290,26 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:534 */
 .x-panel-tooltip .x-anchor-top {
     border-top-width: 0;
-    border-bottom: 0.65em solid #aeaeae;
-    top: calc(-0.65em + 1px);
+    border-bottom: 0.7em solid #848484;
+    top: calc(-0.7em + 1px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:544 */
 .x-panel-tooltip .x-anchor-bottom {
     border-bottom-width: 0;
-    border-top: 0.65em solid #aeaeae;
-    bottom: calc(-0.65em + 1px);
+    border-top: 0.7em solid #848484;
+    bottom: calc(-0.7em + 1px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:554 */
 .x-panel-tooltip .x-anchor-left {
     border-left-width: 0;
-    border-right: 0.65em solid #aeaeae;
-    left: calc(-0.65em + 1px);
+    border-right: 0.7em solid #848484;
+    left: calc(-0.7em + 1px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:564 */
 .x-panel-tooltip .x-anchor-right {
     border-right-width: 0;
-    border-left: 0.65em solid #aeaeae;
-    right: calc(-0.65em + 1px);
+    border-left: 0.7em solid #848484;
+    right: calc(-0.7em + 1px);
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:576 */
 .x-panel-tooltip .x-anchor:after {
@@ -7311,186 +7318,184 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:580 */
 .x-panel-tooltip .x-anchor-top:after {
     border-top-width: 0;
-    border-bottom: 0.65em solid #fff;
+    border-bottom: 0.7em solid #747474;
     left: calc(-0.8155em + 1px);
     top: 1px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:587 */
 .x-panel-tooltip .x-anchor-bottom:after {
     border-bottom-width: 0;
-    border-top: 0.65em solid #fff;
+    border-top: 0.7em solid #747474;
     left: calc(-0.8155em + 1px);
     bottom: 1px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:594 */
 .x-panel-tooltip .x-anchor-left:after {
     border-left-width: 0;
-    border-right: 0.65em solid #fff;
+    border-right: 0.7em solid #747474;
     top: calc(-0.8155em + 1px);
     left: 1px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:601 */
 .x-panel-tooltip .x-anchor-right:after {
     border-right-width: 0;
-    border-left: 0.65em solid #fff;
+    border-left: 0.7em solid #747474;
     top: calc(-0.8155em + 1px);
     right: 1px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:611 */
 .x-panel-inner-tooltip {
-    padding: 8px;
-    background-color: #fff;
-    color: #000;
-    border-color: #bbb;
+    padding: 6px 8px;
+    background-color: #747474;
+    color: #f0f0f0;
+    border-color: #919191;
     font-weight: normal;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:632 */
 .x-panel-header-tooltip {
-    background-color: #fff;
+    background-color: #747474;
     background-image: none;
-    color: #000;
-    padding: 8px 8px 0 8px;
+    color: #f0f0f0;
+    padding: 3px 3px 0 3px;
     font-weight: bold;
-    border-color: #bbb;
+    border-color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Panel.scss:653 */
 .x-panel-header-tooltip .x-tool {
     margin-left: 4px;
+    color: #f0f0f0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:2 */
 .x-panel-tooltip-outer-border-l {
-    border-left-color: #bbb !important;
+    border-left-color: #919191 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:6 */
 .x-panel-tooltip-outer-border-b {
-    border-bottom-color: #bbb !important;
+    border-bottom-color: #919191 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:10 */
 .x-panel-tooltip-outer-border-bl {
-    border-bottom-color: #bbb !important;
+    border-bottom-color: #919191 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #bbb !important;
+    border-left-color: #919191 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:16 */
 .x-panel-tooltip-outer-border-r {
-    border-right-color: #bbb !important;
+    border-right-color: #919191 !important;
     border-right-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:20 */
 .x-panel-tooltip-outer-border-rl {
-    border-right-color: #bbb !important;
+    border-right-color: #919191 !important;
     border-right-width: 1px !important;
-    border-left-color: #bbb !important;
+    border-left-color: #919191 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:26 */
 .x-panel-tooltip-outer-border-rb {
-    border-right-color: #bbb !important;
+    border-right-color: #919191 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #bbb !important;
+    border-bottom-color: #919191 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:32 */
 .x-panel-tooltip-outer-border-rbl {
-    border-right-color: #bbb !important;
+    border-right-color: #919191 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #bbb !important;
+    border-bottom-color: #919191 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #bbb !important;
+    border-left-color: #919191 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:40 */
 .x-panel-tooltip-outer-border-t {
-    border-top-color: #bbb !important;
+    border-top-color: #919191 !important;
     border-top-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:44 */
 .x-panel-tooltip-outer-border-tl {
-    border-top-color: #bbb !important;
+    border-top-color: #919191 !important;
     border-top-width: 1px !important;
-    border-left-color: #bbb !important;
+    border-left-color: #919191 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:50 */
 .x-panel-tooltip-outer-border-tb {
-    border-top-color: #bbb !important;
+    border-top-color: #919191 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #bbb !important;
+    border-bottom-color: #919191 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:56 */
 .x-panel-tooltip-outer-border-tbl {
-    border-top-color: #bbb !important;
+    border-top-color: #919191 !important;
     border-top-width: 1px !important;
-    border-bottom-color: #bbb !important;
+    border-bottom-color: #919191 !important;
     border-bottom-width: 1px !important;
-    border-left-color: #bbb !important;
+    border-left-color: #919191 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:64 */
 .x-panel-tooltip-outer-border-tr {
-    border-top-color: #bbb !important;
+    border-top-color: #919191 !important;
     border-top-width: 1px !important;
-    border-right-color: #bbb !important;
+    border-right-color: #919191 !important;
     border-right-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:70 */
 .x-panel-tooltip-outer-border-trl {
-    border-top-color: #bbb !important;
+    border-top-color: #919191 !important;
     border-top-width: 1px !important;
-    border-right-color: #bbb !important;
+    border-right-color: #919191 !important;
     border-right-width: 1px !important;
-    border-left-color: #bbb !important;
+    border-left-color: #919191 !important;
     border-left-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:78 */
 .x-panel-tooltip-outer-border-trb {
-    border-top-color: #bbb !important;
+    border-top-color: #919191 !important;
     border-top-width: 1px !important;
-    border-right-color: #bbb !important;
+    border-right-color: #919191 !important;
     border-right-width: 1px !important;
-    border-bottom-color: #bbb !important;
+    border-bottom-color: #919191 !important;
     border-bottom-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:86 */
 .x-panel-tooltip-outer-border-trbl {
-    border-color: #bbb !important;
+    border-color: #919191 !important;
     border-width: 1px !important;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Checkbox.scss:133 */
 .x-checkboxfield .x-input {
-    height: 1.57143rem;
-    width: 1.57143rem;
-    line-height: 1.57143rem;
-    color: #35baf6;
+    height: 1.3847rem;
+    width: 1.3847rem;
+    line-height: 1.3847rem;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/Checkbox.scss:141 */
 .x-big .x-checkboxfield .x-input {
-    height: 1.875rem;
-    width: 1.875rem;
+    height: 1.375rem;
+    width: 1.375rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-checkboxfield .x-input:before {
-    content: "\e908";
-    font-family: iOS;
-    font-size: 1.14286rem;
+    content: "\f096";
+    font-size: 1.3847rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
 .x-big .x-checkboxfield .x-input:before {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-checkboxfield.x-checked .x-input:before {
-    content: "\e907";
-    font-family: iOS;
+    content: "\f046";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-datetrigger .x-icon-el:before {
-    content: "\e906";
-    font-family: 'iOS';
+    content: "\f073";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/picker/Picker.scss:6 */
 .x-picker .x-dataview {
@@ -7511,7 +7516,7 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/picker/Picker.scss:20 */
 .x-picker-bar {
     height: 2.46em;
-    border: 1px solid #dcdcdc;
+    background-color: #ffefbb;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/picker/Picker.scss:26 */
 .x-big .x-picker-bar {
@@ -7524,15 +7529,15 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/picker/Picker.scss:38 */
 .x-picker-slot-title {
     height: 1.5em;
-    color: #000;
+    color: #606060;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: #dcdcdc;
+    border-bottom-color: #d0d0d0;
     padding: 0.2em 1.02em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/picker/Picker.scss:49 */
 .x-picker-slot-title > div {
-    color: #000;
+    color: #606060;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/picker/Picker.scss:55 */
 .x-picker-slot .x-dataview-item {
@@ -7540,11 +7545,10 @@ html.x-big {
     height: 2.46em;
     line-height: 2.46em;
     padding: 0 0.6em;
-    color: #bbb;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/picker/Picker.scss:71 */
 .x-picker-slot .x-dataview-item.x-selected {
-    color: #000;
+    font-weight: 500;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/picker/Picker.scss:78 */
 .x-big .x-picker-slot .x-dataview-item {
@@ -7553,23 +7557,19 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-revealtrigger .x-icon-el:before {
-    content: "\e911";
-    font-family: 'iOS';
+    content: "\f06e";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-radiofield .x-input:before {
-    content: "\e923";
-    font-family: iOS;
+    content: "\f10c";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-radiofield.x-checked .x-input:before {
-    content: "\e922";
-    font-family: iOS;
+    content: "\f192";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-searchtrigger .x-icon-el:before {
-    content: "\e92a";
-    font-family: 'iOS';
+    content: "\f002";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Select.scss:6 */
 .x-selectfield-overlay .x-list-item-label {
@@ -7584,186 +7584,170 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:137 */
 .x-selectfield-overlay .x-listitem.x-selected .x-list-label:after {
-    content: "\e90b";
+    content: "\f00c";
     font-feature-settings: 'liga';
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Select.scss:14 */
 .x-selectfield-overlay .x-listitem.x-selected .x-list-label:after {
-    color: #35baf6;
+    color: #404040;
     position: absolute;
     right: 0.6em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:228 */
 .x-thumb {
-    height: 1.4286rem;
-    width: 1.4286rem;
-    background-color: #fff;
-    border-radius: 0.7143rem;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: -0.7143rem;
-    border: 1px solid #dcdcdc;
+    height: 1.5385rem;
+    width: 1.5385rem;
+    background-color: #f6f6f6;
+    margin-top: -0.76925rem;
+    border: 1px solid #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:242 */
 .x-big .x-thumb {
-    height: 1.75rem;
-    width: 1.75rem;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
-    margin-top: -0.875rem;
-    -webkit-border-radius: 0.875rem;
-    -moz-border-radius: 0.875rem;
-    -ms-border-radius: 0.875rem;
-    -o-border-radius: 0.875rem;
-    border-radius: 0.875rem;
+    height: 1.875rem;
+    width: 1.875rem;
+    margin-top: -0.9375rem;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:251 */
+.x-thumb .x-icon-el {
+    color: #d0d0d0;
+    size: 0.9231rem;
+    size-big: 1.2rem;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
+.x-thumb .x-icon-el:before {
+    content: "\e612";
+    font-family: ExtJS;
+    font-size: 0.9231rem;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
+.x-big .x-thumb .x-icon-el:before {
+    font-size: 1.2rem;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:263 */
+.x-thumb:hover {
+    background-color: #fcfcfc;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:267 */
+.x-thumb:active {
+    background-color: #f1f1f1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:277 */
 .x-thumb-sizer {
-    height: 1.4286rem;
+    height: 1.5385rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:281 */
 .x-big .x-thumb-sizer {
-    height: 1.75rem;
+    height: 1.875rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:154 */
 .x-slider .x-track-el {
-    height: 2px;
-    background-color: #bbb;
+    height: 0.9375rem;
+    background-color: #eee;
+    border: 1px solid #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:162 */
 .x-big .x-slider .x-track-el {
-    height: 2px;
+    height: 1.2rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:169 */
 .x-slider .x-fill-el {
-    height: 2px;
-    background-color: #35baf6;
+    height: 0.9375rem;
+    background-color: #5dc8f8;
+    border: 1px solid #d0d0d0;
+    margin: -1px 0 0 -1px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:180 */
 .x-big .x-slider .x-fill-el {
-    height: 2px;
+    height: 1.2rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:187 */
 .x-slider.x-disabled {
     opacity: 0.3;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:190 */
+.x-slider.x-disabled .x-fill-el {
+    border-width: 1px;
+    border-style: solid;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Slider.scss:6 */
 .x-sliderfield .x-body-el {
     /**
  * @class Ext.field.Slider
  */
-    padding: 0.07143em 0em;
+    padding: 0.4616em 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Slider.scss:10 */
 .x-big .x-sliderfield .x-body-el {
-    padding: 0.125em 0em;
+    padding: 0.4375em 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/trigger/Trigger.scss:201 */
 .x-spindowntrigger .x-icon-el {
-    height: 0.85715em;
-    width: 0.85715em;
+    height: 0.84616em;
+    width: 0.84616em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-spindowntrigger .x-icon-el:before {
-    content: "\e901";
-    font-family: iOS;
-    font-size: 1em;
+    content: "\f0d7";
+    font-size: 1.23077em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-big .x-spindowntrigger .x-icon-el:before {
-    content: "\e92b";
-    font-family: iOS;
+    content: "\f068";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/field/trigger/Trigger.scss:201 */
 .x-spinuptrigger .x-icon-el {
-    height: 0.85715em;
-    width: 0.85715em;
+    height: 0.84616em;
+    width: 0.84616em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-spinuptrigger .x-icon-el:before {
-    content: "\e904";
-    font-family: iOS;
-    font-size: 1em;
+    content: "\f0d8";
+    font-size: 1.23077em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-big .x-spinuptrigger .x-icon-el:before {
-    content: "\e92c";
-    font-family: iOS;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:154 */
-.x-toggleslider .x-track-el {
-    height: 1.5715rem;
-    background-color: #fff;
-    border: 1px solid #dcdcdc;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:162 */
-.x-big .x-toggleslider .x-track-el {
-    height: 1.875rem;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:169 */
-.x-toggleslider .x-fill-el {
-    height: 1.5715rem;
-    background-color: #53d769;
-    border: 1px solid #53d769;
-    margin: -1px 0 0 -1px;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:180 */
-.x-big .x-toggleslider .x-fill-el {
-    height: 1.875rem;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Slider.scss:190 */
-.x-toggleslider.x-disabled .x-fill-el {
-    border-width: 1px;
-    border-style: solid;
+    content: "\f067";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Toggle.scss:207 */
 .x-toggleslider {
-    width: 2.65rem;
+    width: 2.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Toggle.scss:211 */
 .x-big .x-toggleslider {
-    width: 3.25rem;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Toggle.scss:216 */
-.x-toggleslider .x-track-el,
-.x-toggleslider .x-fill-el {
-    border-radius: 1.5715rem;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Toggle.scss:221 */
-.x-big .x-toggleslider .x-track-el,
-.x-big .x-toggleslider .x-fill-el {
-    border-radius: 1.5715rem;
+    width: 3rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Toggle.scss:232 */
 .x-toggleslider .x-fill-el {
     width: calc(100% + 2px);
 }
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Toggle.scss:241 */
-.x-toggleslider .x-thumb-wrap-el {
-    margin: 0 2px;
-}
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:242 */
 .x-big .x-thumb-toggle-on {
-    margin-top: -0.875rem;
+    margin-top: -0.9375rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/slider/Thumb.scss:242 */
 .x-big .x-thumb-toggle-off {
-    margin-top: -0.875rem;
+    margin-top: -0.9375rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Toggle.scss:6 */
 .x-togglefield .x-body-el {
     /**
  * @class Ext.field.Toggle
  */
-    padding: 0.07143em 0em;
+    padding: 0.4616em 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/field/Toggle.scss:10 */
 .x-big .x-togglefield .x-body-el {
-    padding: 0.125em 0em;
+    padding: 0.4375em 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldContainer.scss:2 */
 .x-form-field-separators > .x-field {
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid #d0d0d0;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldContainer.scss:7 */
+.x-form-field-separators > .x-textfield.x-focused {
+    border-color: #3892d4;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldContainer.scss:15 */
 .x-form-field-separators > .x-textfield.x-invalid {
@@ -7778,99 +7762,37 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:8 */
 .x-form-fieldset .x-form-fieldset-inner {
-    border: 1px solid #dcdcdc;
+    border: 1px solid #d0d0d0;
     padding: 0.6rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
-    border-radius: 0.5rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:17 */
 .x-form-fieldset .x-field {
     background: transparent;
 }
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:21 */
-.x-form-fieldset .x-field:first-child {
-    -moz-border-radius-topleft: 0.5rem;
-    -webkit-border-top-left-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
-    -moz-border-radius-topright: 0.5rem;
-    -webkit-border-top-right-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-}
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:27 */
 .x-form-fieldset .x-field:last-child {
     border-bottom: 0;
-    -moz-border-radius-bottomleft: 0.5rem;
-    -webkit-border-bottom-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    -moz-border-radius-bottomright: 0.5rem;
-    -webkit-border-bottom-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:39 */
 .x-form-fieldset-title {
     font-size: 0.8em;
-    font-family: '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
     margin: 1em 0.7em 0.3em;
-    color: #919191;
+    color: #606060;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:44 */
 .x-big .x-form-fieldset-title {
     font-size: 0.8em;
-    font-family: '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:51 */
 .x-form-fieldset-instructions {
-    color: #c4c4c4;
+    color: #939393;
     margin: 1em 0.7em 0.3em;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:65 */
-.x-field.x-label-align-left:first-child .x-label-el {
-    -moz-border-radius-topleft: 0.5rem;
-    -webkit-border-top-left-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:71 */
-.x-field.x-label-align-left:last-child .x-label-el {
-    -moz-border-radius-bottomleft: 0.5rem;
-    -webkit-border-bottom-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:79 */
-.x-field.x-label-align-right:first-child .x-label-el {
-    -moz-border-radius-topright: 0.5rem;
-    -webkit-border-top-right-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:84 */
 .x-field.x-label-align-right:last-child {
     border-bottom: 0;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:87 */
-.x-field.x-label-align-right:last-child .x-label-el {
-    -moz-border-radius-bottomright: 0.5rem;
-    -webkit-border-bottom-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:95 */
-.x-field.x-label-align-top:first-child .x-label-el {
-    -moz-border-radius-topleft: 0.5rem;
-    -webkit-border-top-left-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
-    -moz-border-radius-topright: 0.5rem;
-    -webkit-border-top-right-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/FieldSet.scss:103 */
-.x-field.x-label-align-bottom:last-child .x-label-el {
-    -moz-border-radius-bottomleft: 0.5rem;
-    -webkit-border-bottom-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-    -moz-border-radius-bottomright: 0.5rem;
-    -webkit-border-bottom-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/form/Panel.scss:5 */
 .x-formpanel-inner {
@@ -7881,8 +7803,8 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Base.scss:110 */
 .x-gridcell {
-    font: 400 1rem/1.2858em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    padding: 0.5em 0.714em;
+    font: 400 1rem/1.2308em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    padding: 0.6154em 0.77em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Base.scss:115 */
 .x-big .x-gridcell {
@@ -7891,7 +7813,7 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/RowBody.scss:25 */
 .x-rowbody .x-content-el {
-    padding: 0.5em 0.714em;
+    padding: 0.6154em 0.77em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Base.scss:110 */
 .x-summarycell {
@@ -7899,14 +7821,14 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/column/Column.scss:277 */
 .x-gridcolumn {
-    color: #000;
+    color: #404040;
     background-color: #fff;
     border-right-width: 1px;
     border-bottom-width: 1px;
     border-right-style: solid;
     border-bottom-style: solid;
-    border-color: #dcdcdc;
-    font: 500 1rem/1.2308em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    border-color: #d0d0d0;
+    font: 500 1rem/1.2308em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
     padding: 0.6154em 0.77em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/column/Column.scss:285 */
@@ -7923,7 +7845,7 @@ html.x-big {
     margin: 0 0 0 0.23em;
     height: 1em;
     width: 1em;
-    color: #bbb;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-gridcolumn.x-sorted .x-sort-icon-el:before {
@@ -7931,25 +7853,25 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-gridcolumn.x-sorted-asc .x-sort-icon-el:before {
-    content: "\e912";
+    content: "\f176";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-gridcolumn.x-sorted-desc .x-sort-icon-el:before {
-    content: "\e913";
+    content: "\f175";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/column/Column.scss:325 */
 .x-gridcolumn:after {
-    background-color: #f5f5f5;
+    background-color: #f6f6f6;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/HeaderContainer.scss:47 */
 .x-headercontainer {
     border-width: 0 0 1px;
     border-style: solid;
-    border-color: #dcdcdc;
+    border-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/Grid.scss:34 */
 .x-grid .x-resize-marker-el {
-    background-color: #bbb;
+    background-color: #919191;
     width: 1px;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Check.scss:137 */
@@ -7962,29 +7884,27 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Check.scss:146 */
 .x-checkcell .x-checkbox-el {
-    height: 1.57143rem;
-    width: 1.57143rem;
-    color: #35baf6;
+    height: 1.3847rem;
+    width: 1.3847rem;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Check.scss:152 */
 .x-big .x-checkcell .x-checkbox-el {
-    height: 1.875rem;
-    width: 1.875rem;
+    height: 1.375rem;
+    width: 1.375rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-checkcell .x-checkbox-el:before {
-    content: "\e908";
-    font-family: iOS;
-    font-size: 1.14286rem;
+    content: "\f096";
+    font-size: 1.3847rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
 .x-big .x-checkcell .x-checkbox-el:before {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-checkcell.x-checked .x-checkbox-el:before {
-    content: "\e907";
-    font-family: iOS;
+    content: "\f046";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Check.scss:170 */
 .x-checkcell.x-disabled .x-checkbox-el {
@@ -8000,29 +7920,27 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Expander.scss:115 */
 .x-expandercell .x-icon-el {
-    height: 1.14286em;
-    width: 1.14286em;
-    color: #35baf6;
+    height: 1.077em;
+    width: 1.077em;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Expander.scss:121 */
 .x-big .x-expandercell .x-icon-el {
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.125em;
+    width: 1.125em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-expandercell .x-icon-el:before {
-    content: "\e929";
-    font-family: iOS;
-    font-size: 1.14286em;
+    content: "\f0fe";
+    font-size: 1.077em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
 .x-big .x-expandercell .x-icon-el:before {
-    font-size: 1.5em;
+    font-size: 1.125em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-expandercell.x-expanded .x-icon-el:before {
-    content: "\e928";
-    font-family: iOS;
+    content: "\f146";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/cell/Widget.scss:24 */
 .x-widgetcell {
@@ -8034,29 +7952,27 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/column/Check.scss:381 */
 .x-checkcolumn .x-checkbox-el {
-    height: 1.57143rem;
-    width: 1.57143rem;
-    color: #35baf6;
+    height: 1.3847rem;
+    width: 1.3847rem;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/column/Check.scss:387 */
 .x-big .x-checkcolumn .x-checkbox-el {
-    height: 1.875rem;
-    width: 1.875rem;
+    height: 1.375rem;
+    width: 1.375rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-checkcolumn .x-checkbox-el:before {
-    content: "\e908";
-    font-family: iOS;
-    font-size: 1.14286rem;
+    content: "\f096";
+    font-size: 1.3847rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
 .x-big .x-checkcolumn .x-checkbox-el:before {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-checkcolumn.x-checked .x-checkbox-el:before {
-    content: "\e907";
-    font-family: iOS;
+    content: "\f046";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/grid/column/Check.scss:405 */
 .x-checkcolumn.x-disabled .x-checkbox-el {
@@ -8077,18 +7993,18 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-pagingtoolbar .x-pagingtoolbar-prev:before {
-    content: "\e902";
-    font-family: iOS;
+    content: "\f104";
+    font-family: FontAwesome;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-pagingtoolbar .x-pagingtoolbar-next:before {
-    content: "\e903";
-    font-family: iOS;
+    content: "\f105";
+    font-family: FontAwesome;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/grid/plugin/ViewOptions.scss:1 */
 .x-gridviewoptions {
     background-color: #fff;
-    border-color: #dcdcdc;
+    border-color: #d0d0d0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/grid/plugin/ViewOptions.scss:6 */
 .x-column-options-sortablehandle,
@@ -8143,11 +8059,11 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/grid/plugin/ViewOptions.scss:37 */
 .x-column-options-sortablehandle {
-    color: #bbb;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-column-options-sortablehandle:before {
-    content: "\e91a";
+    content: "\f0c9";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/grid/plugin/ViewOptions.scss:42 */
 .x-column-options-text {
@@ -8160,15 +8076,15 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-column-options-visibleindicator:before {
-    content: "\e911";
+    content: "\f06e";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/grid/plugin/ViewOptions.scss:51 */
 .x-column-options-groupindicator {
-    color: #bbb;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-column-options-groupindicator:before {
-    content: '\e933';
+    content: "\f0c0";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/grid/plugin/ViewOptions.scss:56 */
 .x-column-options-folder,
@@ -8177,18 +8093,18 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-column-options-folder:before {
-    content: "\e914";
+    content: "\f07b";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-column-options-leaf:before {
-    content: '\e917';
+    content: "\f15b";
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/grid/plugin/ViewOptions.scss:69 */
 .x-column-options-hidden .x-column-options-visibleindicator,
 .x-column-options-hidden .x-column-options-text,
 .x-column-options-hidden .x-column-options-folder,
 .x-column-options-hidden .x-column-options-leaf {
-    color: #bbb;
+    color: #919191;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/grid/plugin/ViewOptions.scss:77 */
 .x-column-options-grouped .x-column-options-groupindicator {
@@ -8196,257 +8112,257 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:1 */
 .x-tool-close {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-close:before {
-    content: "\e90d";
+    content: "\f00d";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:5 */
 .x-tool-minimize {
-    font-family: 'iOS';
+    font-family: ExtJS;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-minimize:before {
-    content: "\e91b";
+    content: "\e608";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:9 */
 .x-tool-maximize {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-maximize:before {
-    content: "\e91f";
+    content: "\f065";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:13 */
 .x-tool-restore {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-restore:before {
-    content: "\e926";
+    content: "\f066";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:17 */
 .x-tool-toggle {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-toggle:before {
-    content: "\e931";
+    content: "\f077";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:20 */
 .x-panel-collapsed .x-tool-toggle {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-panel-collapsed .x-tool-toggle:before {
-    content: "\e90f";
+    content: "\f078";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:25 */
 .x-tool-gear {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-gear:before {
-    content: "\e915";
+    content: "\f013";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:29 */
 .x-tool-prev {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-prev:before {
-    content: "\e918";
+    content: "\f053";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:33 */
 .x-tool-next {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-next:before {
-    content: "\e927";
+    content: "\f054";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:37 */
 .x-tool-pin {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-pin:before {
-    content: "\e91e";
+    content: "\f08d";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:41 */
 .x-tool-unpin {
-    font-family: 'iOS';
+    font-family: ExtJS;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-unpin:before {
-    content: "\e930";
+    content: "\e611";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:45 */
 .x-tool-right {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-right:before {
-    content: "\e903";
+    content: "\f0da";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:49 */
 .x-tool-left {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-left:before {
-    content: "\e902";
+    content: "\f0d9";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:53 */
 .x-tool-down {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-down:before {
-    content: "\e901";
+    content: "\f0d7";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:57 */
 .x-tool-up {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-up:before {
-    content: "\e904";
+    content: "\f0d8";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:61 */
 .x-tool-refresh {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-refresh:before {
-    content: "\e924";
+    content: "\f021";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:65 */
 .x-tool-plus {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-plus:before {
-    content: "\e91f";
+    content: "\f067";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:69 */
 .x-tool-menu {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-menu:before {
-    content: "\e91a";
+    content: "\f0c9";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:73 */
 .x-tool-minus {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-minus:before {
-    content: "\e91b";
+    content: "\f068";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:77 */
 .x-tool-search {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-search:before {
-    content: "\e92a";
+    content: "\f002";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:81 */
 .x-tool-save {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-save:before {
-    content: "\e914";
+    content: "\f00c";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:85 */
 .x-tool-help {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-help:before {
-    content: "\e916";
+    content: "\f128";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:89 */
 .x-tool-print {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-print:before {
-    content: "\e921";
+    content: "\f02f";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:93 */
 .x-tool-expand {
-    font-family: 'iOS';
+    font-family: ExtJS;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-expand:before {
-    content: "\e910";
+    content: "\e606";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:97 */
 .x-tool-collapse {
-    font-family: 'iOS';
+    font-family: ExtJS;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-collapse:before {
-    content: "\e90e";
+    content: "\e600";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:101 */
 .x-tool-resize {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
@@ -8456,7 +8372,7 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:105 */
 .x-tool-move {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
@@ -8466,82 +8382,82 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:109 */
 .x-tool-expand-bottom {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-expand-bottom:before {
-    content: "\e901";
+    content: "\f0d7";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:113 */
 .x-tool-collapse-bottom {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-collapse-bottom:before {
-    content: "\e901";
+    content: "\f0d7";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:117 */
 .x-tool-expand-top {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-expand-top:before {
-    content: "\e904";
+    content: "\f0d8";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:121 */
 .x-tool-collapse-top {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-collapse-top:before {
-    content: "\e904";
+    content: "\f0d8";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:125 */
 .x-tool-expand-left {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-expand-left:before {
-    content: "\e902";
+    content: "\f0d9";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:129 */
 .x-tool-collapse-left {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-collapse-left:before {
-    content: "\e902";
+    content: "\f0d9";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:133 */
 .x-tool-expand-right {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-expand-right:before {
-    content: "\e903";
+    content: "\f0da";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/panel/Tool.scss:137 */
 .x-tool-collapse-right {
-    font-family: 'iOS';
+    font-family: FontAwesome;
     line-height: 1;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
 .x-tool-collapse-right:before {
-    content: "\e903";
+    content: "\f0da";
     font-feature-settings: 'liga';
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/src/plugin/ListPaging.scss:5 */
@@ -8592,43 +8508,43 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:549 */
 .x-tab {
-    color: #919191;
-    padding: 0.171em 0.77em;
-    font: 400 0.7em/1.23em '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
+    color: #f0f0f0;
+    padding: 0.54em 0.6em;
+    font: 500 1rem/1.23em 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
     border: 1px solid transparent;
     background-color: transparent;
     background-image: none;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:560 */
 .x-big .x-tab {
-    padding: 0.3125em 0.625em;
-    line-height: 1.25em;
+    padding: 0.625em 0.6em;
+    line-height: 1.375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:578 */
 .x-tab.x-tab-active {
     color: #35baf6;
-    background-color: transparent;
+    background-color: #fff;
     background-image: none;
-    border-color: transparent;
+    border-color: #fff;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:585 */
 .x-tab .x-button-icon {
-    width: 1.23rem;
-    height: 1.23rem;
-    color: #919191;
+    width: 1.23em;
+    height: 1.23em;
+    color: #f0f0f0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:63 */
 .x-tab .x-button-icon:before {
-    font-size: 1.23rem;
+    font-size: 1.23em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/icon.scss:80 */
 .x-big .x-tab .x-button-icon:before {
-    font-size: 1.5rem;
+    font-size: 1.375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:591 */
 .x-big .x-tab .x-button-icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.375em;
+    height: 1.375em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:600 */
 .x-tab.x-tab-active .x-button-icon {
@@ -8660,31 +8576,34 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:653 */
 .x-tab .x-badge {
-    border-color: #cb0000;
-    top: -1em;
-    left: 53%;
-    padding: 0.1em 0.4em;
-    max-width: 75%;
+    border-color: #661a00;
+    min-width: 2em;
+    top: -0.2em;
+    right: 0;
+    padding: 0.1em 0.3em;
+    max-width: 95%;
     color: #fff;
-    background-color: #fe0000;
-    background-image: none;
-    -webkit-border-radius: 10em;
-    -moz-border-radius: 10em;
-    -ms-border-radius: 10em;
-    -o-border-radius: 10em;
-    border-radius: 10em;
+    background-image: -webkit-linear-gradient(top, #e63900, #b32d00 3%, #802000);
+    background-image: -moz-linear-gradient(top, #e63900, #b32d00 3%, #802000);
+    background-image: -o-linear-gradient(top, #e63900, #b32d00 3%, #802000);
+    background-image: -ms-linear-gradient(top, #e63900, #b32d00 3%, #802000);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/tab/Tab.scss:660 */
 .x-big .x-tab .x-badge {
-    font-size: 0.875rem;
-    line-height: 1.25em;
-    padding: 0.1em 0.5em;
+    font-size: 1em;
+    line-height: 1.375em;
+    padding: 0.1em 0.3em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:318 */
 .x-tabbar {
-    background-color: #f5f5f5;
+    background-color: #35baf6;
     background-image: none;
-    border-color: #f5f5f5;
+    border-color: #35baf6;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:333 */
 .x-tabbar .x-tabbar-inner.x-horizontal > * {
@@ -8696,285 +8615,15 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:364 */
 .x-tabbar .x-title {
-    color: #1c1c1c;
+    color: #000;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:382 */
 .x-tabbar-inner {
-    padding: 0.429rem 0;
-    min-height: 2.5715em;
+    min-height: 3.26em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Toolbar.scss:387 */
 .x-big .x-tabbar-inner {
-    padding: 0.375rem 0;
-    min-height: 2.75em;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:3 */
-@font-face {
-    font-family: 'iOS';
-    src: url('../resources/font-ios/fonts/iOS.ttf?z4ok3n') format('truetype'), url('../resources/font-ios/fonts/iOS.woff?z4ok3n') format('woff'), url('../resources/font-ios/fonts/iOS.svg?z4ok3n#iOS') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:12 */
-.x-ios {
-    font-family: 'iOS';
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:17 */
-.ios-add:before {
-    content: "\e900";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:23 */
-.ios-arrow-down:before {
-    content: "\e901";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:29 */
-.ios-arrow-left:before {
-    content: "\e902";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:35 */
-.ios-arrow-right:before {
-    content: "\e903";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:41 */
-.ios-arrow-up:before {
-    content: "\e904";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:47 */
-.ios-back-arrow:before {
-    content: "\e905";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:53 */
-.ios-calendar:before {
-    content: "\e906";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:59 */
-.ios-check-box-checked:before {
-    content: "\e907";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:65 */
-.ios-check-box-unchecked:before {
-    content: "\e908";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:71 */
-.ios-check-circle-checked:before {
-    content: "\e909";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:77 */
-.ios-check-cricle-unchecked:before {
-    content: "\e90a";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:83 */
-.ios-check:before {
-    content: "\e90b";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:89 */
-.ios-close-hollow:before {
-    content: "\e90c";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:95 */
-.ios-close:before {
-    content: "\e90d";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:101 */
-.ios-collapse:before {
-    content: "\e90e";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:107 */
-.ios-down:before {
-    content: "\e90f";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:113 */
-.ios-expand:before {
-    content: "\e910";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:119 */
-.ios-eye:before {
-    content: "\e911";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:125 */
-.ios-filter-arrow-down:before {
-    content: "\e912";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:131 */
-.ios-filter-arrow-up:before {
-    content: "\e913";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:137 */
-.ios-folder:before {
-    content: "\e914";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:143 */
-.ios-gear:before {
-    content: "\e915";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:149 */
-.ios-help:before {
-    content: "\e916";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:155 */
-.ios-leaf:before {
-    content: '\e917';
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:161 */
-.ios-left:before {
-    content: "\e918";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:167 */
-.ios-maximize:before {
-    content: "\e919";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:173 */
-.ios-menu:before {
-    content: "\e91a";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:179 */
-.ios-minus:before {
-    content: "\e91b";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:185 */
-.ios-move:before {
-    content: "\e91c";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:191 */
-.ios-next:before {
-    content: "\e91d";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:197 */
-.ios-pin:before {
-    content: "\e91e";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:203 */
-.ios-plus:before {
-    content: "\e91f";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:209 */
-.ios-previous:before {
-    content: "\e920";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:215 */
-.ios-print:before {
-    content: "\e921";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:221 */
-.ios-radio-button-checked:before {
-    content: "\e922";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:227 */
-.ios-radio-button-unchecked:before {
-    content: "\e923";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:233 */
-.ios-refresh:before {
-    content: "\e924";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:239 */
-.ios-remove:before {
-    content: "\e925";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:245 */
-.ios-restore:before {
-    content: "\e926";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:251 */
-.ios-right:before {
-    content: "\e927";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:257 */
-.ios-row-expander-collapse:before {
-    content: "\e928";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:263 */
-.ios-row-expander-expand:before {
-    content: "\e929";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:269 */
-.ios-search:before {
-    content: "\e92a";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:275 */
-.ios-spinner-minus:before {
-    content: "\e92b";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:281 */
-.ios-spinner-plus:before {
-    content: "\e92c";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:287 */
-.ios-spinner:before {
-    content: "\e92d";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:293 */
-.ios-toggle-down:before {
-    content: "\e92e";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:299 */
-.ios-toggle-up:before {
-    content: "\e92f";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:305 */
-.ios-unpin:before {
-    content: "\e930";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:311 */
-.ios-up:before {
-    content: "\e931";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:317 */
-.ios-user:before {
-    content: "\e932";
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/font-ios/sass/src/all.scss:323 */
-.ios-group:before {
-    content: '\e933';
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-ios/sass/src/Button.scss:4 */
-.x-button-menu .x-button-icon:before {
-    content: "\e91a" !important;
-    font-family: 'iOS' !important;
-    color: #35baf6;
-    font-size: 1.4em;
-    line-height: 0;
-    padding-right: 0.2em;
-    position: relative;
-    top: 0.15em;
-    font-weight: bold;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-ios/sass/src/Button.scss:17 */
-.x-button-menu.x-button-pressing .x-button-icon:before {
-    color: #cdeefd;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-ios/sass/src/Button.scss:21 */
-.x-button-menu.x-button-disabled .x-button-icon:before {
-    color: #bbb;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-ios/sass/src/Button.scss:27 */
-.x-button-back:before {
-    content: "\e905";
-    font-family: 'iOS';
-    color: #35baf6;
-    font-size: 1.4em;
-    line-height: 0;
-    padding-right: 0.2em;
-    position: relative;
-    top: 0.05em;
-    font-weight: bold;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-ios/sass/src/Button.scss:40 */
-.x-button-back.x-button-pressing:before {
-    color: #cdeefd;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-ios/sass/src/Button.scss:44 */
-.x-button-back.x-button-disabled:before {
-    color: #bbb;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-ios/sass/src/Menu.scss:2 */
-.x-menu .x-button {
-    border-bottom-color: #eee;
-    border-radius: 0;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-ios/sass/src/Menu.scss:6 */
-.x-menu .x-button:last-child {
-    border-bottom-color: transparent;
+    min-height: 3.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/draw/Surface.scss:1 */
 .x-surface {
@@ -9012,25 +8661,14 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:18 */
 .x-legend-horizontal .x-legend-item:first-child {
     border-left: 1px solid #ccc;
-    border-bottom-left-radius: 0.5em;
-    border-top-left-radius: 0.5em;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:24 */
-.x-legend-horizontal .x-legend-item:last-child {
-    border-bottom-right-radius: 0.5em;
-    border-top-right-radius: 0.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:30 */
 .x-legend-horizontal.x-rtl .x-legend-item:first-child {
     border-right: 1px solid #ccc;
-    border-bottom-right-radius: 0.5em;
-    border-top-right-radius: 0.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:35 */
 .x-legend-horizontal.x-rtl .x-legend-item:last-child {
     border-right: none;
-    border-bottom-left-radius: 0.5em;
-    border-top-left-radius: 0.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:43 */
 .x-legend-vertical {
@@ -9046,13 +8684,6 @@ html.x-big {
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:53 */
 .x-legend-vertical .x-legend-item:first-child {
     border-top: 1px solid #ccc;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-}
-/* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:59 */
-.x-legend-vertical .x-legend-item:last-child {
-    border-bottom-left-radius: 0.5em;
-    border-bottom-right-radius: 0.5em;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/sass/src/chart/legend/Legend.scss:66 */
 .x-legend-item-inactive {
@@ -9066,9 +8697,9 @@ html.x-big {
     background: rgba(255, 255, 255, 0);
     max-width: 16em;
     min-width: 0;
-    font-size: 87.5%;
-    font-family: '-apple-system', 'Helvetica Neue', helvetica, arial, sans-serif;
-    line-height: 87.5%;
+    font-size: 81.25%;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    line-height: 81.25%;
     font-weight: normal;
     white-space: nowrap;
     overflow: hidden;
@@ -9084,11 +8715,6 @@ html.x-big {
     position: absolute;
     width: 0.8em;
     height: 0.8em;
-    -webkit-border-radius: 0.4em;
-    -moz-border-radius: 0.4em;
-    -ms-border-radius: 0.4em;
-    -o-border-radius: 0.4em;
-    border-radius: 0.4em;
     -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.4) 0 1px 0 inset;
     -moz-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.4) 0 1px 0 inset;
     box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.4) 0 1px 0 inset;
@@ -9115,8 +8741,8 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:16 */
 .x-legend-item {
-    font-size: 131.25%;
-    line-height: 131.25%;
+    font-size: 121.875%;
+    line-height: 121.875%;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/charts/modern/sass/src/chart/legend/Legend.scss:21 */
 .x-legend-item-marker {
@@ -9197,9 +8823,9 @@ html.x-big {
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/packages/ux/sass/var/Gauge.scss:28 */
 .x-gauge .x-gauge-track {
-    fill: #000;
+    fill: #404040;
     fill-opacity: 1;
-    stroke: #2582ac;
+    stroke: #2a95c5;
     stroke-opacity: 1;
     stroke-width: 1;
 }
@@ -9256,7 +8882,7 @@ html.x-big {
 .x-button-bright-blue {
     color: #fff;
     border-width: 0;
-    border-color: #03a9f5;
+    border-color: #038dcd;
     background-color: #03a9f5;
     background-image: none;
 }
@@ -9266,7 +8892,7 @@ html.x-big {
     color: #fff;
     background-color: #027fb9;
     background-image: none;
-    border-color: #027fb9;
+    border-color: #026390;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-bright-blue .x-button-icon {
@@ -9308,7 +8934,7 @@ html.x-big {
 .x-button-blue {
     color: #fff;
     border-width: 0;
-    border-color: #167abc;
+    border-color: #126297;
     background-color: #167abc;
     background-image: none;
 }
@@ -9318,7 +8944,7 @@ html.x-big {
     color: #fff;
     background-color: #105685;
     background-image: none;
-    border-color: #105685;
+    border-color: #0b3f61;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-blue .x-button-icon {
@@ -9342,7 +8968,7 @@ html.x-big {
     color: #fff;
     background-color: #105685;
     background-image: none;
-    border-color: #105685;
+    border-color: #0b3f61;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-facebook .x-button-icon {
@@ -9357,7 +8983,7 @@ html.x-big {
 .x-button-gray-button {
     color: #fff;
     border-width: 0;
-    border-color: #a7a7a7;
+    border-color: #939393;
     background-color: #a7a7a7;
     background-image: none;
 }
@@ -9367,7 +8993,7 @@ html.x-big {
     color: #fff;
     background-color: #888;
     background-image: none;
-    border-color: #888;
+    border-color: #747474;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-gray-button .x-button-icon {
@@ -9391,7 +9017,7 @@ html.x-big {
     color: #fff;
     background-color: #0a90db;
     background-image: none;
-    border-color: #0a90db;
+    border-color: #0976b4;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-soft-blue .x-button-icon {
@@ -9415,7 +9041,7 @@ html.x-big {
     color: #fff;
     background-color: #028199;
     background-image: none;
-    border-color: #028199;
+    border-color: #025f70;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-soft-cyan .x-button-icon {
@@ -9439,7 +9065,7 @@ html.x-big {
     color: #fff;
     background-color: #7eb542;
     background-image: none;
-    border-color: #7eb542;
+    border-color: #699737;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-soft-green .x-button-icon {
@@ -9463,7 +9089,7 @@ html.x-big {
     color: #fff;
     background-color: #6d4668;
     background-image: none;
-    border-color: #6d4668;
+    border-color: #543650;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-soft-purple .x-button-icon {
@@ -9487,7 +9113,7 @@ html.x-big {
     color: #fff;
     background-color: #d11f31;
     background-image: none;
-    border-color: #d11f31;
+    border-color: #ad1a29;
 }
 /* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-neptune/sass/var/Button.scss:679 */
 .x-button-soft-red .x-button-icon {
@@ -9840,4 +9466,547 @@ a {
 /* D:/Apps/Stocker/StockerDashboard/sass/src/Application.scss:3 */
 body.x-ios.x-webview.x-portrait {
     margin-top: 20px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:3 */
+.dashboard > * > .x-inner,
+.dashboard > * > * > .x-inner {
+    padding: 20px 0 0 20px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:8 */
+.dashboard-item {
+    margin: 0 20px 20px 0;
+    float: left;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:13 */
+.small-100 {
+    width: calc(100% - 20px);
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:17 */
+.small-60 {
+    width: calc(60% - 20px);
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:21 */
+.small-50 {
+    width: calc(50% - 20px);
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:25 */
+.small-40 {
+    width: calc(40% - 20px);
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:29 */
+.small-20 {
+    width: calc(20% - 20px);
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:33 */
+@media (min-width: 1000px) {
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:34 */
+    .big-100 {
+        width: calc(100% - 20px);
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:38 */
+    .big-60 {
+        width: calc(60% - 20px);
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:42 */
+    .big-50 {
+        width: calc(50% - 20px);
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:46 */
+    .big-40 {
+        width: calc(40% - 20px);
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:50 */
+    .big-33 {
+        width: calc(33.3% - 20px);
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:54 */
+    .big-20 {
+        width: calc(20% - 20px);
+    }
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:60 */
+.x-tool-wrench {
+    font-family: FontAwesome;
+    line-height: 1;
+    background: none;
+}
+/* D:/Apps/Stocker/StockerDashboard/ext/modern/theme-base/sass/etc/mixins/font-icon.scss:130 */
+.x-tool-wrench:before {
+    content: "\f0ad";
+    font-feature-settings: 'liga';
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:66 */
+.quick-graph-panel .x-panel-header {
+    padding-left: 1.375em;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:70 */
+.quick-graph-panel .x-panel-title-icon {
+    position: relative;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:73 */
+.quick-graph-panel .x-panel-title-icon:before {
+    position: absolute;
+    height: 1.875em;
+    width: 1.875em;
+    top: -0.4375em;
+    left: -0.4375em;
+    border-radius: 1.875em;
+    background-color: #f1f1f1;
+    line-height: 1.875em;
+    text-align: center;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/dashboard/Dashboard.scss:86 */
+.quick-graph-panel .x-panel-title-text {
+    padding-left: 0.53em;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:2 */
+.userProfile-container .userProfilePic {
+    border: 4px solid #ddd;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:7 */
+.userProfile-container .userProfileName {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    color: #404040;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:14 */
+.userProfile-container .userProfileDesc {
+    color: #404040;
+    line-height: 16px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:21 */
+.userProfile-container .user-profile-desc .x-box-item:before,
+.userProfile-container .user-profile-desc .x-layout-box-item:before {
+    color: #35baf6;
+    margin-right: 12px;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:30 */
+.userProfile-container .user-profile-desc a {
+    color: #404040;
+    text-decoration: none;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:35 */
+.userProfile-container .user-profile-desc .box {
+    margin-left: 40px;
+    line-height: 14px;
+    font-size: 14px;
+    line-height: 18px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:40 */
+.userProfile-container .user-profile-desc .box:before {
+    margin-left: -20px;
+    color: #35baf6;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:46 */
+.userProfile-container .user-profile-desc .x-toolbar {
+    border: none;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:51 */
+.userProfile-container .about-me-wrap {
+    border-top: 1px solid #ddd;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:54 */
+.userProfile-container .about-me-wrap h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 0 10px 0;
+    display: block;
+    margin-left: 20px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:62 */
+.userProfile-container .about-me-wrap h3:before {
+    font-size: 18px;
+    font-weight: normal;
+    color: #35baf6;
+    margin-right: 12px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:70 */
+.userProfile-container .about-me-wrap p {
+    margin: 0;
+    padding: 0 20px 20px 26px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:76 */
+.userProfile-container .likes-friends-wrap {
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:80 */
+.userProfile-container .likes-friends-wrap .x-panel {
+    margin-top: 12px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:84 */
+.userProfile-container .likes-friends-wrap .friends-count-wrap {
+    border-left: 1px solid #ddd;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:90 */
+.userProfile-container .large-icon:before {
+    color: #35baf6;
+    font-size: 35px !important;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:97 */
+.userProfile-container .icon-padding:before {
+    padding: 16px;
+    color: #35baf6;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:103 */
+.userProfile-container .tall-separator {
+    height: 48px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:107 */
+.userProfile-container .fa-ellipsis-v {
+    font-size: 20px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:111 */
+.userProfile-container .likes-value,
+.userProfile-container .friends-value {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: normal;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:117 */
+.userProfile-container .comments {
+    margin-bottom: 10px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:120 */
+.userProfile-container .comments img.profile-icon {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #ddd;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:128 */
+.userProfile-container .comments h4 {
+    font-size: 14px;
+    margin: 0 10px 12px 0;
+    float: left;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:133 */
+.userProfile-container .comments h4 span {
+    margin-left: 8px;
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:141 */
+.userProfile-container .comments .from-now {
+    float: right;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:144 */
+.userProfile-container .comments .from-now span {
+    margin-right: 5px;
+    font-size: 16px;
+    position: relative;
+    top: 1px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:152 */
+.userProfile-container .comments .content-wrap {
+    margin-left: 65px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:155 */
+.userProfile-container .comments .content-wrap .content {
+    margin-bottom: 15px;
+    white-space: normal;
+    clear: both;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:162 */
+.userProfile-container .comments.sub-comments {
+    margin: 0 0 10px 60px;
+    border-bottom: 1px solid #ddd;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:166 */
+.userProfile-container .comments.sub-comments .like-comment-btn-wrap {
+    border-bottom: none;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:172 */
+.userProfile-container .like-comment-btn-wrap {
+    text-align: right;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:177 */
+.userProfile-container .like-comment-btn-wrap button {
+    margin-left: 15px;
+    height: 30px;
+    width: 30px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    color: #404040;
+    border: none;
+    cursor: pointer;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:189 */
+.userProfile-container .x-grid-item,
+.userProfile-container .x-grid-item-over {
+    background: #fff;
+    border: 0;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:194 */
+.userProfile-container .x-grid-item:last-child {
+    border-bottom: none;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:197 */
+.userProfile-container .x-grid-item:last-child .like-comment-btn-wrap {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:202 */
+.userProfile-container .x-grid-item:last-child .comments {
+    margin-bottom: 0;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:207 */
+.userProfile-container .x-grid-cell-inner {
+    padding: 0;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:212 */
+.userProfile-container .timeline-item .line-wrap {
+    position: relative;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:215 */
+.userProfile-container .timeline-item .line-wrap:before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    border-right: solid 2px #35baf6;
+    left: 0;
+    top: 70px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:226 */
+.userProfile-container .timeline-item .profile-pic-wrap {
+    width: 100px;
+    float: left;
+    font-size: 10px;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    padding: 5px 0;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:235 */
+.userProfile-container .timeline-item .profile-pic-wrap img {
+    height: 46px;
+    width: 46px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:242 */
+.userProfile-container .timeline-item .contents-wrap {
+    margin: 0 0px 15px 110px;
+    border: 1px solid #ddd;
+    position: relative;
+    padding: 15px;
+    white-space: normal;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:249 */
+.userProfile-container .timeline-item .contents-wrap:before,
+.userProfile-container .timeline-item .contents-wrap:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:259 */
+.userProfile-container .timeline-item .contents-wrap:before {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #ddd;
+    margin: 15px 0 0 -9px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:266 */
+.userProfile-container .timeline-item .contents-wrap:after {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #fff;
+    margin: 15px 0 0 -8px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:273 */
+.userProfile-container .timeline-item .contents-wrap .shared-by,
+.userProfile-container .timeline-item .contents-wrap .followed-by {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:278 */
+.userProfile-container .timeline-item .contents-wrap .shared-by a,
+.userProfile-container .timeline-item .contents-wrap .followed-by a {
+    color: #35baf6;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:285 */
+.userProfile-container .timeline-item .contents-wrap .shared-img {
+    width: 100%;
+    display: block;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:290 */
+.userProfile-container .timeline-item .contents-wrap .job-meeting a {
+    color: #35baf6;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:299 */
+.userProfile-container .timeline-item .article-comment {
+    border-left: 5px solid #ddd;
+    padding: 10px 20px;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:303 */
+.userProfile-container .timeline-item .article-comment span {
+    margin-right: 10px;
+    color: #eee;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:310 */
+.userProfile-container .timeline-item .followed-by img {
+    height: 32px;
+    width: 32px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 5px;
+    float: left;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:318 */
+.userProfile-container .timeline-item .followed-by .followed-by-inner {
+    margin-left: 40px;
+    padding: 5px 0;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:326 */
+.profiledescription-social-toolbar {
+    border-top: 1px solid #ddd !important;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:329 */
+@media (max-width: 450px) {
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:331 */
+    .userProfile-container .comments h4,
+    .userProfile-container .comments .from-now {
+        float: none;
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:335 */
+    .userProfile-container .comments .from-now {
+        margin-bottom: 10px;
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:338 */
+    .userProfile-container .comments h4 {
+        margin: 0;
+    }
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:344 */
+@media (max-width: 350px) {
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:345 */
+    .timeline-items-wrap {
+        display: none;
+    }
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:350 */
+@media (max-width: 420px) {
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:351 */
+    .profiledescription-social-toolbar {
+        display: none !important;
+    }
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:357 */
+.user-notifications,
+.timeline-items-wrap {
+    padding: 15px;
+    background: #fff;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:363 */
+.timeline-epoch {
+    width: 100px;
+    background: #fff;
+    text-align: center;
+    padding: 7px 5px;
+    position: relative;
+    margin-bottom: 15px;
+    color: #35baf6;
+    font-size: 14px;
+    border: solid 3px #35baf6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:378 */
+.timeline-item-last .line-wrap:before {
+    display: none;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:384 */
+@media (max-width: 320px) {
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:386 */
+    .phone .user-profile-desc {
+        height: 380px !important;
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:391 */
+    .phone .userProfile-container .icon-padding:before {
+        padding: 16px 8px;
+    }
+    /* D:/Apps/Stocker/StockerDashboard/sass/src/view/profile/UserProfile.scss:397 */
+    .phone .userProfile-container .timeline-items-wrap .x-dataview-item .timeline-item:before {
+        height: 540px;
+    }
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/StatusTile.scss:1 */
+.status-tile {
+    background-color: #fff;
+    border: 3px solid transparent;
+    position: relative;
+    text-align: center;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/StatusTile.scss:8 */
+.status-tile-wrap {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/StatusTile.scss:13 */
+.status-tile-large > .status-tile-wrap {
+    font-size: 150%;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/StatusTile.scss:18 */
+.status-tile-quantity {
+    font-size: 250%;
+    font-weight: 500;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/StatusTile.scss:23 */
+.status-tile-icon-wrap {
+    font-size: 180%;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/StatusTile.scss:27 */
+.status-tile-icon-wrap,
+.status-tile-icon {
+    display: inline-block;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/StatusTile.scss:32 */
+.status-tile-icon-first .status-tile-icon-wrap {
+    width: 2.4em;
+    height: 2.4em;
+    line-height: 2.4em;
+    color: #fff;
+    border-radius: 50%;
 }

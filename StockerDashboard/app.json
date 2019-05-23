@@ -10,7 +10,7 @@
     ],
     "framework": "ext",
     "toolkit": "modern",
-    "theme": "theme-ios",
+    "theme": "theme-triton",
     "requires": [
         "charts",
         "font-awesome",

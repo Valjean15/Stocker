@@ -14,13 +14,22 @@ Ext.define('StockerDashboard.view.main.Toolbar', {
 
     items: [
         /**
+         * Logo de la aplicacion
+         */
+        {
+            xtype: 'component',
+            reference: 'logo',
+            userCls: 'main-logo',
+            html: 'Stocker'
+        },
+        /**
          * Boton que abre el menu de navegacion
          */
         {
             xtype: 'button',
             ui: 'header',
             iconCls: 'x-fa fa-bars',
-            margin: '0 0 0 16',
+            margin: '0 0 0 10',
             listeners: {
                 tap: 'onToggleNavigationSize'
             }

@@ -1,7 +1,6 @@
 $app-name:  dynamic( 'StockerDashboard' );
 $image-search-path: 'D:/Apps/Stocker/StockerDashboard/build/development/StockerDashboard/resources';
-$theme-name:  dynamic( 'theme-ios' );
-$include-admin-view-dashboard-dashboard: dynamic(true);;
+$theme-name:  dynamic( 'theme-triton' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractmanager: dynamic(true);;
 $include-ext-abstractplugin: dynamic(true);;
@@ -705,13 +704,6 @@ $include-ext-tab-tab: dynamic(true);;
 $include-ext-table-cell: dynamic(true);;
 $include-ext-table-row: dynamic(true);;
 $include-ext-table-table: dynamic(true);;
-$include-ext-theme-ios-titlebar: dynamic(true);;
-$include-ext-theme-ios-dataview-nestedlist: dynamic(true);;
-$include-ext-theme-ios-field-checkbox: dynamic(true);;
-$include-ext-theme-ios-form-fieldcontainer: dynamic(true);;
-$include-ext-theme-ios-grid-grid: dynamic(true);;
-$include-ext-theme-ios-panel-header: dynamic(true);;
-$include-ext-theme-ios-tab-tab: dynamic(true);;
 $include-ext-theme-neptune-titlebar: dynamic(true);;
 $include-ext-theme-neptune-tip-tooltip: dynamic(true);;
 $include-ext-tip-manager: dynamic(true);;
@@ -808,12 +800,16 @@ $include-stockerdashboard-application: dynamic(true);;
 $include-stockerdashboard-profile-phone: dynamic(true);;
 $include-stockerdashboard-profile-tablet: dynamic(true);;
 $include-stockerdashboard-store-navigationtree: dynamic(true);;
+$include-stockerdashboard-view-dashboard-dashboard: dynamic(true);;
 $include-stockerdashboard-view-dashboard-dashboardcontroller: dynamic(true);;
 $include-stockerdashboard-view-dashboard-dashboardmodel: dynamic(true);;
 $include-stockerdashboard-view-main-main: dynamic(true);;
 $include-stockerdashboard-view-main-maincontroller: dynamic(true);;
 $include-stockerdashboard-view-main-toolbar: dynamic(true);;
 $include-stockerdashboard-view-phone-main-maincontroller: dynamic(true);;
+$include-stockerdashboard-view-product-search: dynamic(true);;
+$include-stockerdashboard-view-profile-userprofile: dynamic(true);;
+$include-stockerdashboard-view-widgets-statustile: dynamic(true);;
 $output-paths: ("path": "../resources");
 
 /* ======================== ETC ======================== */
@@ -865,14 +861,6 @@ $current-package: 'theme-triton';
 $current-resource-root: $theme-triton-resource-root;
 $relative-image-path-for-uis: $theme-triton-resource-path;
 @import '../../../../../ext/modern/theme-triton/sass/etc/all';
-
-/* including package theme-ios */
-$theme-ios-resource-root: '' !default;
-$theme-ios-resource-path: 'images' !default;
-$current-package: 'theme-ios';
-$current-resource-root: $theme-ios-resource-root;
-$relative-image-path-for-uis: $theme-ios-resource-path;
-@import '../../../../../ext/modern/theme-ios/sass/etc/all';
 
 /* including package charts */
 $charts-resource-root: 'charts' !default;
@@ -1014,54 +1002,6 @@ $relative-image-path-for-uis: $theme-triton-resource-path;
 @import '../../../../../ext/modern/theme-triton/sass/var/grid/cell/Expander';
 @import '../../../../../ext/modern/theme-triton/sass/var/tab/Tab';
 
-/* including package theme-ios */
-$theme-ios-resource-root: '' !default;
-$theme-ios-resource-path: 'images' !default;
-$current-package: 'theme-ios';
-$current-resource-root: $theme-ios-resource-root;
-$relative-image-path-for-uis: $theme-ios-resource-path;
-@import '../../../../../ext/modern/theme-ios/sass/var/Component';
-@import '../../../../../ext/modern/theme-ios/sass/var/Progress';
-@import '../../../../../ext/modern/theme-ios/sass/var/Mask';
-@import '../../../../../ext/modern/theme-ios/sass/var/list/TreeItem';
-@import '../../../../../ext/modern/theme-ios/sass/var/Panel';
-@import '../../../../../ext/modern/theme-ios/sass/var/Button';
-@import '../../../../../ext/modern/theme-ios/sass/var/Menu';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/Field';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/trigger/Trigger';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/trigger/Clear';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/Text';
-@import '../../../../../ext/modern/theme-ios/sass/var/MessageBox';
-@import '../../../../../ext/modern/theme-ios/sass/var/TitleBar';
-@import '../../../../../ext/modern/theme-ios/sass/var/Toast';
-@import '../../../../../ext/modern/theme-ios/sass/var/Toolbar';
-@import '../../../../../ext/modern/theme-ios/sass/var/carousel/Carousel';
-@import '../../../../../ext/modern/theme-ios/sass/var/dataview/IndexBar';
-@import '../../../../../ext/modern/theme-ios/sass/var/dataview/ItemHeader';
-@import '../../../../../ext/modern/theme-ios/sass/var/dataview/ListItem';
-@import '../../../../../ext/modern/theme-ios/sass/var/tip/ToolTip';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/Checkbox';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/trigger/Date';
-@import '../../../../../ext/modern/theme-ios/sass/var/picker/Picker';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/trigger/Reveal';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/Radio';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/trigger/Search';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/Select';
-@import '../../../../../ext/modern/theme-ios/sass/var/slider/Thumb';
-@import '../../../../../ext/modern/theme-ios/sass/var/slider/Slider';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/Slider';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/trigger/SpinDown';
-@import '../../../../../ext/modern/theme-ios/sass/var/field/trigger/SpinUp';
-@import '../../../../../ext/modern/theme-ios/sass/var/slider/Toggle';
-@import '../../../../../ext/modern/theme-ios/sass/var/form/FieldSet';
-@import '../../../../../ext/modern/theme-ios/sass/var/grid/column/Column';
-@import '../../../../../ext/modern/theme-ios/sass/var/grid/cell/Expander';
-@import '../../../../../ext/modern/theme-ios/sass/var/grid/plugin/PagingToolbar';
-@import '../../../../../ext/modern/theme-ios/sass/var/grid/plugin/ViewOptions';
-@import '../../../../../ext/modern/theme-ios/sass/var/panel/Tool';
-@import '../../../../../ext/modern/theme-ios/sass/var/tab/Tab';
-@import '../../../../../ext/modern/theme-ios/sass/var/tab/Bar';
-
 /* including package charts */
 $charts-resource-root: 'charts' !default;
 $charts-resource-path: 'charts/images' !default;
@@ -1110,6 +1050,8 @@ $current-package: false;
 $current-resource-root: $StockerDashboard-resource-root;
 $relative-image-path-for-uis: $StockerDashboard-resource-path;
 @import '../../../../../sass/var/view/main/Main';
+@import '../../../../../sass/var/view/dashboard/Dashboard';
+@import '../../../../../sass/var/view/profile/UserProfile';
 
 
 /* ======================== RULE ======================== */
@@ -1292,23 +1234,6 @@ $relative-image-path-for-uis: $theme-neptune-resource-path;
 @import '../../../../../ext/modern/theme-neptune/sass/src/tab/Bar';
 @import '../../../../../ext/modern/theme-neptune/sass/src/tab/Panel';
 
-/* including package font-ios */
-$font-ios-resource-root: 'font-ios' !default;
-$font-ios-resource-path: 'font-ios/images' !default;
-$current-package: 'font-ios';
-$current-resource-root: $font-ios-resource-root;
-$relative-image-path-for-uis: $font-ios-resource-path;
-@import '../../../../../ext/packages/font-ios/sass/src/all';
-
-/* including package theme-ios */
-$theme-ios-resource-root: '' !default;
-$theme-ios-resource-path: 'images' !default;
-$current-package: 'theme-ios';
-$current-resource-root: $theme-ios-resource-root;
-$relative-image-path-for-uis: $theme-ios-resource-path;
-@import '../../../../../ext/modern/theme-ios/sass/src/Button';
-@import '../../../../../ext/modern/theme-ios/sass/src/Menu';
-
 /* including package charts */
 $charts-resource-root: 'charts' !default;
 $charts-resource-path: 'charts/images' !default;
@@ -1346,3 +1271,6 @@ $current-resource-root: $StockerDashboard-resource-root;
 $relative-image-path-for-uis: $StockerDashboard-resource-path;
 @import '../../../../../sass/src/view/main/Main';
 @import '../../../../../sass/src/Application';
+@import '../../../../../sass/src/view/dashboard/Dashboard';
+@import '../../../../../sass/src/view/profile/UserProfile';
+@import '../../../../../sass/src/view/widgets/StatusTile';

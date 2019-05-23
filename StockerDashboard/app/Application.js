@@ -23,8 +23,8 @@ Ext.define('StockerDashboard.Application', {
      * Perfiles de entrada
      */
     profiles: [
-        'Phone',
-        'Tablet'
+        //'Phone',
+        //'Tablet'
     ],
 
     /**
