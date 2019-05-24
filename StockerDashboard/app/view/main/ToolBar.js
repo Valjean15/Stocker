@@ -20,7 +20,7 @@ Ext.define('StockerDashboard.view.main.Toolbar', {
             xtype: 'component',
             reference: 'logo',
             userCls: 'main-logo',
-            html: 'Stocker'
+            html: Translate.get('Stocker')
         },
         /**
          * Boton que abre el menu de navegacion

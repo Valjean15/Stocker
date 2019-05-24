@@ -29,44 +29,44 @@ Ext.define('StockerDashboard.view.dashboard.Dashboard', {
             height: 170,
             userCls: 'big-33 small-50 dashboard-item shadow',
 
-            iconCls: 'x-fa fa-shopping-cart',
+            iconCls: Icon.get('shoppingCart'),
             iconFirst: true,
             color: '#9cc96b',
-            text: 'Total',
-            description: 'Shopping'
+            text: Translate.get('total'),
+            description: Translate.get('shopping')
         },
         {
             xtype: 'statustile',
             height: 170,
             userCls: 'big-33 small-50 dashboard-item shadow',
 
-            iconCls: 'x-fa fa-plus-circle',
+            iconCls: Icon.get('plusCircle'),
             iconFirst: true,
             color: '#167abc',
-            text: 'Total',
-            description: 'Sales'
+            text: Translate.get('total'),
+            description: Translate.get('sales')
         },
         {
             xtype: 'statustile',
             height: 170,
             userCls: 'big-33 small-50 dashboard-item shadow',
 
-            iconCls: 'x-fa fa-file',
+            iconCls: Icon.get('file'),
             iconFirst: true,
             color: '#925e8b',
-            text: 'Total',
-            description: 'Stock'
+            text: Translate.get('total'),
+            description: Translate.get('stock')
         },
         {
             xtype: 'statustile',
             height: 170,
             userCls: 'big-33 small-50 dashboard-item shadow',
 
-            iconCls: 'x-fa fa-tasks',
+            iconCls: Icon.get('tasks'),
             iconFirst: true,
             color: '#ffc107',
-            text: 'Total',
-            description: 'Incoming'
+            text: Translate.get('total'),
+            description: Translate.get('products')
         }
     ]
 });

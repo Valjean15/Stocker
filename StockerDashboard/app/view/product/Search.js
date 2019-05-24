@@ -1,14 +1,20 @@
 /**
  * Vista donde se buscan los productos
  */
-Ext.define('StockerDashboard.view.product.search', {
+Ext.define('StockerDashboard.view.product.Search', {
     xtype: 'productsearch',
     extend: 'Ext.Container',
 
     /**
-     * Dependencias de la vista
+     * Controlador de la vista
      */
-    requires: [
-        'Ext.grid.Grid'
-    ],
+    controller: 'searchProduct',
+    cls: 'dashboard',
+    scrollable: true,
+
+    /**
+     * Items de la vista
+     */
+    items: [
+    ]
 });

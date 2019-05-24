@@ -10010,3 +10010,43 @@ body.x-ios.x-webview.x-portrait {
     color: #fff;
     border-radius: 50%;
 }
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/LinkedTile.scss:1 */
+.linked-tile {
+    background-color: #fff;
+    border: 3px solid transparent;
+    position: relative;
+    text-align: center;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/LinkedTile.scss:8 */
+.linked-tile-wrap {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/LinkedTile.scss:13 */
+.linked-tile-large > .linked-tile-wrap {
+    font-size: 150%;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/LinkedTile.scss:18 */
+.linked-tile-quantity {
+    font-size: 180%;
+    font-weight: 400;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/LinkedTile.scss:23 */
+.linked-tile-icon-wrap {
+    font-size: 150%;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/LinkedTile.scss:27 */
+.linked-tile-icon-wrap,
+.linked-tile-icon {
+    display: inline-block;
+}
+/* D:/Apps/Stocker/StockerDashboard/sass/src/view/widgets/LinkedTile.scss:32 */
+.linked-tile-icon-first .linked-tile-icon-wrap {
+    width: 2.2em;
+    height: 2.2em;
+    line-height: 2.2em;
+    color: #fff;
+    border-radius: 50%;
+}

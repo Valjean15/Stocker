@@ -28,7 +28,7 @@ Ext.define('StockerDashboard.Application', {
     ],
 
     /**
-     * Stores compartidados
+     * Stores compartidos
      */
     stores: [
         'NavigationTree'

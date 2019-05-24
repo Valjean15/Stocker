@@ -5,6 +5,9 @@ Ext.define('StockerDashboard.view.widgets.StatusTile', {
     extend: 'Ext.Component',
     xtype: 'statustile',
 
+    /**
+     * Configuraciones del componente
+     */
     config: {
 
         /**

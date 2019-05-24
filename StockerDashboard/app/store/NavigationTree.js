@@ -5,6 +5,11 @@ Ext.define('StockerDashboard.store.NavigationTree', {
     extend: 'Ext.data.TreeStore',
 
     storeId: 'NavigationTree',
+    alias: 'store.navigationTree',
+
+    requires: [
+        'StockerDashboard.data.language.*'
+    ],
 
     /**
      * Campos de los items del arbol
@@ -23,26 +28,19 @@ Ext.define('StockerDashboard.store.NavigationTree', {
          */
         children: [
             {
-                text: 'Dashboard',
-                iconCls: 'x-fa fa-desktop',
+                text: Translate.get('dashboard'),
+                iconCls: Icon.get('desktop'),
                 rowCls: 'nav-tree-badge',
                 viewType: 'admindashboard',
                 routeId: 'dashboard',
                 leaf: true
             },
             {
-                text: 'Products',
-                iconCls: 'x-fa fa-box',
+                text: Translate.get('products'),
+                iconCls: Icon.get('archive'),
                 viewType: 'productsearch',
                 leaf: true
-            },
-            /*{
-                text: 'Search',
-                iconCls: 'x-fa fa-search',
-                viewType: 'search',
-                leaf: true,
-                hidden: true
-            }*/
+            }
         ]
     }
 });
