@@ -31,7 +31,7 @@
 
             var OptionsBuilder = new DbContextOptionsBuilder<StockerContext>();
             //var ConnectionString = builder.GetConnectionString("DefaultConnections");
-            var ConnectionString = "Server=DESKTOP-2ARC100;Database=StockerDatabase;Integrated Security=true;MultipleActiveResultSets=true;";
+            var ConnectionString = "Server=tcp:localhost,1433;Database=StockerDatabase;Trusted_Connection=false;MultipleActiveResultSets=true;User Id=sa;Password=SqlServer1234";
             OptionsBuilder.UseSqlServer(ConnectionString, Options => Options.MigrationsAssembly("DataAccessLayer"));
             return new StockerContext(OptionsBuilder.Options);
         }

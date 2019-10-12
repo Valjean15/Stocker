@@ -16,6 +16,7 @@
             LastName = string.Empty;
             PhoneNumber = string.Empty;
             Address = string.Empty;
+            Identification = string.Empty;
         }
 
         /// <summary>
@@ -32,6 +33,11 @@
         ///     Numero de contacto del contactos
         /// </summary>
         public string PhoneNumber { get; set; }
+
+        /// <summary>
+        ///     Identifiacion del cliente
+        /// </summary>
+        public string Identification { get; set; }
 
         /// <summary>
         ///     Direccion del contacto

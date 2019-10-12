@@ -19,7 +19,11 @@
         public void Configure(EntityTypeBuilder<ExchangeRate> Builder)
         {
             Builder.ToTable(nameof(ExchangeRate), Modules.Common);
-            Builder.HasKey(exchageRate => exchageRate.Id);
+            Builder.HasKey(exchangeRate => exchangeRate.Id);
+
+            Builder.HasOne(exchangeRate => exchangeRate.Currency)
+                .WithMany(currency => currency.ExchangesRates)
+                .HasForeignKey(exchangeRate => exchangeRate.CurrencyId);
         }
     }
 }

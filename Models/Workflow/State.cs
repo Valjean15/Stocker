@@ -1,7 +1,5 @@
 ﻿namespace Models.Workflow
 {
-    using System.Collections.Generic;
-
     /// <summary>
     ///     Representa un estado dentro del flujo de trabajo
     /// </summary>
@@ -13,8 +11,6 @@
         public State()
         {
             Name = string.Empty;
-            Flow = new Flow();
-            Transitions = new HashSet<Transition>();
         }
 
         /// <summary>
@@ -42,11 +38,6 @@
         /// </para>
         /// </summary>
         public virtual Flow Flow { get; set; }
-
-        /// <summary>
-        ///     Transiciones relacionados al estado
-        /// </summary>
-        public virtual ICollection<Transition> Transitions { get; set; }
 
         #endregion
     }

@@ -25,20 +25,20 @@
         ///     Estado de entrada de la transicion
         /// </para>
         /// <para>
-        ///     Llave foranea de la entidad <see cref="Workflow.State"/>
+        ///     Llave foranea de la entidad <see cref="State"/>
         /// </para>
         /// </summary>
-        public int StartStateId { get; set; }
+        public int? StartStateId { get; set; }
 
         /// <summary>
         /// <para>
         ///     Estado de salida de la transicion
         /// </para>
         /// <para>
-        ///     Llave foranea de la entidad <see cref="Workflow.State"/>
+        ///     Llave foranea de la entidad <see cref="State"/>
         /// </para>
         /// </summary>
-        public int EndStateId { get; set; }
+        public int? EndStateId { get; set; }
 
         #endregion
     }

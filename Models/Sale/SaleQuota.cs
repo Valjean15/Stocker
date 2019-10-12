@@ -8,14 +8,6 @@
     public class SaleQuota : EntityBase<int>
     {
         /// <summary>
-        ///     Construtor base de la entidad
-        /// </summary>
-        public SaleQuota()
-        {
-            Sale = new Sale();
-        }
-
-        /// <summary>
         ///     Valor de la cuota
         /// </summary>
         public decimal Value { get; set; }

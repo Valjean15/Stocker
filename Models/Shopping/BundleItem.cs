@@ -1,25 +1,12 @@
 ﻿namespace Models.Shopping
 {
     using Models.Common;
-    using Models.Inventory;
-    using System.Collections.Generic;
 
     /// <summary>
     ///     Producto de compra dentro de un lote
     /// </summary>
     public class BundleItem : EntityBase<int>
     {
-        /// <summary>
-        ///     Construtor base de la entidad
-        /// </summary>
-        public BundleItem()
-        {
-            Currency = new Currency();
-            Bundle = new Bundle();
-            Product = new Product();
-            StockItems = new HashSet<StockItem>();
-        }
-
         /// <summary>
         ///     Numero de items ordenados
         /// </summary>
@@ -72,7 +59,7 @@
         public int BundleId { get; set; }
 
         /// <summary>
-        ///     Llave foranea de la entidad <see cref="Shopping.Product"/>
+        ///     Llave foranea de la entidad <see cref="Common.Product"/>
         /// </summary>
         public int ProductId { get; set; }
 
@@ -88,7 +75,7 @@
         ///     Indica la moneda en que se encuntran los montos del Lote
         /// </para>
         /// </summary>
-        public Currency Currency { get; set; }
+        public virtual Currency Currency { get; set; }
 
         /// <summary>
         /// <para>
@@ -109,11 +96,6 @@
         /// </para>
         /// </summary>
         public virtual Product Product { get; set; }
-
-        /// <summary>
-        ///     Todos los items y en que item de inventario corresponden
-        /// </summary>
-        public virtual ICollection<StockItem> StockItems { get; set; }
 
         #endregion
     }

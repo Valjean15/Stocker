@@ -1,6 +1,7 @@
 ﻿namespace Models
 {
     using System;
+    using Models.Interfaces;
 
     /// <summary>
     ///     Implementacion de la base que utilizan todos los modelos de la base de datos.
@@ -29,18 +30,17 @@
         /// <summary>
         ///     Comparador personalizado para poder comparar directamente con los Id
         /// </summary>
-        /// <param name="Obj">
+        /// <param name="obj">
         ///     Objeto con el que se va a comparar
         /// </param>
         /// <returns>
         ///     Regresa true, si ambas entidades tienen el mismo Id, en caso contrario false
         /// </returns>
 
-        public override bool Equals(object Obj)
+        public override bool Equals(object obj)
         {
-            if (Obj is null) return false;
-            var ObjParsed = Obj as IEntityBase<TKey>;
-            return ObjParsed is null ? false : Equals(ObjParsed);
+            if (obj is null) return false;
+            return (obj is IEntityBase<TKey> ObjParsed) && Equals(ObjParsed);
         }
 
         /// <summary>

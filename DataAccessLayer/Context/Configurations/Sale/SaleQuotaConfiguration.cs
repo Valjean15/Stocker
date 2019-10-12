@@ -23,7 +23,8 @@
 
             Builder.HasOne(saleQuota => saleQuota.Sale)
                 .WithMany(sale => sale.Quotas)
-                .HasForeignKey(saleQuota => saleQuota.SaleId);
+                .HasForeignKey(saleQuota => saleQuota.SaleId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

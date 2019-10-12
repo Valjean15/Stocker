@@ -1,13 +1,15 @@
 ﻿namespace Models.Inventory
 {
     using Models.Common;
+    using Models.Enums;
+    using Models.Interfaces;
     using Models.Workflow;
     using System.Collections.Generic;
 
     /// <summary>
     ///     Hace referencia a un inventario
     /// </summary>
-    public class Stock : EntityBase<int>
+    public class Stock : EntityBase<int>, IWorkflowState
     {
         /// <summary>
         ///     Construtor base de la entidad
@@ -15,15 +17,17 @@
         public Stock()
         {
             Name = string.Empty;
-            Store = new Store();
-            State = new State();
-            Items = new HashSet<StockItem>();
         }
 
         /// <summary>
         ///     Nombre del inventario
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        ///     Tipo de Inventario
+        /// </summary>
+        public StockType StockType { get; set; }
 
         #region Foreing Keys
 

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class InitialMigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,8 +30,7 @@ namespace DataAccessLayer.Migrations
                 name: "Workflow");
 
             migrationBuilder.CreateTable(
-                name: "Role",
-                schema: "Administration",
+                name: "AspNetRoles",
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
@@ -41,7 +40,7 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Role", x => x.Id);
+                    table.PrimaryKey("PK_AspNetRoles", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -68,6 +67,20 @@ namespace DataAccessLayer.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_User", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Brand",
+                schema: "Common",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Brand", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -110,6 +123,7 @@ namespace DataAccessLayer.Migrations
                     Name = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     PhoneNumber = table.Column<string>(nullable: true),
+                    Identification = table.Column<string>(nullable: true),
                     Address = table.Column<string>(nullable: true),
                     ContactType = table.Column<int>(nullable: false),
                     Gender = table.Column<int>(nullable: false)
@@ -117,20 +131,6 @@ namespace DataAccessLayer.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Contact", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Brand",
-                schema: "Shopping",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Brand", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -168,8 +168,23 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RoleClaim",
-                schema: "Administration",
+                name: "Transition",
+                schema: "Workflow",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    StartStateId = table.Column<int>(nullable: true),
+                    EndStateId = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Transition", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AspNetRoleClaims",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -180,19 +195,17 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RoleClaim", x => x.Id);
+                    table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_RoleClaim_Role_RoleId",
+                        name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
                         column: x => x.RoleId,
-                        principalSchema: "Administration",
-                        principalTable: "Role",
+                        principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserClaim",
-                schema: "Administration",
+                name: "AspNetUserClaims",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -203,9 +216,9 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserClaim", x => x.Id);
+                    table.PrimaryKey("PK_AspNetUserClaims", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserClaim_User_UserId",
+                        name: "FK_AspNetUserClaims_User_UserId",
                         column: x => x.UserId,
                         principalSchema: "Administration",
                         principalTable: "User",
@@ -214,8 +227,7 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserLogin",
-                schema: "Administration",
+                name: "AspNetUserLogins",
                 columns: table => new
                 {
                     LoginProvider = table.Column<string>(nullable: false),
@@ -225,9 +237,9 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserLogin", x => new { x.LoginProvider, x.ProviderKey });
+                    table.PrimaryKey("PK_AspNetUserLogins", x => new { x.LoginProvider, x.ProviderKey });
                     table.ForeignKey(
-                        name: "FK_UserLogin_User_UserId",
+                        name: "FK_AspNetUserLogins_User_UserId",
                         column: x => x.UserId,
                         principalSchema: "Administration",
                         principalTable: "User",
@@ -236,8 +248,7 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserRole",
-                schema: "Administration",
+                name: "AspNetUserRoles",
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
@@ -245,16 +256,15 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserRole", x => new { x.UserId, x.RoleId });
+                    table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
                     table.ForeignKey(
-                        name: "FK_UserRole_Role_RoleId",
+                        name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
                         column: x => x.RoleId,
-                        principalSchema: "Administration",
-                        principalTable: "Role",
+                        principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_UserRole_User_UserId",
+                        name: "FK_AspNetUserRoles_User_UserId",
                         column: x => x.UserId,
                         principalSchema: "Administration",
                         principalTable: "User",
@@ -263,8 +273,7 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserToken",
-                schema: "Administration",
+                name: "AspNetUserTokens",
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
@@ -274,9 +283,9 @@ namespace DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserToken", x => new { x.UserId, x.LoginProvider, x.Name });
+                    table.PrimaryKey("PK_AspNetUserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
                     table.ForeignKey(
-                        name: "FK_UserToken_User_UserId",
+                        name: "FK_AspNetUserTokens_User_UserId",
                         column: x => x.UserId,
                         principalSchema: "Administration",
                         principalTable: "User",
@@ -294,7 +303,6 @@ namespace DataAccessLayer.Migrations
                     ChangeRateDate = table.Column<DateTime>(nullable: false),
                     SaleRate = table.Column<decimal>(nullable: false),
                     PurchaseRate = table.Column<decimal>(nullable: false),
-                    PrincipalCurrencyId = table.Column<int>(nullable: false),
                     CurrencyId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
@@ -302,37 +310,6 @@ namespace DataAccessLayer.Migrations
                     table.PrimaryKey("PK_ExchangeRate", x => x.Id);
                     table.ForeignKey(
                         name: "FK_ExchangeRate_Currency_CurrencyId",
-                        column: x => x.CurrencyId,
-                        principalSchema: "Common",
-                        principalTable: "Currency",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Product",
-                schema: "Shopping",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    SaleUnitPrice = table.Column<decimal>(nullable: false),
-                    BrandId = table.Column<int>(nullable: false),
-                    CurrencyId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Product", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Product_Brand_BrandId",
-                        column: x => x.BrandId,
-                        principalSchema: "Shopping",
-                        principalTable: "Brand",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Product_Currency_CurrencyId",
                         column: x => x.CurrencyId,
                         principalSchema: "Common",
                         principalTable: "Currency",
@@ -359,7 +336,46 @@ namespace DataAccessLayer.Migrations
                         principalSchema: "Workflow",
                         principalTable: "Flow",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Product",
+                schema: "Common",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true),
+                    SaleUnitPrice = table.Column<decimal>(nullable: false),
+                    BrandId = table.Column<int>(nullable: false),
+                    CurrencyId = table.Column<int>(nullable: false),
+                    StateId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Product", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Product_Brand_BrandId",
+                        column: x => x.BrandId,
+                        principalSchema: "Common",
+                        principalTable: "Brand",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Product_Currency_CurrencyId",
+                        column: x => x.CurrencyId,
+                        principalSchema: "Common",
+                        principalTable: "Currency",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Product_State_StateId",
+                        column: x => x.StateId,
+                        principalSchema: "Workflow",
+                        principalTable: "State",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -370,6 +386,7 @@ namespace DataAccessLayer.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
+                    StockType = table.Column<int>(nullable: false),
                     StoreId = table.Column<int>(nullable: false),
                     StateId = table.Column<int>(nullable: false)
                 },
@@ -389,7 +406,7 @@ namespace DataAccessLayer.Migrations
                         principalSchema: "Common",
                         principalTable: "Store",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -402,25 +419,41 @@ namespace DataAccessLayer.Migrations
                     SaleDate = table.Column<DateTime>(nullable: false),
                     Total = table.Column<decimal>(nullable: false),
                     CurrencyId = table.Column<int>(nullable: false),
-                    StateId = table.Column<int>(nullable: false)
+                    StateId = table.Column<int>(nullable: false),
+                    ContactId = table.Column<int>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sale", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Sale_Contact_ContactId",
+                        column: x => x.ContactId,
+                        principalSchema: "Contact",
+                        principalTable: "Contact",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Sale_Currency_CurrencyId",
                         column: x => x.CurrencyId,
                         principalSchema: "Common",
                         principalTable: "Currency",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Sale_State_StateId",
                         column: x => x.StateId,
                         principalSchema: "Workflow",
                         principalTable: "State",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Sale_User_UserId",
+                        column: x => x.UserId,
+                        principalSchema: "Administration",
+                        principalTable: "User",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -438,9 +471,10 @@ namespace DataAccessLayer.Migrations
                     Total = table.Column<decimal>(nullable: false),
                     Discount = table.Column<decimal>(nullable: false),
                     Order = table.Column<DateTime>(nullable: false),
-                    Arrival = table.Column<DateTime>(nullable: false),
+                    Arrival = table.Column<DateTime>(nullable: true),
                     CurrencyId = table.Column<int>(nullable: false),
-                    StateId = table.Column<int>(nullable: false)
+                    StateId = table.Column<int>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -451,36 +485,80 @@ namespace DataAccessLayer.Migrations
                         principalSchema: "Common",
                         principalTable: "Currency",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Bundle_State_StateId",
                         column: x => x.StateId,
                         principalSchema: "Workflow",
                         principalTable: "State",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Bundle_User_UserId",
+                        column: x => x.UserId,
+                        principalSchema: "Administration",
+                        principalTable: "User",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Transition",
-                schema: "Workflow",
+                name: "StockItem",
+                schema: "Inventory",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    StartStateId = table.Column<int>(nullable: false),
-                    EndStateId = table.Column<int>(nullable: false),
-                    StateId = table.Column<int>(nullable: true)
+                    Entry = table.Column<DateTime>(nullable: false),
+                    StockId = table.Column<int>(nullable: false),
+                    ProductId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Transition", x => x.Id);
+                    table.PrimaryKey("PK_StockItem", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Transition_State_StateId",
-                        column: x => x.StateId,
-                        principalSchema: "Workflow",
-                        principalTable: "State",
+                        name: "FK_StockItem_Product_ProductId",
+                        column: x => x.ProductId,
+                        principalSchema: "Common",
+                        principalTable: "Product",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_StockItem_Stock_StockId",
+                        column: x => x.StockId,
+                        principalSchema: "Inventory",
+                        principalTable: "Stock",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SaleItem",
+                schema: "Sale",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Value = table.Column<decimal>(nullable: false),
+                    Quantity = table.Column<int>(nullable: false),
+                    SaleId = table.Column<int>(nullable: false),
+                    ProductId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SaleItem", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SaleItem_Product_ProductId",
+                        column: x => x.ProductId,
+                        principalSchema: "Common",
+                        principalTable: "Product",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_SaleItem_Sale_SaleId",
+                        column: x => x.SaleId,
+                        principalSchema: "Sale",
+                        principalTable: "Sale",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -507,7 +585,7 @@ namespace DataAccessLayer.Migrations
                         principalSchema: "Sale",
                         principalTable: "Sale",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -537,7 +615,7 @@ namespace DataAccessLayer.Migrations
                         principalSchema: "Shopping",
                         principalTable: "Bundle",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_BundleItem_Currency_CurrencyId",
                         column: x => x.CurrencyId,
@@ -548,44 +626,14 @@ namespace DataAccessLayer.Migrations
                     table.ForeignKey(
                         name: "FK_BundleItem_Product_ProductId",
                         column: x => x.ProductId,
-                        principalSchema: "Shopping",
+                        principalSchema: "Common",
                         principalTable: "Product",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "StockItem",
-                schema: "Inventory",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Entry = table.Column<DateTime>(nullable: false),
-                    StockId = table.Column<int>(nullable: false),
-                    BundleItemId = table.Column<int>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_StockItem", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_StockItem_BundleItem_BundleItemId",
-                        column: x => x.BundleItemId,
-                        principalSchema: "Shopping",
-                        principalTable: "BundleItem",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_StockItem_Stock_StockId",
-                        column: x => x.StockId,
-                        principalSchema: "Inventory",
-                        principalTable: "Stock",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "MovementStockItem",
+                name: "TransferMovement",
                 schema: "Inventory",
                 columns: table => new
                 {
@@ -593,14 +641,22 @@ namespace DataAccessLayer.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     MovementDate = table.Column<DateTime>(nullable: false),
                     Quantity = table.Column<int>(nullable: false),
-                    StockItemId = table.Column<int>(nullable: false)
+                    StockItemId = table.Column<int>(nullable: false),
+                    TargetStockItemId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MovementStockItem", x => x.Id);
+                    table.PrimaryKey("PK_TransferMovement", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MovementStockItem_StockItem_StockItemId",
+                        name: "FK_TransferMovement_StockItem_StockItemId",
                         column: x => x.StockItemId,
+                        principalSchema: "Inventory",
+                        principalTable: "StockItem",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_TransferMovement_StockItem_TargetStockItemId",
+                        column: x => x.TargetStockItemId,
                         principalSchema: "Inventory",
                         principalTable: "StockItem",
                         principalColumn: "Id",
@@ -608,29 +664,60 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SaleItem",
-                schema: "Sale",
+                name: "SaleMovement",
+                schema: "Inventory",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Value = table.Column<decimal>(nullable: false),
+                    MovementDate = table.Column<DateTime>(nullable: false),
                     Quantity = table.Column<int>(nullable: false),
-                    SaleId = table.Column<int>(nullable: false),
-                    StockItemId = table.Column<int>(nullable: false)
+                    StockItemId = table.Column<int>(nullable: false),
+                    SaleItemId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SaleItem", x => x.Id);
+                    table.PrimaryKey("PK_SaleMovement", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SaleItem_Sale_SaleId",
-                        column: x => x.SaleId,
+                        name: "FK_SaleMovement_SaleItem_SaleItemId",
+                        column: x => x.SaleItemId,
                         principalSchema: "Sale",
-                        principalTable: "Sale",
+                        principalTable: "SaleItem",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_SaleItem_StockItem_StockItemId",
+                        name: "FK_SaleMovement_StockItem_StockItemId",
+                        column: x => x.StockItemId,
+                        principalSchema: "Inventory",
+                        principalTable: "StockItem",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BundleMovement",
+                schema: "Inventory",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    MovementDate = table.Column<DateTime>(nullable: false),
+                    Quantity = table.Column<int>(nullable: false),
+                    StockItemId = table.Column<int>(nullable: false),
+                    BundleItemId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BundleMovement", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BundleMovement_BundleItem_BundleItemId",
+                        column: x => x.BundleItemId,
+                        principalSchema: "Shopping",
+                        principalTable: "BundleItem",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_BundleMovement_StockItem_StockItemId",
                         column: x => x.StockItemId,
                         principalSchema: "Inventory",
                         principalTable: "StockItem",
@@ -639,17 +726,30 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_AspNetRoleClaims_RoleId",
+                table: "AspNetRoleClaims",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
                 name: "RoleNameIndex",
-                schema: "Administration",
-                table: "Role",
+                table: "AspNetRoles",
                 column: "NormalizedName",
                 unique: true,
                 filter: "[NormalizedName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_RoleClaim_RoleId",
-                schema: "Administration",
-                table: "RoleClaim",
+                name: "IX_AspNetUserClaims_UserId",
+                table: "AspNetUserClaims",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUserLogins_UserId",
+                table: "AspNetUserLogins",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AspNetUserRoles_RoleId",
+                table: "AspNetUserRoles",
                 column: "RoleId");
 
             migrationBuilder.CreateIndex(
@@ -667,33 +767,53 @@ namespace DataAccessLayer.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserClaim_UserId",
-                schema: "Administration",
-                table: "UserClaim",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UserLogin_UserId",
-                schema: "Administration",
-                table: "UserLogin",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_UserRole_RoleId",
-                schema: "Administration",
-                table: "UserRole",
-                column: "RoleId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ExchangeRate_CurrencyId",
                 schema: "Common",
                 table: "ExchangeRate",
                 column: "CurrencyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MovementStockItem_StockItemId",
+                name: "IX_Product_BrandId",
+                schema: "Common",
+                table: "Product",
+                column: "BrandId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Product_CurrencyId",
+                schema: "Common",
+                table: "Product",
+                column: "CurrencyId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Product_StateId",
+                schema: "Common",
+                table: "Product",
+                column: "StateId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BundleMovement_BundleItemId",
                 schema: "Inventory",
-                table: "MovementStockItem",
+                table: "BundleMovement",
+                column: "BundleItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BundleMovement_StockItemId",
+                schema: "Inventory",
+                table: "BundleMovement",
+                column: "StockItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SaleMovement_SaleItemId",
+                schema: "Inventory",
+                table: "SaleMovement",
+                column: "SaleItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SaleMovement_StockItemId",
+                schema: "Inventory",
+                table: "SaleMovement",
                 column: "StockItemId");
 
             migrationBuilder.CreateIndex(
@@ -709,16 +829,35 @@ namespace DataAccessLayer.Migrations
                 column: "StoreId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StockItem_BundleItemId",
+                name: "IX_StockItem_ProductId",
                 schema: "Inventory",
                 table: "StockItem",
-                column: "BundleItemId");
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_StockItem_StockId",
                 schema: "Inventory",
                 table: "StockItem",
                 column: "StockId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransferMovement_StockItemId",
+                schema: "Inventory",
+                table: "TransferMovement",
+                column: "StockItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TransferMovement_TargetStockItemId",
+                schema: "Inventory",
+                table: "TransferMovement",
+                column: "TargetStockItemId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Sale_ContactId",
+                schema: "Sale",
+                table: "Sale",
+                column: "ContactId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Sale_CurrencyId",
@@ -733,17 +872,22 @@ namespace DataAccessLayer.Migrations
                 column: "StateId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Sale_UserId",
+                schema: "Sale",
+                table: "Sale",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SaleItem_ProductId",
+                schema: "Sale",
+                table: "SaleItem",
+                column: "ProductId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_SaleItem_SaleId",
                 schema: "Sale",
                 table: "SaleItem",
                 column: "SaleId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_SaleItem_StockItemId",
-                schema: "Sale",
-                table: "SaleItem",
-                column: "StockItemId",
-                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_SaleQuota_SaleId",
@@ -765,6 +909,12 @@ namespace DataAccessLayer.Migrations
                 column: "StateId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Bundle_UserId",
+                schema: "Shopping",
+                table: "Bundle",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BundleItem_BundleId",
                 schema: "Shopping",
                 table: "BundleItem",
@@ -784,68 +934,44 @@ namespace DataAccessLayer.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Product_BrandId",
-                schema: "Shopping",
-                table: "Product",
-                column: "BrandId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Product_CurrencyId",
-                schema: "Shopping",
-                table: "Product",
-                column: "CurrencyId",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_State_FlowId",
                 schema: "Workflow",
                 table: "State",
                 column: "FlowId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Transition_StateId",
-                schema: "Workflow",
-                table: "Transition",
-                column: "StateId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "RoleClaim",
-                schema: "Administration");
+                name: "AspNetRoleClaims");
 
             migrationBuilder.DropTable(
-                name: "UserClaim",
-                schema: "Administration");
+                name: "AspNetUserClaims");
 
             migrationBuilder.DropTable(
-                name: "UserLogin",
-                schema: "Administration");
+                name: "AspNetUserLogins");
 
             migrationBuilder.DropTable(
-                name: "UserRole",
-                schema: "Administration");
+                name: "AspNetUserRoles");
 
             migrationBuilder.DropTable(
-                name: "UserToken",
-                schema: "Administration");
+                name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
                 name: "ExchangeRate",
                 schema: "Common");
 
             migrationBuilder.DropTable(
-                name: "Contact",
-                schema: "Contact");
-
-            migrationBuilder.DropTable(
-                name: "MovementStockItem",
+                name: "BundleMovement",
                 schema: "Inventory");
 
             migrationBuilder.DropTable(
-                name: "SaleItem",
-                schema: "Sale");
+                name: "SaleMovement",
+                schema: "Inventory");
+
+            migrationBuilder.DropTable(
+                name: "TransferMovement",
+                schema: "Inventory");
 
             migrationBuilder.DropTable(
                 name: "SaleQuota",
@@ -860,27 +986,18 @@ namespace DataAccessLayer.Migrations
                 schema: "Workflow");
 
             migrationBuilder.DropTable(
-                name: "Role",
-                schema: "Administration");
-
-            migrationBuilder.DropTable(
-                name: "User",
-                schema: "Administration");
-
-            migrationBuilder.DropTable(
-                name: "StockItem",
-                schema: "Inventory");
-
-            migrationBuilder.DropTable(
-                name: "Sale",
-                schema: "Sale");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "BundleItem",
                 schema: "Shopping");
 
             migrationBuilder.DropTable(
-                name: "Stock",
+                name: "SaleItem",
+                schema: "Sale");
+
+            migrationBuilder.DropTable(
+                name: "StockItem",
                 schema: "Inventory");
 
             migrationBuilder.DropTable(
@@ -888,11 +1005,31 @@ namespace DataAccessLayer.Migrations
                 schema: "Shopping");
 
             migrationBuilder.DropTable(
-                name: "Product",
-                schema: "Shopping");
+                name: "Sale",
+                schema: "Sale");
 
             migrationBuilder.DropTable(
-                name: "Store",
+                name: "Product",
+                schema: "Common");
+
+            migrationBuilder.DropTable(
+                name: "Stock",
+                schema: "Inventory");
+
+            migrationBuilder.DropTable(
+                name: "Contact",
+                schema: "Contact");
+
+            migrationBuilder.DropTable(
+                name: "User",
+                schema: "Administration");
+
+            migrationBuilder.DropTable(
+                name: "Brand",
+                schema: "Common");
+
+            migrationBuilder.DropTable(
+                name: "Currency",
                 schema: "Common");
 
             migrationBuilder.DropTable(
@@ -900,11 +1037,7 @@ namespace DataAccessLayer.Migrations
                 schema: "Workflow");
 
             migrationBuilder.DropTable(
-                name: "Brand",
-                schema: "Shopping");
-
-            migrationBuilder.DropTable(
-                name: "Currency",
+                name: "Store",
                 schema: "Common");
 
             migrationBuilder.DropTable(

@@ -3,17 +3,14 @@
     using System;
 
     /// <summary>
-    ///     Entidad encargada de almacenar tasa de cambio entre monedas
+    ///     Entidad encargada de almacenar tasa de cambio entre monedas.
+    ///     <para>
+    ///         Se maneja una moneda principal la cual, todas las tasas de cambio estan en funcion
+    ///         a la moneda principal.
+    ///     </para>
     /// </summary>
     public class ExchangeRate : EntityBase<int>
     {
-        /// <summary>
-        ///      Construtor base de la entidad
-        /// </summary>
-        public ExchangeRate()
-        {
-        }
-
         /// <summary>
         ///     Fecha de la tasa de cambio
         /// </summary>
@@ -32,15 +29,18 @@
         #region Foreing Keys
 
         /// <summary>
-        ///     LLave foranea de la entidad <see cref="Currency"/>
-        /// </summary>
-        /// 
-        public int PrincipalCurrencyId { get; set; }
-
-        /// <summary>
         ///     Llave foranea de la entidad <see cref="Currency"/>
         /// </summary>
         public int CurrencyId { get; set; }
+
+        #endregion
+
+        #region Virtual Properties
+
+        /// <summary>
+        ///     Moneda de la cual pertenece la tasa de cambio
+        /// </summary>
+        public virtual Currency Currency { get; set; }
 
         #endregion
     }

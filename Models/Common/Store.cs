@@ -14,7 +14,6 @@
         public Store()
         {
             Name = string.Empty;
-            Stocks = new HashSet<Stock>();
         }
 
         /// <summary>

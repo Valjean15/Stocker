@@ -23,11 +23,12 @@
 
             Builder.HasOne(saleItem => saleItem.Sale)
                 .WithMany(sale => sale.Items)
-                .HasForeignKey(saleItem => saleItem.SaleId);
+                .HasForeignKey(saleItem => saleItem.SaleId)
+                .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(saleItem => saleItem.StockItem)
-                .WithOne()
-                .HasForeignKey<SaleItem>(saleItem => saleItem.StockItemId)
+            Builder.HasOne(saleItem => saleItem.Product)
+                .WithMany(product => product.SaleItems)
+                .HasForeignKey(saleItem => saleItem.ProductId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

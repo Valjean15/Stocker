@@ -1,26 +1,18 @@
 ﻿namespace Models.Sale
 {
     using Models.Common;
+    using Models.Interfaces;
     using Models.Workflow;
+    using Models.Contact;
     using System;
     using System.Collections.Generic;
+    using Models.Administration;
 
     /// <summary>
     ///     Representa una venta, salida de elementos de inventario
     /// </summary>
-    public class Sale : EntityBase<int>
+    public class Sale : EntityBase<int>, IWorkflowState, IUser
     {
-        /// <summary>
-        ///      Construtor base de la entidad
-        /// </summary>
-        public Sale()
-        {
-            Currency = new Currency();
-            State = new State();
-            Quotas = new HashSet<SaleQuota>();
-            Items = new HashSet<SaleItem>();
-        }
-
         /// <summary>
         ///     Fecha en la que se realiza la venta
         /// </summary>
@@ -42,6 +34,19 @@
         ///     Llave foranea de la entidad <see cref="Workflow.State"/>
         /// </summary>
         public int StateId { get; set; }
+
+        /// <summary>
+        ///     Llave foranea de la entidad <see cref="Contact"/>
+        /// </summary>
+        public int ContactId { get; set; }
+
+        /// <summary>
+        ///     Usuario que genero la venta
+        ///     <para>
+        ///     Llave foranea de la entidad <see cref="Administration.User"/>
+        ///     </para>
+        /// </summary>
+        public string UserId { get; set; }
 
         #endregion
 
@@ -66,6 +71,26 @@
         /// </para>
         /// </summary>
         public virtual State State { get; set; }
+
+        /// <summary>
+        /// <para>
+        ///     Propiedad virtual de la llave foranea de <see cref="ContactId"/>
+        /// </para>
+        /// <para>
+        ///     Representa la persona a la cual se le esta realizando la venta
+        /// </para>
+        /// </summary>
+        public virtual Contact Contact { get; set; }
+
+        /// <summary>
+        /// <para>
+        ///     Propiedad virtual de la llave foranea de <see cref="UserId"/>
+        /// </para>
+        /// <para>
+        ///     Usuario que genero la venta
+        /// </para>
+        /// </summary>
+        public virtual User User { get; set; }
 
         /// <summary>
         ///     Cuotas asociadas a esta venta

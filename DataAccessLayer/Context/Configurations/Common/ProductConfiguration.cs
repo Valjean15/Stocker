@@ -1,7 +1,7 @@
 ﻿namespace DataAccessLayer.Context.Configurations.Shopping
 {
     using Util.Constants;
-    using Models.Shopping;
+    using Models.Common;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -18,16 +18,23 @@
         /// </param>
         public void Configure(EntityTypeBuilder<Product> Builder)
         {
-            Builder.ToTable(nameof(Product), Modules.Shopping);
+            Builder.ToTable(nameof(Product), Modules.Common);
             Builder.HasKey(product => product.Id);
 
             Builder.HasOne(product => product.Brand)
                 .WithMany(brand => brand.Products)
-                .HasForeignKey(product => product.BrandId);
+                .HasForeignKey(product => product.BrandId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             Builder.HasOne(product => product.Currency)
                 .WithOne()
-                .HasForeignKey<Product>(product => product.CurrencyId);
+                .HasForeignKey<Product>(product => product.CurrencyId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            Builder.HasOne(product => product.State)
+                .WithOne()
+                .HasForeignKey<Product>(product => product.StateId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

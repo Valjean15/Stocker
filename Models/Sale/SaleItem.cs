@@ -1,21 +1,12 @@
 ﻿namespace Models.Sale
 {
-    using Models.Inventory;
+    using Models.Common;
 
     /// <summary>
     ///     Representa elemento dentro de una venta
     /// </summary>
     public class SaleItem : EntityBase<int>
     {
-        /// <summary>
-        ///     Construtor base de la entidad
-        /// </summary>
-        public SaleItem()
-        {
-            Sale = new Sale();
-            StockItem = new StockItem();
-        }
-
         /// <summary>
         ///     Valor del item
         /// </summary>
@@ -34,9 +25,9 @@
         public int SaleId { get; set; }
 
         /// <summary>
-        ///     Llave foranea de la entidad <see cref="StockItem"/>
+        ///     Llave foranea de la entidad <see cref="Product"/>
         /// </summary>
-        public int StockItemId { get; set; }
+        public int ProductId { get; set; }
 
         #endregion
 
@@ -54,13 +45,13 @@
 
         /// <summary>
         /// <para>
-        ///     Propiedad virtual de la llave foranea de <see cref="StockItemId"/>
+        ///     Propiedad virtual de la llave foranea de <see cref="ProductId"/>
         /// </para>
         /// <para>
-        ///     Indica que elemento de que inventario pertenece
+        ///     Indica a que producto representa
         /// </para>
         /// </summary>
-        public virtual StockItem StockItem { get; set; }
+        public virtual Product Product { get; set; }
 
         #endregion
     }

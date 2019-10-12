@@ -15,7 +15,7 @@
         /// <summary>
         /// Indica si el repositorio ya fue liberado
         /// </summary>
-        protected bool Disposed = false;
+        protected bool Disposed;
 
         /// <summary>
         /// Contexto de consultas
@@ -84,7 +84,7 @@
         }
 
         /// <inheritdoc/>
-        public TEntity? Delete(params object[] keyValues)
+        public TEntity Delete(params object[] keyValues)
         {
             var entity = FindByKey(keyValues);
             if (entity is null) return null;
@@ -106,16 +106,16 @@
         public IQueryable<TEntity> FindBy(Expression<Func<TEntity, bool>> predicate) => DbSet.Where(predicate);
 
         /// <inheritdoc/>
-        public TEntity? FirstBy(Expression<Func<TEntity, bool>> predicate) => FirstOrDefault(predicate);
+        public TEntity FirstBy(Expression<Func<TEntity, bool>> predicate) => FirstOrDefault(predicate);
 
         /// <inheritdoc/>
         public bool Any(Expression<Func<TEntity, bool>> predicate) => DbSet.Any(predicate);
 
         /// <inheritdoc/>
-        public TEntity? FindByKey(params object[] keyValues) => DbSet.Find(keyValues);
+        public TEntity FindByKey(params object[] keyValues) => DbSet.Find(keyValues);
 
         /// <inheritdoc/>
-        public TEntity? FirstOrDefault(Expression<Func<TEntity, bool>> predicate) => DbSet.FirstOrDefault(predicate);
+        public TEntity FirstOrDefault(Expression<Func<TEntity, bool>> predicate) => DbSet.FirstOrDefault(predicate);
 
         #endregion
 

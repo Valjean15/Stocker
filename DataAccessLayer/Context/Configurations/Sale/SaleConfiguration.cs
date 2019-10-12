@@ -23,11 +23,23 @@
 
             Builder.HasOne(sale => sale.Currency)
                 .WithMany()
-                .HasForeignKey(sale => sale.CurrencyId);
+                .HasForeignKey(sale => sale.CurrencyId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             Builder.HasOne(sale => sale.State)
                 .WithMany()
-                .HasForeignKey(sale => sale.StateId);
+                .HasForeignKey(sale => sale.StateId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            Builder.HasOne(sale => sale.Contact)
+                .WithOne()
+                .HasForeignKey<Sale>(sale => sale.ContactId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            Builder.HasOne(sale => sale.User)
+                .WithMany(user => user.Sales)
+                .HasForeignKey(sale => sale.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

@@ -1,12 +1,16 @@
-﻿namespace Models.Shopping
+﻿namespace Models.Common
 {
-    using Models.Common;
+    using Models.Interfaces;
+    using Models.Inventory;
+    using Models.Sale;
+    using Models.Shopping;
+    using Models.Workflow;
     using System.Collections.Generic;
 
     /// <summary>
     ///     Entidad que representa un item de compra
     /// </summary>
-    public class Product : EntityBase<int>
+    public class Product : EntityBase<int>, IWorkflowState
     {
         /// <summary>
         ///     Construtor base de la entidad
@@ -14,9 +18,6 @@
         public Product()
         {
             Name = string.Empty;
-            Brand = new Brand();
-            Currency = new Currency();
-            BundleItems = new HashSet<BundleItem>();
         }
 
         /// <summary>
@@ -32,7 +33,7 @@
         #region Foreing Keys
 
         /// <summary>
-        ///     LLave foranea de la entidad <see cref="Shopping.Brand"/>
+        ///     LLave foranea de la entidad <see cref="Brand"/>
         /// </summary>
         public int BrandId { get; set; }
 
@@ -40,6 +41,11 @@
         ///     Llave foranea de la entidad <see cref="Common.Currency"/>
         /// </summary>
         public int CurrencyId { get; set; }
+
+        /// <summary>
+        ///     Llave foranea de la entidad <see cref="Common.Currency"/>
+        /// </summary>
+        public int StateId { get; set; }
 
         #endregion
 
@@ -61,9 +67,29 @@
         public virtual Currency Currency { get; set; }
 
         /// <summary>
+        /// <para>
+        ///     Propiedad virtual de la llave foranea de <see cref="StateId"/>
+        /// </para>
+        /// <para>
+        ///     Indica el estado actual del producto
+        /// </para>
+        /// </summary>
+        public virtual State State { get; set; }
+
+        /// <summary>
         ///     Todos los items de compra asociados a este producto
         /// </summary>
         public virtual ICollection<BundleItem> BundleItems { get; set; }
+
+        /// <summary>
+        ///     Todos los items de ventas asociados a este producto
+        /// </summary>
+        public virtual ICollection<SaleItem> SaleItems { get; set; }
+
+        /// <summary>
+        ///     Todos los items de inventario asociados a este producto
+        /// </summary>
+        public virtual ICollection<StockItem> StockItems { get; set; }
 
         #endregion
     }

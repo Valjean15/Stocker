@@ -1,4 +1,4 @@
-﻿namespace Models.Shopping
+﻿namespace Models.Common
 {
     using System.Collections.Generic;
 
@@ -13,7 +13,6 @@
         public Brand()
         {
             Name = string.Empty;
-            Products = new HashSet<Product>();
         }
 
         /// <summary>

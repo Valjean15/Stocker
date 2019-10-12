@@ -6,7 +6,7 @@
     using System.Threading;
     using System.Threading.Tasks;
     using Microsoft.EntityFrameworkCore;
-    using Models;
+    using Models.Interfaces;
 
     /// <summary>
     ///     Implementacion de un Store para las entidades de base de datos

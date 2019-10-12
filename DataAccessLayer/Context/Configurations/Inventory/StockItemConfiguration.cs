@@ -21,14 +21,15 @@
             Builder.ToTable(nameof(StockItem), Modules.Inventory);
             Builder.HasKey(stockItem => stockItem.Id);
 
+            Builder.HasOne(stockItem => stockItem.Product)
+                .WithMany(product => product.StockItems)
+                .HasForeignKey(stockItem => stockItem.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             Builder.HasOne(stockItem => stockItem.Stock)
                 .WithMany(stock => stock.Items)
                 .HasForeignKey(stockItem => stockItem.StockId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            Builder.HasOne(stockItem => stockItem.BundleItem)
-                .WithMany(bundleItem => bundleItem.StockItems)
-                .HasForeignKey(stockItem => stockItem.BundleItemId);
         }
     }
 }

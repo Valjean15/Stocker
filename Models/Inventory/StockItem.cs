@@ -1,24 +1,14 @@
 ﻿namespace Models.Inventory 
 {
-    using Models.Shopping;
     using System;
     using System.Collections.Generic;
+    using Models.Common;
 
     /// <summary>
     ///     Hace referencia un elemento de inventario
     /// </summary>
     public class StockItem : EntityBase<int>
     {
-        /// <summary>
-        ///      Construtor base de la entidad
-        /// </summary>
-        public StockItem()
-        {
-            Stock = new Stock();
-            BundleItem = new BundleItem();
-            Movements = new HashSet<MovementStockItem>();
-        }
-
         /// <summary>
         ///     Fecha en el que el item ingreso al inventario
         /// </summary>
@@ -32,9 +22,9 @@
         public int StockId { get; set; }
 
         /// <summary>
-        ///     Llave foranea de la entidad <see cref="Shopping.BundleItem"/>
+        ///     Llave foranea de la entidad <see cref="Product"/>
         /// </summary>
-        public int BundleItemId { get; set; }
+        public int ProductId { get; set; }
 
         #endregion
 
@@ -52,18 +42,28 @@
 
         /// <summary>
         /// <para>
-        ///     Propiedad virtual de la llave foranea de <see cref="BundleItemId"/>
+        ///     Propiedad virtual de la llave foranea de <see cref="ProductId"/>
         /// </para>
         /// <para>
-        ///     Indica a que elemento de lote representa
+        ///     Indica a que producto representa
         /// </para>
         /// </summary>
-        public virtual BundleItem BundleItem { get; set; }
+        public virtual Product Product { get; set; }
 
         /// <summary>
-        ///     Representa todos los movientos que sufre este elemento en este inventario
+        ///     Indica todos los movimientos de compra
         /// </summary>
-        public virtual ICollection<MovementStockItem> Movements { get; set; }
+        public virtual ICollection<BundleMovement> BundleMovements { get; set; }
+
+        /// <summary>
+        ///     Indica todos los movimientos de venta
+        /// </summary>
+        public virtual ICollection<SaleMovement> SaleMovements { get; set; }
+
+        /// <summary>
+        ///     Indica todos los movimientos de transferencias
+        /// </summary>
+        public virtual ICollection<TransferMovement> TransferMovements { get; set; }
 
         #endregion
     }

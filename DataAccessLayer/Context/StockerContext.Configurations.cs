@@ -18,19 +18,19 @@
         /// <summary>
         ///     Método que configura las tablas de las base de datos
         /// </summary>
-        /// <param name="Builder">
+        /// <param name="builder">
         ///     Configuracion usada para contruccion de tablas
         /// </param>
-        protected override void OnModelCreating(ModelBuilder Builder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(Builder);
-            AdministrationModule(Builder);
-            ContactModule(Builder);
-            CommonModule(Builder);
-            SaleModule(Builder);
-            ShoppingModule(Builder);
-            WorkflowModule(Builder);
-            InventoryModule(Builder);
+            base.OnModelCreating(builder);
+            AdministrationModule(builder);
+            ContactModule(builder);
+            CommonModule(builder);
+            SaleModule(builder);
+            ShoppingModule(builder);
+            WorkflowModule(builder);
+            InventoryModule(builder);
         }
 
         /// <summary>
@@ -41,13 +41,7 @@
         /// </param>
         private void AdministrationModule(ModelBuilder Builder)
         {
-            Builder.ApplyConfiguration(new RoleClaimConfiguration());
-            Builder.ApplyConfiguration(new RoleConfiguration());
-            Builder.ApplyConfiguration(new UserClaimConfiguration());
-            Builder.ApplyConfiguration(new UserLoginConfiguration());
             Builder.ApplyConfiguration(new UserConfiguration());
-            Builder.ApplyConfiguration(new UserRoleConfiguration());
-            Builder.ApplyConfiguration(new UserTokenConfiguration());
         }
 
         /// <summary>
@@ -72,6 +66,8 @@
             Builder.ApplyConfiguration(new ExchangeRateConfiguration());
             Builder.ApplyConfiguration(new CurrencyConfiguration());
             Builder.ApplyConfiguration(new StoreConfiguration());
+            Builder.ApplyConfiguration(new ProductConfiguration());
+            Builder.ApplyConfiguration(new BrandConfiguration());
         }
 
         /// <summary>
@@ -95,10 +91,8 @@
         /// </param>
         private void ShoppingModule(ModelBuilder Builder)
         {
-            Builder.ApplyConfiguration(new BrandConfiguration());
             Builder.ApplyConfiguration(new BundleConfiguration());
             Builder.ApplyConfiguration(new BundleItemConfiguration());
-            Builder.ApplyConfiguration(new ProductConfiguration());
         }
 
         /// <summary>
@@ -123,9 +117,11 @@
         /// </param>
         private void InventoryModule(ModelBuilder Builder)
         {
-            Builder.ApplyConfiguration(new MovementStockItemConfiguration());
             Builder.ApplyConfiguration(new StockConfiguration());
             Builder.ApplyConfiguration(new StockItemConfiguration());
+            Builder.ApplyConfiguration(new BundleMovementConfiguration());
+            Builder.ApplyConfiguration(new TransferMovementConfiguration());
+            Builder.ApplyConfiguration(new SaleMovementConfiguration());
         }
     }
 }

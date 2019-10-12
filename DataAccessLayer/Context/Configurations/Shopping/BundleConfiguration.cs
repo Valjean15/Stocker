@@ -23,11 +23,18 @@
 
             Builder.HasOne(bundle => bundle.Currency)
                 .WithOne()
-                .HasForeignKey<Bundle>(bundle => bundle.CurrencyId);
+                .HasForeignKey<Bundle>(bundle => bundle.CurrencyId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             Builder.HasOne(bundle => bundle.State)
                 .WithMany()
-                .HasForeignKey(bundle => bundle.StateId);
+                .HasForeignKey(bundle => bundle.StateId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            Builder.HasOne(bundle => bundle.User)
+                .WithMany(user => user.Bundles)
+                .HasForeignKey(bundle => bundle.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

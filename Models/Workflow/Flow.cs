@@ -26,7 +26,6 @@
         public Flow()
         {
             Name = string.Empty;
-            States = new HashSet<State>();
         }
 
         /// <summary>

@@ -51,6 +51,7 @@
         ///     Id de la entidad involucrada
         /// </summary>
         public int EntityId { get; set; }
+
         #endregion
     }
 }

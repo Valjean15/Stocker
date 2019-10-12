@@ -15,7 +15,7 @@ namespace DataAccessLayer.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.3-servicing-35854")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -40,7 +40,7 @@ namespace DataAccessLayer.Migrations
                         .HasName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("Role","Administration");
+                    b.ToTable("AspNetRoles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -60,7 +60,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("RoleClaim","Administration");
+                    b.ToTable("AspNetRoleClaims");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -80,7 +80,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserClaim","Administration");
+                    b.ToTable("AspNetUserClaims");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
@@ -98,7 +98,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserLogin","Administration");
+                    b.ToTable("AspNetUserLogins");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
@@ -111,7 +111,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("UserRole","Administration");
+                    b.ToTable("AspNetUserRoles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -126,7 +126,7 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("UserToken","Administration");
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("Models.Administration.User", b =>
@@ -180,6 +180,19 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("User","Administration");
                 });
 
+            modelBuilder.Entity("Models.Common.Brand", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Brand","Common");
+                });
+
             modelBuilder.Entity("Models.Common.Currency", b =>
                 {
                     b.Property<int>("Id")
@@ -207,8 +220,6 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<int>("CurrencyId");
 
-                    b.Property<int>("PrincipalCurrencyId");
-
                     b.Property<decimal>("PurchaseRate");
 
                     b.Property<decimal>("SaleRate");
@@ -218,6 +229,35 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("CurrencyId");
 
                     b.ToTable("ExchangeRate","Common");
+                });
+
+            modelBuilder.Entity("Models.Common.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BrandId");
+
+                    b.Property<int>("CurrencyId");
+
+                    b.Property<string>("Name");
+
+                    b.Property<decimal>("SaleUnitPrice");
+
+                    b.Property<int>("StateId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CurrencyId")
+                        .IsUnique();
+
+                    b.HasIndex("StateId")
+                        .IsUnique();
+
+                    b.ToTable("Product","Common");
                 });
 
             modelBuilder.Entity("Models.Common.Store", b =>
@@ -245,6 +285,8 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<int>("Gender");
 
+                    b.Property<string>("Identification");
+
                     b.Property<string>("LastName");
 
                     b.Property<string>("Name");
@@ -256,11 +298,13 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Contact","Contact");
                 });
 
-            modelBuilder.Entity("Models.Inventory.MovementStockItem", b =>
+            modelBuilder.Entity("Models.Inventory.BundleMovement", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BundleItemId");
 
                     b.Property<DateTime>("MovementDate");
 
@@ -270,9 +314,34 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BundleItemId");
+
                     b.HasIndex("StockItemId");
 
-                    b.ToTable("MovementStockItem","Inventory");
+                    b.ToTable("BundleMovement","Inventory");
+                });
+
+            modelBuilder.Entity("Models.Inventory.SaleMovement", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("MovementDate");
+
+                    b.Property<int>("Quantity");
+
+                    b.Property<int>("SaleItemId");
+
+                    b.Property<int>("StockItemId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SaleItemId");
+
+                    b.HasIndex("StockItemId");
+
+                    b.ToTable("SaleMovement","Inventory");
                 });
 
             modelBuilder.Entity("Models.Inventory.Stock", b =>
@@ -284,6 +353,8 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("Name");
 
                     b.Property<int>("StateId");
+
+                    b.Property<int>("StockType");
 
                     b.Property<int>("StoreId");
 
@@ -302,19 +373,42 @@ namespace DataAccessLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BundleItemId");
-
                     b.Property<DateTime>("Entry");
+
+                    b.Property<int>("ProductId");
 
                     b.Property<int>("StockId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BundleItemId");
+                    b.HasIndex("ProductId");
 
                     b.HasIndex("StockId");
 
                     b.ToTable("StockItem","Inventory");
+                });
+
+            modelBuilder.Entity("Models.Inventory.TransferMovement", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("MovementDate");
+
+                    b.Property<int>("Quantity");
+
+                    b.Property<int>("StockItemId");
+
+                    b.Property<int>("TargetStockItemId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StockItemId");
+
+                    b.HasIndex("TargetStockItemId");
+
+                    b.ToTable("TransferMovement","Inventory");
                 });
 
             modelBuilder.Entity("Models.Sale.Sale", b =>
@@ -322,6 +416,8 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ContactId");
 
                     b.Property<int>("CurrencyId");
 
@@ -331,11 +427,18 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<decimal>("Total");
 
+                    b.Property<string>("UserId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ContactId")
+                        .IsUnique();
 
                     b.HasIndex("CurrencyId");
 
                     b.HasIndex("StateId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Sale","Sale");
                 });
@@ -346,20 +449,19 @@ namespace DataAccessLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("ProductId");
+
                     b.Property<int>("Quantity");
 
                     b.Property<int>("SaleId");
-
-                    b.Property<int>("StockItemId");
 
                     b.Property<decimal>("Value");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SaleId");
+                    b.HasIndex("ProductId");
 
-                    b.HasIndex("StockItemId")
-                        .IsUnique();
+                    b.HasIndex("SaleId");
 
                     b.ToTable("SaleItem","Sale");
                 });
@@ -387,26 +489,13 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("SaleQuota","Sale");
                 });
 
-            modelBuilder.Entity("Models.Shopping.Brand", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Brand","Shopping");
-                });
-
             modelBuilder.Entity("Models.Shopping.Bundle", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("Arrival");
+                    b.Property<DateTime?>("Arrival");
 
                     b.Property<int>("CurrencyId");
 
@@ -428,12 +517,16 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<decimal>("Total");
 
+                    b.Property<string>("UserId");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CurrencyId")
                         .IsUnique();
 
                     b.HasIndex("StateId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Bundle","Shopping");
                 });
@@ -474,30 +567,6 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("BundleItem","Shopping");
-                });
-
-            modelBuilder.Entity("Models.Shopping.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BrandId");
-
-                    b.Property<int>("CurrencyId");
-
-                    b.Property<string>("Name");
-
-                    b.Property<decimal>("SaleUnitPrice");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BrandId");
-
-                    b.HasIndex("CurrencyId")
-                        .IsUnique();
-
-                    b.ToTable("Product","Shopping");
                 });
 
             modelBuilder.Entity("Models.Workflow.Flow", b =>
@@ -561,17 +630,13 @@ namespace DataAccessLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("EndStateId");
+                    b.Property<int?>("EndStateId");
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("StartStateId");
-
-                    b.Property<int?>("StateId");
+                    b.Property<int?>("StartStateId");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("StateId");
 
                     b.ToTable("Transition","Workflow");
                 });
@@ -623,18 +688,54 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("Models.Common.ExchangeRate", b =>
                 {
-                    b.HasOne("Models.Common.Currency")
+                    b.HasOne("Models.Common.Currency", "Currency")
                         .WithMany("ExchangesRates")
                         .HasForeignKey("CurrencyId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Models.Inventory.MovementStockItem", b =>
+            modelBuilder.Entity("Models.Common.Product", b =>
                 {
+                    b.HasOne("Models.Common.Brand", "Brand")
+                        .WithMany("Products")
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Models.Common.Currency", "Currency")
+                        .WithOne()
+                        .HasForeignKey("Models.Common.Product", "CurrencyId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Models.Workflow.State", "State")
+                        .WithOne()
+                        .HasForeignKey("Models.Common.Product", "StateId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("Models.Inventory.BundleMovement", b =>
+                {
+                    b.HasOne("Models.Shopping.BundleItem", "BundleItem")
+                        .WithMany()
+                        .HasForeignKey("BundleItemId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("Models.Inventory.StockItem", "StockItem")
-                        .WithMany("Movements")
+                        .WithMany("BundleMovements")
                         .HasForeignKey("StockItemId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("Models.Inventory.SaleMovement", b =>
+                {
+                    b.HasOne("Models.Sale.SaleItem", "SaleItem")
+                        .WithMany()
+                        .HasForeignKey("SaleItemId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Models.Inventory.StockItem", "StockItem")
+                        .WithMany("SaleMovements")
+                        .HasForeignKey("StockItemId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Models.Inventory.Stock", b =>
@@ -647,15 +748,15 @@ namespace DataAccessLayer.Migrations
                     b.HasOne("Models.Common.Store", "Store")
                         .WithMany("Stocks")
                         .HasForeignKey("StoreId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Models.Inventory.StockItem", b =>
                 {
-                    b.HasOne("Models.Shopping.BundleItem", "BundleItem")
+                    b.HasOne("Models.Common.Product", "Product")
                         .WithMany("StockItems")
-                        .HasForeignKey("BundleItemId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Models.Inventory.Stock", "Stock")
                         .WithMany("Items")
@@ -663,29 +764,52 @@ namespace DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
+            modelBuilder.Entity("Models.Inventory.TransferMovement", b =>
+                {
+                    b.HasOne("Models.Inventory.StockItem", "StockItem")
+                        .WithMany("TransferMovements")
+                        .HasForeignKey("StockItemId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Models.Inventory.StockItem", "TargetStockItem")
+                        .WithMany()
+                        .HasForeignKey("TargetStockItemId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("Models.Sale.Sale", b =>
                 {
+                    b.HasOne("Models.Contact.Contact", "Contact")
+                        .WithOne()
+                        .HasForeignKey("Models.Sale.Sale", "ContactId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("Models.Common.Currency", "Currency")
                         .WithMany()
                         .HasForeignKey("CurrencyId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Models.Workflow.State", "State")
                         .WithMany()
                         .HasForeignKey("StateId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Models.Administration.User", "User")
+                        .WithMany("Sales")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Models.Sale.SaleItem", b =>
                 {
+                    b.HasOne("Models.Common.Product", "Product")
+                        .WithMany("SaleItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.HasOne("Models.Sale.Sale", "Sale")
                         .WithMany("Items")
                         .HasForeignKey("SaleId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Models.Inventory.StockItem", "StockItem")
-                        .WithOne()
-                        .HasForeignKey("Models.Sale.SaleItem", "StockItemId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
@@ -694,7 +818,7 @@ namespace DataAccessLayer.Migrations
                     b.HasOne("Models.Sale.Sale", "Sale")
                         .WithMany("Quotas")
                         .HasForeignKey("SaleId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Models.Shopping.Bundle", b =>
@@ -702,12 +826,17 @@ namespace DataAccessLayer.Migrations
                     b.HasOne("Models.Common.Currency", "Currency")
                         .WithOne()
                         .HasForeignKey("Models.Shopping.Bundle", "CurrencyId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Models.Workflow.State", "State")
                         .WithMany()
                         .HasForeignKey("StateId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Models.Administration.User", "User")
+                        .WithMany("Bundles")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("Models.Shopping.BundleItem", b =>
@@ -715,30 +844,17 @@ namespace DataAccessLayer.Migrations
                     b.HasOne("Models.Shopping.Bundle", "Bundle")
                         .WithMany("Items")
                         .HasForeignKey("BundleId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Models.Common.Currency", "Currency")
                         .WithOne()
                         .HasForeignKey("Models.Shopping.BundleItem", "CurrencyId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Models.Shopping.Product", "Product")
+                    b.HasOne("Models.Common.Product", "Product")
                         .WithMany("BundleItems")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Restrict);
-                });
-
-            modelBuilder.Entity("Models.Shopping.Product", b =>
-                {
-                    b.HasOne("Models.Shopping.Brand", "Brand")
-                        .WithMany("Products")
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Models.Common.Currency", "Currency")
-                        .WithOne()
-                        .HasForeignKey("Models.Shopping.Product", "CurrencyId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Models.Workflow.State", b =>
@@ -746,14 +862,7 @@ namespace DataAccessLayer.Migrations
                     b.HasOne("Models.Workflow.Flow", "Flow")
                         .WithMany("States")
                         .HasForeignKey("FlowId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Models.Workflow.Transition", b =>
-                {
-                    b.HasOne("Models.Workflow.State")
-                        .WithMany("Transitions")
-                        .HasForeignKey("StateId");
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 #pragma warning restore 612, 618
         }

@@ -5,7 +5,7 @@
     using System.Linq.Expressions;
     using System.Threading;
     using System.Threading.Tasks;
-    using Models;
+    using Models.Interfaces;
 
     /// <summary>
     ///     Comportamiento del Store de una entidad, solo contiene funcionalidades

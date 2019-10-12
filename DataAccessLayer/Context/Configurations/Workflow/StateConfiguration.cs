@@ -23,7 +23,8 @@
 
             Builder.HasOne(state => state.Flow)
                 .WithMany(flow => flow.States)
-                .HasForeignKey(state => state.FlowId);
+                .HasForeignKey(state => state.FlowId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

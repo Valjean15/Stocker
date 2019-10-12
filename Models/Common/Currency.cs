@@ -14,7 +14,6 @@
         {
             Name = string.Empty;
             Symbol = string.Empty;
-            ExchangesRates = new HashSet<ExchangeRate>();
         }
 
         /// <summary>

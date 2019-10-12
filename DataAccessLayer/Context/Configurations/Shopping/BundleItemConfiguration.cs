@@ -28,7 +28,8 @@
 
             Builder.HasOne(bundleItem => bundleItem.Bundle)
                 .WithMany(bundle => bundle.Items)
-                .HasForeignKey(bundleItem => bundleItem.BundleId);
+                .HasForeignKey(bundleItem => bundleItem.BundleId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             Builder.HasOne(bundleItem => bundleItem.Product)
                 .WithMany(product => product.BundleItems)

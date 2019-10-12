@@ -55,9 +55,19 @@
         public DbSet<StockItem> StockItems { get; set; }
 
         /// <summary>
-        ///     Repositorio de Movimientos de los items de inventario
+        ///     Repositorio de Movimientos de compras inventario
         /// </summary>
-        public DbSet<MovementStockItem> MovementStockItems { get; set; }
+        public DbSet<BundleMovement> BundleMovements { get; set; }
+
+        /// <summary>
+        ///     Repositorio de Movimientos de ventas inventario
+        /// </summary>
+        public DbSet<SaleMovement> SaleMovements { get; set; }
+
+        /// <summary>
+        ///     Repositorio de Movimientos de trasferencias de inventario
+        /// </summary>
+        public DbSet<TransferMovement> TransferMovements { get; set; }
 
         #endregion
 
