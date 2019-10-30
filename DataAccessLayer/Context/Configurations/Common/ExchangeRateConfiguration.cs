@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context.Configurations.Common
+﻿namespace DataAccess.Context.Configurations.Common
 {
     using Util.Constants;
     using Models.Common;

@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context.Configurations.Contact
+﻿namespace DataAccess.Context.Configurations.Contact
 {
     using Util.Constants;
     using Models.Contact;

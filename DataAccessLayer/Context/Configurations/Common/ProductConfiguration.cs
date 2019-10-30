@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context.Configurations.Shopping
+﻿namespace DataAccess.Context.Configurations.Shopping
 {
     using Util.Constants;
     using Models.Common;
@@ -27,13 +27,13 @@
                 .OnDelete(DeleteBehavior.Restrict);
 
             Builder.HasOne(product => product.Currency)
-                .WithOne()
-                .HasForeignKey<Product>(product => product.CurrencyId)
+                .WithMany()
+                .HasForeignKey(product => product.CurrencyId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             Builder.HasOne(product => product.State)
-                .WithOne()
-                .HasForeignKey<Product>(product => product.StateId)
+                .WithMany()
+                .HasForeignKey(product => product.StateId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

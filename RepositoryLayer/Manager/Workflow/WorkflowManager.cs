@@ -5,6 +5,7 @@
     using DataAccessLayer.Context;
     using Models.Workflow;
     using System.Collections.Generic;
+    using Models.Interfaces;
 
     /// <summary>
     ///     Clase encargada de realizar todas las acciones relacionadas a workflow
@@ -22,41 +23,17 @@
 
         }
 
-        /// <summary>
-        ///     Ejecuta una transicion de workflow
-        /// </summary>
-        /// <param name="transition">
-        ///     Transicion a ejecutar
-        /// </param>
-        public void ExecuteTransition(int entityId, string tableName, Transition transition)
+        public void ExecuteTransition(IWorkflowState Entity, Transition Transition)
         {
             throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        ///     Obtiene todas las transiciones de salida de un estado
-        /// </summary>
-        /// <param name="state">
-        ///     Estado a obtener transiciones de salida
-        /// </param>
-        /// <returns>
-        ///     HashSet de transiciones
-        /// </returns>
-        public HashSet<Transition> GetExitTransition(State state)
+        public HashSet<Transition> GetExitTransition(State State)
         {
             throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        ///     Realiza un retorno de la ultima transicion ejecutada
-        /// </summary>
-        /// <param name="entityId">
-        ///     Id de la entidad relacionada
-        /// </param>
-        /// <param name="tableName">
-        ///     Nombre de la entidad relacionada
-        /// </param>
-        public void RollBackTransition(int entityId, string tableName)
+        public void RollBackTransition(IWorkflowState Entity)
         {
             throw new System.NotImplementedException();
         }

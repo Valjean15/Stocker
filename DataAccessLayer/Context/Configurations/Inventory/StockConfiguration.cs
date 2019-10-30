@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context.Configurations.Inventory
+﻿namespace DataAccess.Context.Configurations.Inventory
 {
     using Util.Constants;
     using Models.Inventory;

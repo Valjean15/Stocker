@@ -1,8 +1,6 @@
-﻿namespace RepositoryLayer.Store
+﻿namespace Repository.Store
 {
     using System;
-    using System.Linq;
-    using System.Linq.Expressions;
     using System.Threading;
     using System.Threading.Tasks;
     using Models.Interfaces;
@@ -17,7 +15,7 @@
     /// <typeparam name="Tkey">
     ///     Tipo de la llave primaria de la entidad a gestionar
     /// </typeparam>
-    internal interface IEntityStore<TEntity, Tkey> : IDisposable
+    public interface IEntityStore<TEntity, Tkey> : IDisposable
         where TEntity : class, IEntityBase<Tkey>
         where Tkey : IEquatable<Tkey>
     {
@@ -30,7 +28,6 @@
         /// <param name="cancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        /// <seealso cref="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netframework-4.8"/>
         Task CreateAsync(TEntity entity, CancellationToken cancellationToken);
 
         /// <summary>
@@ -42,7 +39,6 @@
         /// <param name="cancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        /// <seealso cref="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netframework-4.8"/>
         Task UpdateAsync(TEntity entity, CancellationToken cancellationToken);
 
         /// <summary>
@@ -54,7 +50,6 @@
         /// <param name="cancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        /// <seealso cref="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netframework-4.8"/>
         Task DeleteAsync(TEntity entity, CancellationToken cancellationToken);
 
         /// <summary>
@@ -66,15 +61,6 @@
         /// <param name="cancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        /// <seealso cref="https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtoken?view=netframework-4.8"/>
         Task<TEntity> FindByKey(Tkey key, CancellationToken cancellationToken);
-
-        /// <summary>
-        ///     Busca todas las entidades que cumplan con una condicion
-        /// </summary>
-        /// <param name="condition">
-        ///     Condicion a filtrar
-        /// </param>
-        IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> condition);
     }
 }

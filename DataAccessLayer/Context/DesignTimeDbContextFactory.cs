@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context
+﻿namespace DataAccess.Context
 {
     using System.IO;
     using Microsoft.EntityFrameworkCore;
@@ -30,9 +30,8 @@
                 .Build();
 
             var OptionsBuilder = new DbContextOptionsBuilder<StockerContext>();
-            //var ConnectionString = builder.GetConnectionString("DefaultConnections");
-            var ConnectionString = "Server=tcp:localhost,1433;Database=StockerDatabase;Trusted_Connection=false;MultipleActiveResultSets=true;User Id=sa;Password=SqlServer1234";
-            OptionsBuilder.UseSqlServer(ConnectionString, Options => Options.MigrationsAssembly("DataAccessLayer"));
+            var ConnectionString = builder.GetConnectionString("DefaultConnection");
+            OptionsBuilder.UseSqlServer(ConnectionString, Options => Options.MigrationsAssembly("DataAccess"));
             return new StockerContext(OptionsBuilder.Options);
         }
     }

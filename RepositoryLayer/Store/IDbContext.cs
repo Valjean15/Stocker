@@ -1,4 +1,4 @@
-﻿namespace RepositoryLayer.Store
+﻿namespace Repository.Store
 {
     using Microsoft.EntityFrameworkCore;
 
@@ -8,10 +8,10 @@
     /// <typeparam name="TContext">
     ///     Tipo del contexto de uso
     /// </typeparam>
-    internal interface IDbContext<out TContext> where TContext : DbContext
+    public interface IDbContext<out TContext> where TContext : DbContext
     {
         /// <summary>
-        ///     Obtine el contexto de Base de datos a utilizar
+        ///     Obtiene el contexto de Base de datos a utilizar
         /// </summary>
         TContext Context { get; }
     }

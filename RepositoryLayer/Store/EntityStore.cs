@@ -1,10 +1,10 @@
-﻿namespace RepositoryLayer.Store
+﻿namespace Repository.Store
 {
     using System;
     using System.Linq;
-    using System.Linq.Expressions;
     using System.Threading;
     using System.Threading.Tasks;
+
     using Microsoft.EntityFrameworkCore;
     using Models.Interfaces;
 
@@ -26,22 +26,7 @@
         where TContext : DbContext
     {
 
-        /// <summary>
-        ///     Constructor base de la entidad
-        /// </summary>
-        /// <param name="context">
-        ///     Contexto a utilizar en el Store
-        /// </param>
-        /// <exception cref="ArgumentNullException">
-        ///     <paramref name="context"/> es un valor nulo
-        /// </exception>
-        public EntityStore(TContext context)
-        {
-            if (Context is null)
-                throw new ArgumentNullException();
-
-            Context = context;
-        }
+        #region Variables
 
         /// <summary>
         ///     Indica si el store ya fue eliminado
@@ -50,7 +35,7 @@
 
         /// <summary>
         /// <para> 
-        ///     Indica si al final de cada operacion realizara <see cref="DbContext.SaveChanges"/>
+        ///     Indica si al final de cada operacion realizara <see cref="DbContext.SaveChanges(bool)"/>
         /// </para>
         /// <para>
         ///     Valor por defecto es <see langword="true"/>
@@ -59,14 +44,33 @@
         private bool AutoSaveChanges { get; set; } = true;
 
         /// <summary>
-        ///     Una propiedad de navegación para las entidades que contiene este Store.
-        /// </summary>
-        protected IQueryable<TEntity> Entities => Context.Set<TEntity>();
-
-        /// <summary>
         ///     Contexto a utilizar en el Store
         /// </summary>
         public TContext Context { get; }
+
+        #endregion
+
+        /// <summary>
+        ///     Constructor base de la entidad
+        /// </summary>
+        /// <param name="Context">
+        ///     Contexto a utilizar en el Store
+        /// </param>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="Context"/> es un valor nulo
+        /// </exception>
+        protected EntityStore(TContext Context)
+        {
+            if (Context is null)
+                throw new ArgumentNullException();
+
+            this.Context = Context;
+        }
+
+        /// <summary>
+        ///     Una propiedad de navegación para las entidades que contiene este Store.
+        /// </summary>
+        protected IQueryable<TEntity> Entities => Context.Set<TEntity>();
 
         /// <summary>
         ///     Creacion de una nueva entidad de forma asincrona
@@ -146,24 +150,14 @@
             => await Entities.FirstOrDefaultAsync(entity => entity.Id.Equals(key), cancellationToken);
 
         /// <summary>
-        ///     Realiza busqueda en base a una condicion
-        /// </summary>
-        /// <param name="condition">
-        ///     Condicion de busqueda
-        /// </param>
-        public IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> condition)
-            => Entities.Where(condition);
-
-        /// <summary>
         ///     Liberacion de Recursos
         /// </summary>
         public void Dispose() => _Disposed = true;
 
-
         /// <summary>
         ///     Accion de guardar.
         /// </summary>
-        /// <param name="CancellationToken">
+        /// <param name="cancellationToken">
         ///     El <see cref="CancellationToken "/> se usa para propagar notificaciones de que la operación debe cancelarse.
         /// </param>
         /// <returns>

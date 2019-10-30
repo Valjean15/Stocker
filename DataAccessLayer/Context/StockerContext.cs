@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context
+﻿namespace DataAccess.Context
 {
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
@@ -15,8 +15,6 @@
         /// <param name="options">
         ///     Opciones de configuracion del contexto
         /// </param>
-        public StockerContext(DbContextOptions<StockerContext> options) : base(options)
-        {
-        }
+        public StockerContext(DbContextOptions<StockerContext> options) : base(options) { }
     }
 }

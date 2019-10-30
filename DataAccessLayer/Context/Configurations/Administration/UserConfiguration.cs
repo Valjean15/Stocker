@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context.Configurations.Administration
+﻿namespace DataAccess.Context.Configurations.Administration
 {
     using Util.Constants;
     using Microsoft.EntityFrameworkCore;

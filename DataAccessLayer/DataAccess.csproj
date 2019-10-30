@@ -11,6 +11,8 @@
     <EmbeddedResource Remove="Migrations\**" />
     <None Remove="Migrations\**" />
     <Compile Remove="Migrations\20191011071556_InitialCreate.cs" />
+    <Compile Remove="Migrations\20191012060500_InitialCreate.cs" />
+    <Compile Remove="Migrations\20191030000206_Initial.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,16 +23,15 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj" />
-    <ProjectReference Include="..\UtilLayer\Util.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\20191012060500_InitialCreate.Designer.cs" />
-    <Compile Include="Migrations\20191012060500_InitialCreate.cs" />
+    <ProjectReference Include="..\ModelsLayer\Models.csproj" />
+    <ProjectReference Include="..\UtilLayer\Util.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\20191030040629_Initial.cs" />
+    <Compile Include="Migrations\20191030040629_Initial.Designer.cs" />
     <Compile Include="Migrations\StockerContextModelSnapshot.cs" />
   </ItemGroup>
 </Project>

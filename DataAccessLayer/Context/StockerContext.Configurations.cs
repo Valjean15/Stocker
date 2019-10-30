@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context
+﻿namespace DataAccess.Context
 {
     using Microsoft.EntityFrameworkCore;
     using Configurations.Administration;

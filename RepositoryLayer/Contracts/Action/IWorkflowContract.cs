@@ -1,6 +1,7 @@
 ﻿namespace RepositoryLayer.Contracts.Action
 {
     using Store;
+    using Models.Interfaces;
     using System.Collections.Generic;
     using Models.Workflow;
     using Microsoft.EntityFrameworkCore;
@@ -16,31 +17,31 @@
         /// <summary>
         ///     Ejecuta una transicion de workflow
         /// </summary>
-        /// <param name="transition">
+        /// <param name="Transition">
         ///     Transicion a ejecutar
         /// </param>
-        void ExecuteTransition(int entityId, string tableName, Transition transition);
+        /// <param name="Entity">
+        ///     Entidad a la cual se le realiza cambio de estado
+        /// </param>
+        void ExecuteTransition(IWorkflowState Entity, Transition Transition);
 
         /// <summary>
         ///     Obtiene todas las transiciones de salida de un estado
         /// </summary>
-        /// <param name="state">
+        /// <param name="State">
         ///     Estado a obtener transiciones de salida
         /// </param>
         /// <returns>
         ///     HashSet de transiciones
         /// </returns>
-        HashSet<Transition> GetExitTransition(State state);
+        HashSet<Transition> GetExitTransition(State State);
 
         /// <summary>
         ///     Realiza un retorno de la ultima transicion ejecutada
         /// </summary>
-        /// <param name="entityId">
-        ///     Id de la entidad relacionada
+        /// <param name="Entity">
+        ///     Entidad a realizar rollback de transicion
         /// </param>
-        /// <param name="tableName">
-        ///     Nombre de la entidad relacionada
-        /// </param>
-        void RollBackTransition(int entityId, string tableName);
+        void RollBackTransition(IWorkflowState Entity);
     }
 }

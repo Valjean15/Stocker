@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context.Configurations.Shopping
+﻿namespace DataAccess.Context.Configurations.Shopping
 {
     using Util.Constants;
     using Models.Shopping;

@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context.Configurations.Workflow
+﻿namespace DataAccess.Context.Configurations.Workflow
 {
     using Util.Constants;
     using Models.Workflow;

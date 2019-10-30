@@ -1,56 +1,11 @@
-Progress
-- Model Layer			100%
-- Data Access Layer		100%
-- Repository Layer		0%
-- Data Transfer Layer	0%
-- Business Layer		0%
+Pendientes:
 
+-- Se debe finalizar todo tipo de cambios para el CRUD de Brand
+    - Crud basico
+    - View -> ViewModel -> Proxy -> Contract Validacion -> OperacionCRUD -> Result
+    - Vista de informacion completa para Brand por medio de Dto y Contract Query
 
-BussinessLayer
-- Encargado de la logica, rutinas propias del ambiente
-* Dependencias
-	- DataTransferObjectLayer
-	- StoreLayer
-
-DataAccessLayer
-- Encargado de contener toda la logica del contexto y sus respectivas configuraciones
-* Dependencias
-	- Models
-
-DataTransferObjectLayer
-- Encargado de contener todos los DTO y su respectivo map de los modelos
-* Dependencias
-	- Models
-
-Models
-- Encargado de contener toda la estructura de la base de datos, los modelos de las entidades
-
-StoreLayer
-- Encargado de gestionar y manejar la informacion recibida y procesarla con los contextos
-* Dependencias
-	- DataAccessLayer
-	- Models
-
-
-Rutina de trabajo
-
-Controller se recibe Dto
-Se invoca funcion de capa de negocio
-Capa de negocio invoca mapper de DTOLayer
-DTOLayer transforma Dto en Modelo correspondiente
-Capa de negocio ejecuta accion con dependencia de StoreLayer
-StoreLayer Ejecuta accion pedida por la capa de negocio
-DataAccessLayer Brinda la conexion con la BD
-Capa de negocio retorna resultados
-* En la capa de StoreLayer, DTOLayer y BuisnessLayer se maneja un ErrorHandler
-
-Controller(Dto){
-    UnitOfWork(Dto){
-        Mapper(Dto) => Model;
-
-        ErrorEstandar();
-        
-        [ErrorHandler, Validar]
-        Repository(Model);
-    }
-}
+-   Manejador de errores a traves de Dynamic Proxy
+-   Implementacion de Contacts de tipo Query
+-   Implementacion de Contractos de tipo Validations
+-   Implemenracion de Contratos de tipo Acciones

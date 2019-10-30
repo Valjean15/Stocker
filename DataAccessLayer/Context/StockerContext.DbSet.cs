@@ -1,12 +1,12 @@
-﻿namespace DataAccessLayer.Context
+﻿namespace DataAccess.Context
 {
+    using Microsoft.EntityFrameworkCore;
     using Models.Common;
     using Models.Contact;
     using Models.Inventory;
     using Models.Sale;
     using Models.Shopping;
     using Models.Workflow;
-    using Microsoft.EntityFrameworkCore;
 
     /// <summary>
     ///     Contiene todos los <see cref="DbSet{TEntity}"/> de la aplicacion segmentados

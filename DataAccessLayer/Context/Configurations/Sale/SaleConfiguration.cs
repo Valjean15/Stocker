@@ -1,4 +1,4 @@
-﻿namespace DataAccessLayer.Context.Configurations.Sale
+﻿namespace DataAccess.Context.Configurations.Sale
 {
     using Util.Constants;
     using Models.Sale;
