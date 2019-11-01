@@ -20,20 +20,7 @@
         /// </param>
         protected override object InvokeCall(MethodInfo targetMethod, object[] args)
         {
-            try
-            {
-                return targetMethod.Invoke(Target, args);
-            }
-            catch (TargetInvocationException targetException)
-            {
-                // Agregar error al manejador de errores global
-            }
-            catch (Exception exception)
-            {
-                // Agregar error al manejador de errores global
-            }
-
-            return null;
+            return base.InvokeCall(targetMethod, args);
         }
     }
 }
