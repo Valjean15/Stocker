@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 using Models.Interfaces;
 using Repository.Store;
+using Proxy.Base;
+using Proxy.ErrorHandler;
 
 namespace Stocker.Controllers
 {
@@ -35,7 +37,7 @@ namespace Stocker.Controllers
         /// </param>
         protected CrudBaseController(IStockerStore<TEntity> Store)
         {
-            this.Store = Store;
+            this.Store = Store.Decorate<IStockerStore<TEntity>, ErrorHandler>();
         }
 
         /// <summary>

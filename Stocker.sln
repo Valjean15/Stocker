@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "ModelsLayer\Model
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "BusinessLayer\Business.csproj", "{B5E8F52C-DD64-4191-BF8F-B88427A51F4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "ProxyLayer\Proxy.csproj", "{7A9C5129-CEC3-4A2E-9796-8EF5F70978FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,10 @@ Global
 		{B5E8F52C-DD64-4191-BF8F-B88427A51F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5E8F52C-DD64-4191-BF8F-B88427A51F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5E8F52C-DD64-4191-BF8F-B88427A51F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A9C5129-CEC3-4A2E-9796-8EF5F70978FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A9C5129-CEC3-4A2E-9796-8EF5F70978FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A9C5129-CEC3-4A2E-9796-8EF5F70978FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A9C5129-CEC3-4A2E-9796-8EF5F70978FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
