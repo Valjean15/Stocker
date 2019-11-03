@@ -14,9 +14,6 @@
   <ItemGroup>
     <Folder Include="Contracts\Query\" />
     <Folder Include="Contracts\Validator\" />
-    <Folder Include="Manager\Common\" />
-    <Folder Include="Manager\Workflow\" />
-    <Folder Include="Contracts\Action\" />
   </ItemGroup>
 
   <ItemGroup>
