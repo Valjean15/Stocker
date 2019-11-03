@@ -11,22 +11,22 @@ namespace Stocker
         /// <summary>
         ///     Metodo inical del programa
         /// </summary>
-        /// <param name="args">
+        /// <param name="Arguments">
         ///     Argumentos de la aplicacion
         /// </param>
-        public static void Main(string[] args)
+        public static void Main(string[] Arguments)
         {
-            CreateWebHostBuilder(args).Build().Run();
+            CreateWebHostBuilder(Arguments).Build().Run();
         }
 
         /// <summary>
         ///     Punto de entrada para la creacion del ambiente de la aplicacion
         /// </summary>
-        /// <param name="args">
+        /// <param name="Arguments">
         ///     Argumentos
         /// </param>
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHostBuilder CreateWebHostBuilder(string[] Arguments) =>
+            WebHost.CreateDefaultBuilder(Arguments)
                 .UseStartup<Startup>();
     }
 }

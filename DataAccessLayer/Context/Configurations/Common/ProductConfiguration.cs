@@ -19,21 +19,21 @@
         public void Configure(EntityTypeBuilder<Product> Builder)
         {
             Builder.ToTable(nameof(Product), Modules.Common);
-            Builder.HasKey(product => product.Id);
+            Builder.HasKey(Product => Product.Id);
 
-            Builder.HasOne(product => product.Brand)
-                .WithMany(brand => brand.Products)
-                .HasForeignKey(product => product.BrandId)
+            Builder.HasOne(Product => Product.Brand)
+                .WithMany(Brand => Brand.Products)
+                .HasForeignKey(Product => Product.BrandId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(product => product.Currency)
+            Builder.HasOne(Product => Product.Currency)
                 .WithMany()
-                .HasForeignKey(product => product.CurrencyId)
+                .HasForeignKey(Product => Product.CurrencyId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(product => product.State)
+            Builder.HasOne(Product => Product.State)
                 .WithMany()
-                .HasForeignKey(product => product.StateId)
+                .HasForeignKey(Product => Product.StateId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

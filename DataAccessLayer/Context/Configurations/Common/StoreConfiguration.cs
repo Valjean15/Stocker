@@ -19,7 +19,7 @@
         public void Configure(EntityTypeBuilder<Store> Builder)
         {
             Builder.ToTable(nameof(Store), Modules.Common);
-            Builder.HasKey(store => store.Id);
+            Builder.HasKey(Store => Store.Id);
         }
     }
 }

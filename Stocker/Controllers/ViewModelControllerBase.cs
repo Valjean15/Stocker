@@ -41,51 +41,51 @@ namespace Stocker.Controllers
         /// <summary>
         ///     Realiza operacion post de una entidad
         /// </summary>
-        /// <param name="viewModel">
+        /// <param name="ViewModel">
         ///     Entidad a guardar
         /// </param>
         [HttpPost]
-        public virtual async Task<IActionResult> Post([FromBody] TViewModel viewModel)
+        public virtual async Task<IActionResult> Post([FromBody] TViewModel ViewModel)
         {
-            var model = viewModel.ToModel();
-            if (model is null) NotFound();
+            var Model = ViewModel.ToModel();
+            if (Model is null) NotFound();
 
-            await Store.CreateAsync(model, CancellationToken.None);
-            return Ok(viewModel);
+            await Store.CreateAsync(Model, CancellationToken.None);
+            return Ok(ViewModel);
         }
 
         /// <summary>
         ///     Realiza operacion put de una entidad
         /// </summary>
-        /// <param name="id">
+        /// <param name="Id">
         ///     Id de la entidad
         /// </param>
-        /// <param name="viewModel">
+        /// <param name="ViewModel">
         ///     Entidad a actualizar
         /// </param>
-        [HttpPut("{id}")]
-        public virtual async Task<IActionResult> Put(int id, [FromBody] TViewModel viewModel)
+        [HttpPut("{Id}")]
+        public virtual async Task<IActionResult> Put(int Id, [FromBody] TViewModel ViewModel)
         {
-            var model = viewModel.ToModel();
-            if (model is null) NotFound();
+            var Model = ViewModel.ToModel();
+            if (Model is null) NotFound();
 
-            if (!model.Id.Equals(id)) return NotFound();
+            if (!Model.Id.Equals(Id)) return NotFound();
 
-            var entityExist = Store.Items.Any(entity => entity.Id == id);
-            if (!entityExist) return NotFound();
+            var Exist = Store.Items.Any(Model => Model.Id == Id);
+            if (!Exist) return NotFound();
 
-            await Store.UpdateAsync(model, CancellationToken.None);
+            await Store.UpdateAsync(Model, CancellationToken.None);
             return Ok();
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public virtual async Task<IActionResult> Delete(int id)
+        [HttpDelete("{Id}")]
+        public virtual async Task<IActionResult> Delete(int Id)
         {
-            var entity = await Store.FindByKey(id, CancellationToken.None);
-            if (entity is null) return NotFound();
+            var Model = await Store.FindByKey(Id, CancellationToken.None);
+            if (Model is null) return NotFound();
 
-            await Store.DeleteAsync(entity, CancellationToken.None);
+            await Store.DeleteAsync(Model, CancellationToken.None);
             return Ok();
         }
     }

@@ -22,45 +22,45 @@
         /// <summary>
         ///     Creacion de una nueva entidad de forma asincrona
         /// </summary>
-        /// <param name="entity">
+        /// <param name="Model">
         ///     Entidad a creare
         /// </param>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        Task CreateAsync(TEntity entity, CancellationToken cancellationToken);
+        Task CreateAsync(TEntity Model, CancellationToken CancellationToken);
 
         /// <summary>
         ///     Actualizacion de una nueva entidad de forma asincrona
         /// </summary>
-        /// <param name="entity">
+        /// <param name="Model">
         ///     Entidad a actualizar
         /// </param>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        Task UpdateAsync(TEntity entity, CancellationToken cancellationToken);
+        Task UpdateAsync(TEntity Model, CancellationToken CancellationToken);
 
         /// <summary>
         ///     Borrado de una nueva entidad de forma asincrona
         /// </summary>
-        /// <param name="entity">
+        /// <param name="Model">
         ///     Entidad a borrar
         /// </param>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        Task DeleteAsync(TEntity entity, CancellationToken cancellationToken);
+        Task DeleteAsync(TEntity Model, CancellationToken CancellationToken);
 
         /// <summary>
         ///     Busca una entidad por su llave primaria
         /// </summary>
-        /// <param name="key">
+        /// <param name="Key">
         ///     Valor de la entidad a buscar
         /// </param>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        Task<TEntity> FindByKey(Tkey key, CancellationToken cancellationToken);
+        Task<TEntity> FindByKey(Tkey Key, CancellationToken CancellationToken);
     }
 }

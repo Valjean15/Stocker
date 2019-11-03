@@ -19,7 +19,7 @@
         public void Configure(EntityTypeBuilder<Currency> Builder)
         {
             Builder.ToTable(nameof(Currency), Modules.Common);
-            Builder.HasKey(currency => currency.Id);
+            Builder.HasKey(Currency => Currency.Id);
         }
     }
 }

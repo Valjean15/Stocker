@@ -19,21 +19,21 @@
         public void Configure(EntityTypeBuilder<BundleItem> Builder)
         {
             Builder.ToTable(nameof(BundleItem), Modules.Shopping);
-            Builder.HasKey(bundleItem => bundleItem.Id);
+            Builder.HasKey(BundleItem => BundleItem.Id);
 
-            Builder.HasOne(bundleItem => bundleItem.Currency)
+            Builder.HasOne(BundleItem => BundleItem.Currency)
                 .WithOne()
-                .HasForeignKey<BundleItem>(bundleItem => bundleItem.CurrencyId)
+                .HasForeignKey<BundleItem>(BundleItem => BundleItem.CurrencyId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(bundleItem => bundleItem.Bundle)
-                .WithMany(bundle => bundle.Items)
-                .HasForeignKey(bundleItem => bundleItem.BundleId)
+            Builder.HasOne(BundleItem => BundleItem.Bundle)
+                .WithMany(Bundle => Bundle.Items)
+                .HasForeignKey(BundleItem => BundleItem.BundleId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(bundleItem => bundleItem.Product)
-                .WithMany(product => product.BundleItems)
-                .HasForeignKey(bundleItem => bundleItem.ProductId)
+            Builder.HasOne(BundleItem => BundleItem.Product)
+                .WithMany(Product => Product.BundleItems)
+                .HasForeignKey(BundleItem => BundleItem.ProductId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

@@ -19,7 +19,7 @@
         public void Configure(EntityTypeBuilder<Brand> Builder)
         {
             Builder.ToTable(nameof(Brand), Modules.Common);
-            Builder.HasKey(brand => brand.Id);
+            Builder.HasKey(Brand => Brand.Id);
         }
     }
 }

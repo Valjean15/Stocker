@@ -12,9 +12,9 @@
         /// <summary>
         ///     Constructor base del contexto
         /// </summary>
-        /// <param name="options">
+        /// <param name="Options">
         ///     Opciones de configuracion del contexto
         /// </param>
-        public StockerContext(DbContextOptions<StockerContext> options) : base(options) { }
+        public StockerContext(DbContextOptions<StockerContext> Options) : base(Options) { }
     }
 }

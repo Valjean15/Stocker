@@ -31,7 +31,7 @@
         /// <summary>
         ///     Indica si el store ya fue eliminado
         /// </summary>
-        private bool _Disposed;
+        private bool Disposed;
 
         /// <summary>
         /// <para> 
@@ -75,98 +75,98 @@
         /// <summary>
         ///     Creacion de una nueva entidad de forma asincrona
         /// </summary>
-        /// <param name="entity">
+        /// <param name="Model">
         ///     Entidad a creare
         /// </param>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        public async Task CreateAsync(TEntity entity, CancellationToken cancellationToken)
+        public async Task CreateAsync(TEntity Model, CancellationToken CancellationToken)
         {
-            ValidateState(entity, cancellationToken);
-            Context.Add(entity);
-            await SaveChanges(cancellationToken); 
+            ValidateState(Model, CancellationToken);
+            Context.Add(Model);
+            await SaveChanges(CancellationToken); 
         }
 
         /// <summary>
         ///     Actualizacion de una nueva entidad de forma asincrona
         /// </summary>
-        /// <param name="entity">
+        /// <param name="Model">
         ///     Entidad a actualizar
         /// </param>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        public async Task UpdateAsync(TEntity entity, CancellationToken cancellationToken)
+        public async Task UpdateAsync(TEntity Model, CancellationToken CancellationToken)
         {
-            ValidateState(entity, cancellationToken);
-            Context.Attach(entity);
-            Context.Update(entity);
+            ValidateState(Model, CancellationToken);
+            Context.Attach(Model);
+            Context.Update(Model);
 
             try
             {
-                await SaveChanges(cancellationToken);
+                await SaveChanges(CancellationToken);
             }
-            catch (DbUpdateConcurrencyException exception)
+            catch (DbUpdateConcurrencyException Exception)
             {
-                throw exception;
+                throw Exception;
             }
         }
 
         /// <summary>
         ///     Borrado de una nueva entidad de forma asincrona
         /// </summary>
-        /// <param name="entity">
+        /// <param name="Model">
         ///     Entidad a borrar
         /// </param>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        public async Task DeleteAsync(TEntity entity, CancellationToken cancellationToken)
+        public async Task DeleteAsync(TEntity Model, CancellationToken CancellationToken)
         {
-            ValidateState(entity, cancellationToken);
-            Context.Remove(entity);
+            ValidateState(Model, CancellationToken);
+            Context.Remove(Model);
 
             try
             {
-                await SaveChanges(cancellationToken);
+                await SaveChanges(CancellationToken);
             }
-            catch (DbUpdateConcurrencyException exception)
+            catch (DbUpdateConcurrencyException Exception)
             {
-                throw exception;
+                throw Exception;
             }
         }
 
         /// <summary>
         ///     Realiza busqueda por llave primaria
         /// </summary>
-        /// <param name="key">
+        /// <param name="Key">
         ///     Valor a buscar
         /// </param>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     Se utiliza para propagar notificaciones que la operación debe ser cancelada
         /// </param>
-        public async Task<TEntity> FindByKey(TKey key, CancellationToken cancellationToken)
-            => await Entities.FirstOrDefaultAsync(entity => entity.Id.Equals(key), cancellationToken);
+        public async Task<TEntity> FindByKey(TKey Key, CancellationToken CancellationToken)
+            => await Entities.FirstOrDefaultAsync(Model => Model.Id.Equals(Key), CancellationToken);
 
         /// <summary>
         ///     Liberacion de Recursos
         /// </summary>
-        public void Dispose() => _Disposed = true;
+        public void Dispose() => Disposed = true;
 
         /// <summary>
         ///     Accion de guardar.
         /// </summary>
-        /// <param name="cancellationToken">
+        /// <param name="CancellationToken">
         ///     El <see cref="CancellationToken "/> se usa para propagar notificaciones de que la operación debe cancelarse.
         /// </param>
         /// <returns>
         ///     El <see cref="Task" /> que representa la operación asíncrona.
         /// </returns>
-        private async Task SaveChanges(CancellationToken cancellationToken)
+        private async Task SaveChanges(CancellationToken CancellationToken)
         {
             if (AutoSaveChanges)
-                await Context.SaveChangesAsync(cancellationToken);
+                await Context.SaveChangesAsync(CancellationToken);
         }
 
         /// <summary>
@@ -185,11 +185,11 @@
         /// <exception cref="ArgumentNullException">
         ///     Excepcion lanzada cuando la <see cref="TEntity"/> a interactuar es <see langword="null"/>
         /// </exception>
-        private void ValidateState(TEntity entity, CancellationToken cancellationToken)
+        private void ValidateState(TEntity Model, CancellationToken cancellationToken)
         {
             cancellationToken.ThrowIfCancellationRequested();
-            if (_Disposed) throw new ObjectDisposedException(GetType().Name);
-            if (entity is null) throw new ArgumentNullException(entity.GetType().Name);
+            if (Disposed) throw new ObjectDisposedException(GetType().Name);
+            if (Model is null) throw new ArgumentNullException(Model.GetType().Name);
         }
     }
 }

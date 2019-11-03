@@ -1,6 +1,9 @@
 ﻿namespace Proxy.Base
 {
+    using System;
     using System.Reflection;
+    using System.Runtime.CompilerServices;
+    using Microsoft.CSharp.RuntimeBinder;
 
     /// <summary>
     ///     Extensiones para los decoradores
@@ -16,17 +19,18 @@
         /// <typeparam name="TProxy">
         ///     Tipo del decorador a aplicar
         /// </typeparam>
-        /// <param name="target">
+        /// <param name="Target">
         ///     Clase a aplicar proxy
         /// </param>
-        public static TDecorated Decorate<TDecorated, TProxy>(this TDecorated target)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TDecorated Decorate<TDecorated, TProxy>(this TDecorated Target)
             where TDecorated : class
             where TProxy : Decorator<TDecorated>
         {
-            object proxy = DispatchProxy.Create<TDecorated, TProxy>();
-            ((TProxy)proxy).SetTarget(target);
+            object Proxy = DispatchProxy.Create<TDecorated, TProxy>();
+            (Proxy as TProxy).SetTarget(Target);
 
-            return (TDecorated)proxy;
+            return Proxy as TDecorated;
         }
 
         /// <summary>
@@ -38,17 +42,55 @@
         /// <typeparam name="TProxy">
         ///     Tipo del decorador a aplicar
         /// </typeparam>
-        /// <param name="target">
+        /// <param name="Target">
         ///     Clase a aplicar proxy
         /// </param>
-        public static TDecorated Decorate<TDecorated, TProxy>(this object target)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static TDecorated Decorate<TDecorated, TProxy>(this object Target)
             where TDecorated : class
             where TProxy : Decorator<object>
         {
-            object proxy = DispatchProxy.Create<TDecorated, TProxy>();
-            ((TProxy)proxy).SetTarget(target);
+            object Proxy = DispatchProxy.Create<TDecorated, TProxy>();
+            (Proxy as TProxy).SetTarget(Target);
 
-            return (TDecorated)proxy;
+            return Proxy as TDecorated;
+        }
+
+
+        /// <summary>
+        ///     Decora una clase con un proxy
+        /// </summary>
+        /// <typeparam name="TDecorated">
+        ///     Tipo de la clase a decorar
+        /// </typeparam>
+        /// <typeparam name="TProxy">
+        ///     Tipo del decorador a aplicar
+        /// </typeparam>
+        /// <param name="Target">
+        ///     Clase a aplicar proxy
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static object Decorate<TProxy>(this object Target)
+            where TProxy : Decorator<object>
+        {
+            var i = Target.GetType().GetInterfaces()[0];
+            var InvokeSite = CallSite<Func<CallSite, Type, object>>.Create(
+                Microsoft.CSharp.RuntimeBinder.Binder.InvokeMember(
+                    CSharpBinderFlags.None,
+                    nameof(DispatchProxy.Create),
+                    new[] { Target.GetType().GetInterfaces()[0], typeof(TProxy) },
+                    typeof(DecoratorExtensions),
+                    new CSharpArgumentInfo[]
+                    {
+                        CSharpArgumentInfo.Create(CSharpArgumentInfoFlags.UseCompileTimeType | CSharpArgumentInfoFlags.IsStaticType, null),
+                    }
+                )
+            );
+
+            object Proxy = InvokeSite.Target(InvokeSite, typeof(DispatchProxy));
+            (Proxy as TProxy).SetTarget(Target);
+
+            return Proxy;
         }
     }
 }

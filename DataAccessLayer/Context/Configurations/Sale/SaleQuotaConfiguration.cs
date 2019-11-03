@@ -19,11 +19,11 @@
         public void Configure(EntityTypeBuilder<SaleQuota> Builder)
         {
             Builder.ToTable(nameof(SaleQuota), Modules.Sale);
-            Builder.HasKey(saleQuota => saleQuota.Id);
+            Builder.HasKey(SaleQuota => SaleQuota.Id);
 
-            Builder.HasOne(saleQuota => saleQuota.Sale)
-                .WithMany(sale => sale.Quotas)
-                .HasForeignKey(saleQuota => saleQuota.SaleId)
+            Builder.HasOne(SaleQuota => SaleQuota.Sale)
+                .WithMany(Sale => Sale.Quotas)
+                .HasForeignKey(SaleQuota => SaleQuota.SaleId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

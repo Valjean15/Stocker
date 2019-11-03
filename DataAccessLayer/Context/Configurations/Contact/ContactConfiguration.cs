@@ -19,7 +19,7 @@
         public void Configure(EntityTypeBuilder<Contact> Builder)
         {
             Builder.ToTable(nameof(Contact), Modules.Contact);
-            Builder.HasKey(contact => contact.Id);
+            Builder.HasKey(Contact => Contact.Id);
         }
     }
 }

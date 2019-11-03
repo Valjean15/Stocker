@@ -19,26 +19,26 @@
         public void Configure(EntityTypeBuilder<Sale> Builder)
         {
             Builder.ToTable(nameof(Sale), Modules.Sale);
-            Builder.HasKey(sale => sale.Id);
+            Builder.HasKey(Sale => Sale.Id);
 
-            Builder.HasOne(sale => sale.Currency)
+            Builder.HasOne(Sale => Sale.Currency)
                 .WithMany()
-                .HasForeignKey(sale => sale.CurrencyId)
+                .HasForeignKey(Sale => Sale.CurrencyId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(sale => sale.State)
+            Builder.HasOne(Sale => Sale.State)
                 .WithMany()
-                .HasForeignKey(sale => sale.StateId)
+                .HasForeignKey(Sale => Sale.StateId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(sale => sale.Contact)
+            Builder.HasOne(Sale => Sale.Contact)
                 .WithOne()
-                .HasForeignKey<Sale>(sale => sale.ContactId)
+                .HasForeignKey<Sale>(Sale => Sale.ContactId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(sale => sale.User)
-                .WithMany(user => user.Sales)
-                .HasForeignKey(sale => sale.UserId)
+            Builder.HasOne(Sale => Sale.User)
+                .WithMany(User => User.Sales)
+                .HasForeignKey(Sale => Sale.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

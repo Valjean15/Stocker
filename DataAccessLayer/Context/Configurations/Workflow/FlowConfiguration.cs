@@ -19,7 +19,7 @@
         public void Configure(EntityTypeBuilder<Flow> Builder)
         {
             Builder.ToTable(nameof(Flow), Modules.Workflow);
-            Builder.HasKey(flow => flow.Id);
+            Builder.HasKey(Flow => Flow.Id);
         }
     }
 }

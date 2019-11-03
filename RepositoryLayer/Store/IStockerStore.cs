@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using DataAccess.Context;
-using Models.Interfaces;
-
-namespace Repository.Store
+﻿namespace Repository.Store
 {
+    using System;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using DataAccess.Context;
+    using Models.Interfaces;
+
     /// <summary>
     ///     Store de contexto del contexto <see cref="StockerContext"/> y de entidades que
     ///     hereden de <see cref="IEntityBase{int}"/>
@@ -22,9 +22,9 @@ namespace Repository.Store
         /// <summary>
         ///     Busca todas las entidades que cumplan con una condicion
         /// </summary>
-        /// <param name="condition">
+        /// <param name="Condition">
         ///     Condicion a filtrar
         /// </param>
-        IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> condition);
+        IQueryable<TEntity> Find(Expression<Func<TEntity, bool>> Condition);
     }
 }

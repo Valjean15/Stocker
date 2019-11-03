@@ -19,11 +19,11 @@
         public void Configure(EntityTypeBuilder<State> Builder)
         {
             Builder.ToTable(nameof(State), Modules.Workflow);
-            Builder.HasKey(state => state.Id);
+            Builder.HasKey(State => State.Id);
 
-            Builder.HasOne(state => state.Flow)
-                .WithMany(flow => flow.States)
-                .HasForeignKey(state => state.FlowId)
+            Builder.HasOne(State => State.Flow)
+                .WithMany(Flow => Flow.States)
+                .HasForeignKey(State => State.FlowId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

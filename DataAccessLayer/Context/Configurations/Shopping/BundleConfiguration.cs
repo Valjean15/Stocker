@@ -19,21 +19,21 @@
         public void Configure(EntityTypeBuilder<Bundle> Builder)
         {
             Builder.ToTable(nameof(Bundle), Modules.Shopping);
-            Builder.HasKey(bundle => bundle.Id);
+            Builder.HasKey(Bundle => Bundle.Id);
 
-            Builder.HasOne(bundle => bundle.Currency)
+            Builder.HasOne(Bundle => Bundle.Currency)
                 .WithOne()
-                .HasForeignKey<Bundle>(bundle => bundle.CurrencyId)
+                .HasForeignKey<Bundle>(Bundle => Bundle.CurrencyId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(bundle => bundle.State)
+            Builder.HasOne(Bundle => Bundle.State)
                 .WithMany()
-                .HasForeignKey(bundle => bundle.StateId)
+                .HasForeignKey(Bundle => Bundle.StateId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(bundle => bundle.User)
-                .WithMany(user => user.Bundles)
-                .HasForeignKey(bundle => bundle.UserId)
+            Builder.HasOne(Bundle => Bundle.User)
+                .WithMany(User => User.Bundles)
+                .HasForeignKey(Bundle => Bundle.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

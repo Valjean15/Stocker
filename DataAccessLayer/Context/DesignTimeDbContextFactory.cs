@@ -24,13 +24,13 @@
         /// </returns>
         public StockerContext CreateDbContext(string[] Arguments)
         {
-            var builder = new ConfigurationBuilder()
+            var Builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
 
             var OptionsBuilder = new DbContextOptionsBuilder<StockerContext>();
-            var ConnectionString = builder.GetConnectionString("DefaultConnection");
+            var ConnectionString = Builder.GetConnectionString("DefaultConnection");
             OptionsBuilder.UseSqlServer(ConnectionString, Options => Options.MigrationsAssembly("DataAccess"));
             return new StockerContext(OptionsBuilder.Options);
         }

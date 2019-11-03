@@ -19,16 +19,16 @@
         public void Configure(EntityTypeBuilder<SaleItem> Builder)
         {
             Builder.ToTable(nameof(SaleItem), Modules.Sale);
-            Builder.HasKey(saleItem => saleItem.Id);
+            Builder.HasKey(SaleItem => SaleItem.Id);
 
-            Builder.HasOne(saleItem => saleItem.Sale)
-                .WithMany(sale => sale.Items)
-                .HasForeignKey(saleItem => saleItem.SaleId)
+            Builder.HasOne(SaleItem => SaleItem.Sale)
+                .WithMany(Sale => Sale.Items)
+                .HasForeignKey(SaleItem => SaleItem.SaleId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(saleItem => saleItem.Product)
-                .WithMany(product => product.SaleItems)
-                .HasForeignKey(saleItem => saleItem.ProductId)
+            Builder.HasOne(SaleItem => SaleItem.Product)
+                .WithMany(Product => Product.SaleItems)
+                .HasForeignKey(SaleItem => SaleItem.ProductId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

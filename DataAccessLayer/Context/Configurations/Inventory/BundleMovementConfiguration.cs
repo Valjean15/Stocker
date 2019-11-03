@@ -19,16 +19,16 @@
         public void Configure(EntityTypeBuilder<BundleMovement> Builder)
         {
             Builder.ToTable(nameof(BundleMovement), Modules.Inventory);
-            Builder.HasKey(bundleMovement => bundleMovement.Id);
+            Builder.HasKey(BundleMovement => BundleMovement.Id);
 
-            Builder.HasOne(bundleMovement => bundleMovement.StockItem)
-                .WithMany(stockItem => stockItem.BundleMovements)
-                .HasForeignKey(bundleMovement => bundleMovement.StockItemId)
+            Builder.HasOne(BundleMovement => BundleMovement.StockItem)
+                .WithMany(StockItem => StockItem.BundleMovements)
+                .HasForeignKey(BundleMovement => BundleMovement.StockItemId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(bundleMovement => bundleMovement.BundleItem)
+            Builder.HasOne(BundleMovement => BundleMovement.BundleItem)
                 .WithMany()
-                .HasForeignKey(bundleMovement => bundleMovement.BundleItemId)
+                .HasForeignKey(BundleMovement => BundleMovement.BundleItemId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

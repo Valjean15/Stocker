@@ -1,7 +1,7 @@
-﻿using Models.Interfaces;
-
-namespace Mapper.Base
+﻿namespace Mapper.Base
 {
+    using Models.Interfaces;
+
     /// <summary>
     ///     Comportamiento de un view model
     /// </summary>

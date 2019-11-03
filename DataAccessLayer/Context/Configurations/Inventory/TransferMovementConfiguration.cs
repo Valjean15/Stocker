@@ -19,11 +19,11 @@
         public void Configure(EntityTypeBuilder<TransferMovement> Builder)
         {
             Builder.ToTable(nameof(TransferMovement), Modules.Inventory);
-            Builder.HasKey(transferMovement => transferMovement.Id);
+            Builder.HasKey(TransferMovement => TransferMovement.Id);
 
-            Builder.HasOne(transferMovement => transferMovement.StockItem)
-                .WithMany(stockItem => stockItem.TransferMovements)
-                .HasForeignKey(transferMovement => transferMovement.StockItemId)
+            Builder.HasOne(TransferMovement => TransferMovement.StockItem)
+                .WithMany(StockItem => StockItem.TransferMovements)
+                .HasForeignKey(TransferMovement => TransferMovement.StockItemId)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

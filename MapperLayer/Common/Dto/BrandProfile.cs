@@ -1,7 +1,7 @@
-﻿using Mapper.Base;
-
-namespace Mapper.Common.Dto
+﻿namespace Mapper.Common.Dto
 {
+    using Mapper.Base;
+
     /// <summary>
     ///     Dto de perfil de una marca
     /// </summary>

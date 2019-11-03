@@ -19,7 +19,7 @@
         public void Configure(EntityTypeBuilder<Transition> Builder)
         {
             Builder.ToTable(nameof(Transition), Modules.Workflow);
-            Builder.HasKey(transition => transition.Id);
+            Builder.HasKey(Transition => Transition.Id);
         }
     }
 }

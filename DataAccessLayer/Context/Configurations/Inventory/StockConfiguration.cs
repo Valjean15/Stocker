@@ -19,16 +19,16 @@
         public void Configure(EntityTypeBuilder<Stock> Builder)
         {
             Builder.ToTable(nameof(Stock), Modules.Inventory);
-            Builder.HasKey(stock => stock.Id);
+            Builder.HasKey(Stock => Stock.Id);
 
-            Builder.HasOne(stock => stock.Store)
-                .WithMany(store => store.Stocks)
-                .HasForeignKey(stock => stock.StoreId)
+            Builder.HasOne(Stock => Stock.Store)
+                .WithMany(Store => Store.Stocks)
+                .HasForeignKey(Stock => Stock.StoreId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            Builder.HasOne(stock => stock.State)
+            Builder.HasOne(Stock => Stock.State)
                 .WithMany()
-                .HasForeignKey(stock => stock.StateId);
+                .HasForeignKey(Stock => Stock.StateId);
         }
     }
 }

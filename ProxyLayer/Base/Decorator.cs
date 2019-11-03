@@ -40,47 +40,47 @@
         protected override object Invoke(MethodInfo targetMethod, object[] args)
         {
             BeforeInvoke(targetMethod, args);
-            var result = InvokeCall(targetMethod, args);
-            AfterInvoke(targetMethod, args, result);
+            var Result = InvokeCall(targetMethod, args);
+            AfterInvoke(targetMethod, args, Result);
 
-            return result;
+            return Result;
         }
 
         /// <summary>
         ///     Metodo a ejecutar antes de la invoacion del metodo a decorar
         /// </summary>
-        /// <param name="targetMethod">
+        /// <param name="TargetMethod">
         ///     Metodo objetivo
         /// </param>
-        /// <param name="args">
+        /// <param name="Arguments">
         ///     Parametros
         /// </param>
-        protected virtual void BeforeInvoke(MethodInfo targetMethod, object[] args) { }
+        protected virtual void BeforeInvoke(MethodInfo TargetMethod, object[] Arguments) { }
 
         /// <summary>
         ///     Funcion que realiza la invocacion de la funcion a decorar
         /// </summary>
-        /// <param name="targetMethod">
+        /// <param name="TargetMethod">
         ///     Metodo objetivo
         /// </param>
-        /// <param name="args">
+        /// <param name="Arguments">
         ///     Argumentos del metodo
         /// </param>
-        protected virtual object InvokeCall(MethodInfo targetMethod, object[] args)
-            => targetMethod.Invoke(Target, args);
+        protected virtual object InvokeCall(MethodInfo TargetMethod, object[] Arguments)
+            => TargetMethod.Invoke(Target, Arguments);
 
         /// <summary>
         ///     Metodo a ejecutar antes de la invoacion del metodo a decorar
         /// </summary>
-        /// <param name="targetMethod">
+        /// <param name="TargetMethod">
         ///     Metodo objetivo
         /// </param>
-        /// <param name="args">
+        /// <param name="Arguments">
         ///     Parametros
         /// </param>
-        /// <param name="result">
+        /// <param name="Result">
         ///     Resultado de la invoacion
         /// </param>
-        protected virtual void AfterInvoke(MethodInfo targetMethod, object[] args, object result) { }
+        protected virtual void AfterInvoke(MethodInfo TargetMethod, object[] Arguments, object Result) { }
     }
 }
