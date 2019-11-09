@@ -1,6 +1,7 @@
 ﻿namespace Proxy.Base
 {
     using System;
+    using System.Linq;
     using System.Reflection;
     using System.Runtime.CompilerServices;
     using Microsoft.CSharp.RuntimeBinder;
@@ -73,12 +74,14 @@
         public static object Decorate<TProxy>(this object Target)
             where TProxy : Decorator<object>
         {
-            var i = Target.GetType().GetInterfaces()[0];
+            var LastInteface = Target.GetType().GetInterfaces().LastOrDefault();
+            if (LastInteface is null) return Target;
+
             var InvokeSite = CallSite<Func<CallSite, Type, object>>.Create(
                 Microsoft.CSharp.RuntimeBinder.Binder.InvokeMember(
                     CSharpBinderFlags.None,
                     nameof(DispatchProxy.Create),
-                    new[] { Target.GetType().GetInterfaces()[0], typeof(TProxy) },
+                    new[] { LastInteface, typeof(TProxy) },
                     typeof(DecoratorExtensions),
                     new CSharpArgumentInfo[]
                     {
